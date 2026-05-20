@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Paris Weekly Events</title>
+    <title>🗼 Paris Weekly Events — May 20–26, 2026</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
@@ -13,68 +13,393 @@
             padding: 40px 20px;
             color: #2c3e50;
         }
-        .container { max-width: 800px; margin: 0 auto; }
+        .container { max-width: 1100px; margin: 0 auto; }
+
         header { text-align: center; margin-bottom: 40px; }
         h1 { font-size: 2.5rem; margin-bottom: 8px; }
-        .tagline { color: #5a6c7d; font-size: 1.1rem; }
-        .card {
+        .date-range { color: #5a6c7d; font-size: 1.1rem; margin-bottom: 4px; }
+        .tagline { color: #7f8c8d; font-size: 0.95rem; }
+
+        .filters {
+            display: flex; flex-wrap: wrap; gap: 10px;
+            justify-content: center; margin-bottom: 28px;
+        }
+        .filter-btn {
+            padding: 8px 18px; border-radius: 999px; font-size: 0.85rem;
+            font-weight: 600; border: none; cursor: pointer; color: white;
+            transition: transform 0.15s, opacity 0.15s, box-shadow 0.15s;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+        }
+        .filter-btn:hover { transform: translateY(-2px); box-shadow: 0 4px 14px rgba(0,0,0,0.2); }
+        .filter-btn.inactive { opacity: 0.32; transform: none; box-shadow: none; }
+        .filter-btn.all-btn { background: #2c3e50; }
+
+        .stats {
+            text-align: center; margin-bottom: 24px;
+            font-size: 0.9rem; color: #5a6c7d;
+        }
+        .stats strong { color: #2c3e50; }
+
+        .events-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 20px;
+        }
+
+        .event-card {
             background: white;
             border-radius: 16px;
-            padding: 32px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-            margin-bottom: 20px;
+            padding: 24px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+            transition: transform 0.2s, box-shadow 0.2s;
+            animation: fadeInUp 0.4s ease both;
+            display: flex; flex-direction: column; gap: 10px;
+            text-decoration: none; color: inherit;
+            cursor: pointer;
         }
-        .status { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
-        .dot {
-            width: 10px; height: 10px; border-radius: 50%;
-            background: #fbbf24; animation: pulse 2s infinite;
+        .event-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 18px 44px rgba(0,0,0,0.14);
         }
-        @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.4; } }
-        h2 { font-size: 1.25rem; margin-bottom: 8px; }
-        p { line-height: 1.6; color: #4a5568; }
-        .categories {
-            display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px;
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(22px); }
+            to   { opacity: 1; transform: translateY(0); }
         }
+
         .chip {
-            padding: 6px 14px; border-radius: 999px; font-size: 0.85rem;
-            color: white; font-weight: 500;
+            display: inline-block;
+            padding: 4px 12px; border-radius: 999px;
+            font-size: 0.78rem; font-weight: 700; color: white;
+            align-self: flex-start; white-space: nowrap;
         }
+        .chip.dark { color: #333; }
+
+        .event-name {
+            font-size: 1.05rem; font-weight: 700; line-height: 1.3;
+            color: #1a2634;
+        }
+        .event-meta {
+            font-size: 0.84rem; color: #5a6c7d;
+            display: flex; flex-direction: column; gap: 3px;
+        }
+        .event-meta .ev-date { font-weight: 600; color: #3d5166; }
+
+        .event-desc {
+            font-size: 0.9rem; color: #4a5568; line-height: 1.55;
+            flex: 1;
+        }
+        .event-link {
+            font-size: 0.8rem; color: #54A0FF; font-weight: 500;
+            align-self: flex-start;
+        }
+
         footer {
-            text-align: center; margin-top: 40px; color: #5a6c7d; font-size: 0.9rem;
+            text-align: center; margin-top: 52px;
+            color: #7f8c8d; font-size: 0.85rem; line-height: 1.9;
         }
-        footer a { color: #2c3e50; }
+        footer a { color: #5a6c7d; }
+        footer a:hover { color: #2c3e50; }
+        .source-domains { font-size: 0.78rem; margin-top: 4px; }
+
+        @media (max-width: 640px) {
+            h1 { font-size: 1.8rem; }
+            .events-grid { grid-template-columns: 1fr; }
+            .filter-btn { padding: 7px 13px; font-size: 0.78rem; }
+        }
     </style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>🗼 Paris Weekly Events</h1>
-            <p class="tagline">A curated weekly briefing — updated every Monday morning</p>
-        </header>
+<div class="container">
 
-        <div class="card">
-            <div class="status">
-                <span class="dot"></span>
-                <h2>Next update: Monday 7am Paris time</h2>
-            </div>
-            <p>This dashboard refreshes every Monday with the week's events across Paris — exhibitions, live music, pop-ups, sports, theater, comedy, dance, cinema, food, and galleries. Categories are color-coded and filterable.</p>
-            <div class="categories">
-                <span class="chip" style="background:#FF6B6B">🎪 Pop-ups</span>
-                <span class="chip" style="background:#4ECDC4">⚽ Sports</span>
-                <span class="chip" style="background:#FFE66D;color:#333">🎵 Live Music</span>
-                <span class="chip" style="background:#FF9FF3;color:#333">🍽️ Food</span>
-                <span class="chip" style="background:#54A0FF">🎬 Cinema</span>
-                <span class="chip" style="background:#A29BFE">🎭 Theater</span>
-                <span class="chip" style="background:#6C5CE7">😂 Comedy</span>
-                <span class="chip" style="background:#00B894">💃 Dance</span>
-                <span class="chip" style="background:#FDCB6E;color:#333">🖼️ Exhibitions</span>
-                <span class="chip" style="background:#E17055">🎨 Galleries</span>
-            </div>
-        </div>
+    <header>
+        <h1>🗼 Paris Weekly Events</h1>
+        <p class="date-range">May 20–26, 2026</p>
+        <p class="tagline">Curated every Monday from live sources — click any card for tickets &amp; info</p>
+    </header>
 
-        <footer>
-            <p>Auto-generated by <a href="https://claude.ai/code/routines">Claude Code routines</a> · <a href="https://github.com/Rasalghulsslayer/paris-weekly-planner">source</a></p>
-        </footer>
+    <div class="filters">
+        <button class="filter-btn all-btn" data-cat="all">✦ All</button>
+        <button class="filter-btn" style="background:#FF6B6B" data-cat="popup">🎪 Pop-ups</button>
+        <button class="filter-btn" style="background:#4ECDC4" data-cat="sports">⚽ Sports</button>
+        <button class="filter-btn" style="background:#c8b800;color:#fff" data-cat="music">🎵 Live Music</button>
+        <button class="filter-btn" style="background:#d97fd9" data-cat="food">🍽️ Food/Dining</button>
+        <button class="filter-btn" style="background:#54A0FF" data-cat="cinema">🎬 Cinema</button>
+        <button class="filter-btn" style="background:#A29BFE" data-cat="theater">🎭 Theater</button>
+        <button class="filter-btn" style="background:#6C5CE7" data-cat="comedy">😂 Comedy</button>
+        <button class="filter-btn" style="background:#00B894" data-cat="dance">💃 Dance</button>
+        <button class="filter-btn" style="background:#d4a017;color:#fff" data-cat="exhibition">🖼️ Exhibitions</button>
+        <button class="filter-btn" style="background:#E17055" data-cat="gallery">🎨 Galleries</button>
     </div>
+
+    <div class="stats" id="stats"></div>
+    <div class="events-grid" id="grid"></div>
+
+    <footer>
+        <p>Generated Mon 20 May 2026, 07:00 UTC · 09:00 Paris time ·
+           <a href="https://github.com/Rasalghulsslayer/paris-weekly-planner">source</a> ·
+           <a href="https://claude.ai/code/routines">Claude Code routines</a></p>
+        <p class="source-domains">
+            Sources: sortiraparis.com · parisjetaime.com · rolandgarros.com · festivaljazzsaintgermainparis.com ·
+            fetedelanature.com · guimet.fr · nuitdesmusees.culture.gouv.fr · livenation.fr ·
+            paris.tastefestivals.com · songkick.com · parisselectbook.com · theatredelaville-paris.com ·
+            foiredutrone.com · cinematheque.fr
+        </p>
+    </footer>
+</div>
+
+<script>
+const EVENTS = [
+  {
+    cat:'music', chip:'🎵 Live Music', chipBg:'#c8b800', chipDark:false,
+    name:'Oberkampf Music Festival',
+    date:'Wed 20 – Thu 21 May', time:'From 19:00', venue:'Nouveau Casino & Quartier Général, 11th',
+    desc:'Free two-day festival of international emerging talent — indie pop, soul and R&B. Line-up: Jazz Cuti, Elle Coves, Forest Blakk, Daydreamers and more across two neighbouring venues.',
+    url:'https://www.livenation.fr/event/oberkampf-music-festival-2026-paris-tickets-edp1650556',
+    sort:'2026-05-20'
+  },
+  {
+    cat:'music', chip:'🎵 Live Music', chipBg:'#c8b800', chipDark:false,
+    name:'Jazz à Saint-Germain-des-Prés — 25th Anniversary',
+    date:'Wed 20 – Sun 24 May', time:'Various', venue:'Multiple venues, 6th arr. (Saint-Germain Church, Péniche Le Son de la Terre, Réfectoire des Cordeliers…)',
+    desc:'Silver jubilee edition of the Left Bank\'s beloved jazz festival, mixing legends with new voices. Features saxophonist Émile Parisien, Hugh Coltman and Marion Rampal; some concerts are free.',
+    url:'https://festivaljazzsaintgermainparis.com/programmation/',
+    sort:'2026-05-20'
+  },
+  {
+    cat:'popup', chip:'🎪 Pop-ups', chipBg:'#FF6B6B', chipDark:false,
+    name:'Fête de la Nature — 20th Anniversary',
+    date:'Wed 20 – Mon 25 May', time:'Various', venue:'City-wide (Jardin des Plantes, La Défense, parks)',
+    desc:'Free nationwide nature festival in its 20th year — hundreds of free walks, workshops and biodiversity events across Paris. Nature Village at Jardin des Plantes on 23–24 May.',
+    url:'https://fetedelanature.com/',
+    sort:'2026-05-20'
+  },
+  {
+    cat:'popup', chip:'🎪 Pop-ups', chipBg:'#FF6B6B', chipDark:false,
+    name:'Foire du Trône — Final Weekend',
+    date:'Through Mon 25 May', time:'Mon–Thu & Sun 12:00–23:00 · Fri–Sat until 01:00', venue:'Pelouse de Reuilly, 12th arr.',
+    desc:'Last days of Europe\'s most celebrated funfair before it closes for the year. 220 rides including the most illuminated Ferris wheel in Europe and France\'s largest transportable roller coaster. Free entry.',
+    url:'https://www.foiredutrone.com/',
+    sort:'2026-05-20'
+  },
+  {
+    cat:'sports', chip:'⚽ Sports', chipBg:'#4ECDC4', chipDark:false,
+    name:'Roland Garros — French Open 2026',
+    date:'Wed 20 – Sun 24 May (this week)', time:'From 10:00 daily', venue:'Stade Roland Garros, 16th arr.',
+    desc:'Qualifying rounds Mon–Fri lead into the first round of the main singles and doubles draw on Sunday 24 May. Multiple matches run simultaneously; early-round tickets remain the most accessible.',
+    url:'https://www.rolandgarros.com/en-us/article/2026-full-schedule-calendar-qualifying-rounds-main-draw-singles-doubles-wheelchair-tennis',
+    sort:'2026-05-20'
+  },
+  {
+    cat:'dance', chip:'💃 Dance', chipBg:'#00B894', chipDark:false,
+    name:'Maldonne — Leïla Ka',
+    date:'Wed 20 – Thu 21 May', time:'20:00', venue:'Théâtre de la Ville – Les Abbesses, 18th arr.',
+    desc:'An intense contemporary dance piece by choreographer Leïla Ka interrogating feminine identities and their transformations through visceral, precisely controlled physical performance.',
+    url:'https://www.theatredelaville-paris.com/en/spectacles/saison-25-26/danse',
+    sort:'2026-05-20'
+  },
+  {
+    cat:'dance', chip:'💃 Dance', chipBg:'#00B894', chipDark:false,
+    name:'La Dame aux camélias — Opéra de Paris (LAST WEEK)',
+    date:'Ongoing – closes Sat 23 May', time:'19:30', venue:'Palais Garnier, 9th arr.',
+    desc:'John Neumeier\'s acclaimed narrative ballet to Chopin\'s music, inspired by Dumas fils\' novel. This week marks the final performances of the run — genuinely last chance.',
+    url:'https://www.operadeparis.fr/en/useful-information/opening-calendar',
+    sort:'2026-05-20'
+  },
+  {
+    cat:'exhibition', chip:'🖼️ Exhibitions', chipBg:'#d4a017', chipDark:false,
+    name:'Silla: Gold and the Sacred — OPENS TODAY',
+    date:'Opens Wed 20 May (through 31 Aug)', time:'Museum hours', venue:'Musée Guimet, 16th arr.',
+    desc:'The first exhibition in Europe dedicated exclusively to the ancient Korean Silla kingdom: 148 artefacts including gold crowns, jade ornaments and intricate jewellery. Marks the 140th anniversary of Franco-Korean diplomatic ties.',
+    url:'https://www.guimet.fr/en/exhibitions/silla-gold-and-sacred-royal-treasures-korea-57-bce-935-ad',
+    sort:'2026-05-20'
+  },
+  {
+    cat:'exhibition', chip:'🖼️ Exhibitions', chipBg:'#d4a017', chipDark:false,
+    name:'Heritage in Resistance: Timbuktu to Odessa — OPENS TODAY',
+    date:'Opens Wed 20 May (through 3 Jan 2027)', time:'Museum hours', venue:'Cité de l\'architecture et du patrimoine, 16th arr.',
+    desc:'A new exhibition exploring how communities worldwide resist the destruction of their heritage in times of conflict, from Mali to Ukraine, with striking archival photography and artefacts.',
+    url:'https://www.citedelarchitecture.fr',
+    sort:'2026-05-20'
+  },
+  {
+    cat:'exhibition', chip:'🖼️ Exhibitions', chipBg:'#d4a017', chipDark:false,
+    name:'Renoir and Love',
+    date:'Ongoing (17 Mar – 19 Jul)', time:'Museum hours', venue:'Musée d\'Orsay, 7th arr.',
+    desc:'A major retrospective centred on tenderness, joy and human connection in Renoir\'s masterpieces, drawing on rarely loaned works from international collections.',
+    url:'https://www.musee-orsay.fr',
+    sort:'2026-05-20'
+  },
+  {
+    cat:'exhibition', chip:'🖼️ Exhibitions', chipBg:'#d4a017', chipDark:false,
+    name:'Hilma af Klint Retrospective',
+    date:'Ongoing (6 May – 30 Aug)', time:'Museum hours', venue:'Grand Palais, 8th arr.',
+    desc:'The Swedish abstract pioneer — whose work predates Kandinsky — gets her largest French retrospective, with over 100 rarely seen canvases displayed across the newly renovated Grand Palais.',
+    url:'https://www.grandpalais.fr',
+    sort:'2026-05-20'
+  },
+  {
+    cat:'exhibition', chip:'🖼️ Exhibitions', chipBg:'#d4a017', chipDark:false,
+    name:'Henri Rousseau Retrospective',
+    date:'Ongoing (25 Mar – 20 Jul)', time:'Museum hours', venue:'Musée de l\'Orangerie, 1st arr.',
+    desc:'An exceptional survey of "Le Douanier" Rousseau — the self-taught naïve master whose dreamlike jungle paintings captivated Picasso, the Surrealists and the contemporary art world alike.',
+    url:'https://www.musee-orangerie.fr',
+    sort:'2026-05-20'
+  },
+  {
+    cat:'theater', chip:'🎭 Theater', chipBg:'#A29BFE', chipDark:false,
+    name:'Les Demoiselles de Rochefort — Live Musical',
+    date:'Ongoing (through 14 Jun)', time:'Various', venue:'Théâtre du Lido, Champs-Élysées, 8th arr.',
+    desc:'Jacques Demy and Michel Legrand\'s beloved musical brought to life on stage on the Champs-Élysées — full cast singing, dancing and Technicolor costumes from the cinematic classic.',
+    url:'https://parisjetaime.com/eng/article/calendar-of-shows-in-paris-a671',
+    sort:'2026-05-20'
+  },
+  {
+    cat:'theater', chip:'🎭 Theater', chipBg:'#A29BFE', chipDark:false,
+    name:'Sherlock Holmes: The Musical Adventure (final weeks)',
+    date:'Ongoing (through 31 May)', time:'Various', venue:'La Gaîté Rive Gauche, 13th arr.',
+    desc:'A witty, swashbuckling original musical following the great detective — strong reviews for sets, cast and score. Final two weeks of the run.',
+    url:'https://www.gaite-paris.com',
+    sort:'2026-05-20'
+  },
+  {
+    cat:'cinema', chip:'🎬 Cinema', chipBg:'#54A0FF', chipDark:false,
+    name:'Cinémathèque: Serial Killer Cinema Retrospective',
+    date:'Through Tue 26 May', time:'Various screenings', venue:'Cinémathèque française, 12th arr.',
+    desc:'A specially curated programme of landmark serial-killer films from Fritz Lang\'s M to modern thrillers, with archival prints and post-screening discussions. Final week.',
+    url:'https://www.cinematheque.fr',
+    sort:'2026-05-20'
+  },
+  {
+    cat:'exhibition', chip:'🖼️ Exhibitions', chipBg:'#d4a017', chipDark:false,
+    name:'Fashion in Majesty: Haute Couture at the Thai Court',
+    date:'Ongoing (13 May – 1 Nov)', time:'Museum hours', venue:'Musée des Arts Décoratifs, 1st arr.',
+    desc:'A sumptuous dialogue between French haute couture houses and the royal ceremonial traditions of the Thai court — garments, jewellery and textiles from both cultures in conversation.',
+    url:'https://www.madparis.fr',
+    sort:'2026-05-20'
+  },
+  {
+    cat:'food', chip:'🍽️ Food/Dining', chipBg:'#d97fd9', chipDark:false,
+    name:'Taste of Paris 2026',
+    date:'Thu 21 – Sun 24 May', time:'Lunch 11:30–16:00 · Dinner 19:00–23:30', venue:'Grand Palais Éphémère, 7th arr.',
+    desc:'Paris\'s flagship culinary festival: 80+ top chefs including Christian Le Squer, Thierry Marx and Nina Metayer serving tasting portions (€6–12 each), live cooking demos and masterclasses across four days.',
+    url:'https://paris.tastefestivals.com/',
+    sort:'2026-05-21'
+  },
+  {
+    cat:'music', chip:'🎵 Live Music', chipBg:'#c8b800', chipDark:false,
+    name:'Vanessa Paradis — Le retour des beaux jours',
+    date:'Thu 21 May', time:'20:00', venue:'Zénith Paris La Villette, 19th arr.',
+    desc:'Vanessa Paradis\'s long-awaited return to the Paris stage, presenting new album material alongside classics like "Marilyn & John" and "Divine Idylle". A second night (22 May) was added due to instant sell-out.',
+    url:'https://parisjetaime.com/eng/event/concert-vanessa-paradis-zenith-la-villette-e1667',
+    sort:'2026-05-21'
+  },
+  {
+    cat:'music', chip:'🎵 Live Music', chipBg:'#c8b800', chipDark:false,
+    name:'Vanessa Paradis — 2nd Night',
+    date:'Fri 22 May', time:'20:00', venue:'Zénith Paris La Villette, 19th arr.',
+    desc:'Additional date added after the first night sold out immediately. Same setlist mixing the new album "Le retour des beaux jours" with catalogue classics.',
+    url:'https://www.songkick.com/concerts/42653732-vanessa-paradis-at-zenith-paris-la-villette',
+    sort:'2026-05-22'
+  },
+  {
+    cat:'comedy', chip:'😂 Comedy', chipBg:'#6C5CE7', chipDark:false,
+    name:'Alexis Tramoni — Le Meilleur et le Pire',
+    date:'Fri 22 & Sat 23 May', time:'21:30', venue:'Petit Palais des Glaces, 10th arr.',
+    desc:'Stand-up show running every Friday and Saturday through late June. Tramoni\'s quick-fire set earns consistent sell-outs for his dissection of everyday absurdities.',
+    url:'https://www.sortiraparis.com/en/what-to-see-in-paris/shows/guides/325370-comedy-shows-in-paris-in-may-2026-the-shows-to-see',
+    sort:'2026-05-22'
+  },
+  {
+    cat:'gallery', chip:'🎨 Galleries', chipBg:'#E17055', chipDark:false,
+    name:'SMITH — "Ici grand ouvert" (Vernissage)',
+    date:'Sat 23 May (through late June)', time:'Evening vernissage', venue:'Paris gallery (see link)',
+    desc:'Opening of a new solo show by Paris-based artist SMITH, whose practice sits at the crossroads of photography, performance and corporeal investigation.',
+    url:'https://www.parisgallerymap.com/openings_and_events',
+    sort:'2026-05-23'
+  },
+  {
+    cat:'gallery', chip:'🎨 Galleries', chipBg:'#E17055', chipDark:false,
+    name:'Szabolcs Bozó — "Antidote" (Vernissage)',
+    date:'Sat 23 May – 20 Jun', time:'Evening vernissage', venue:'Paris gallery (see link)',
+    desc:'Opening night for Hungarian painter Szabolcs Bozó\'s "Antidote" — emotional figurative works drawing wide critical attention this season.',
+    url:'https://www.parisgallerymap.com/openings_and_events',
+    sort:'2026-05-23'
+  },
+  {
+    cat:'exhibition', chip:'🖼️ Exhibitions', chipBg:'#d4a017', chipDark:false,
+    name:'Nuit des Musées — 22nd Edition',
+    date:'Sat 23 May', time:'~20:00 until midnight', venue:'80+ museums across Paris (free entry)',
+    desc:'Europe\'s annual Museum Night opens 80+ Paris institutions for free late-night access. Highlights: "Nuit Blanche des Fauves" choreography at MAM, DJ sets at Rodin, rooftop storytelling at Quai Branly. Theme: Focus Corée.',
+    url:'https://nuitdesmusees.culture.gouv.fr/',
+    sort:'2026-05-23'
+  },
+  {
+    cat:'sports', chip:'⚽ Sports', chipBg:'#4ECDC4', chipDark:false,
+    name:'Roland Garros — Main Draw Day 1',
+    date:'Sun 24 May', time:'From 11:00', venue:'Stade Roland Garros, 16th arr.',
+    desc:'First round of the main singles draw begins — the best day for simultaneous court action and atmosphere. Top seeds in action, atmosphere at its most electric.',
+    url:'https://www.rolandgarros.com/en-us/order-of-play/tentative/',
+    sort:'2026-05-24'
+  },
+  {
+    cat:'comedy', chip:'😂 Comedy', chipBg:'#6C5CE7', chipDark:false,
+    name:'Random Comedy Club',
+    date:'Sun 25 May', time:'Evening', venue:'Chouchou Hotel, Paris',
+    desc:'A lively Sunday stand-up showcase where comedians take turns on stage in an intimate hotel setting — 100% French humour, accessible to intermediate French speakers.',
+    url:'https://www.sortiraparis.com/en/what-to-see-in-paris/shows/guides/244131-comedy-shows-paris',
+    sort:'2026-05-25'
+  },
+];
+
+const grid = document.getElementById('grid');
+const statsEl = document.getElementById('stats');
+const allBtns = document.querySelectorAll('.filter-btn');
+let activeFilter = 'all';
+
+function render(filter) {
+    const list = filter === 'all' ? EVENTS : EVENTS.filter(e => e.cat === filter);
+    grid.innerHTML = '';
+    list.forEach((ev, i) => {
+        const a = document.createElement('a');
+        a.className = 'event-card';
+        a.href = ev.url;
+        a.target = '_blank';
+        a.rel = 'noopener noreferrer';
+        a.style.animationDelay = (i * 0.045) + 's';
+        a.innerHTML =
+            `<span class="chip${ev.chipDark ? ' dark' : ''}" style="background:${ev.chipBg}">${ev.chip}</span>` +
+            `<div class="event-name">${ev.name}</div>` +
+            `<div class="event-meta">` +
+              `<span class="ev-date">📅 ${ev.date}</span>` +
+              (ev.time ? `<span>🕐 ${ev.time}</span>` : '') +
+              `<span>📍 ${ev.venue}</span>` +
+            `</div>` +
+            `<div class="event-desc">${ev.desc}</div>` +
+            `<span class="event-link">More info →</span>`;
+        grid.appendChild(a);
+    });
+    statsEl.innerHTML = `Showing <strong>${list.length}</strong> event${list.length !== 1 ? 's' : ''}` +
+        (filter !== 'all' ? ` in <strong>${filter}</strong>` : ' across all categories');
+}
+
+allBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+        const cat = btn.dataset.cat;
+        if (cat === activeFilter && cat !== 'all') {
+            activeFilter = 'all';
+        } else {
+            activeFilter = cat;
+        }
+        allBtns.forEach(b => {
+            if (b.dataset.cat === 'all') { b.classList.remove('inactive'); return; }
+            b.classList.toggle('inactive', activeFilter !== 'all' && b.dataset.cat !== activeFilter);
+        });
+        render(activeFilter);
+    });
+});
+
+render('all');
+</script>
 </body>
 </html>
