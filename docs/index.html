@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🗼 Paris Weekly Events — May 20–26, 2026</title>
+    <title>🗼 Paris Weekly Events — May 25–31, 2026</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
@@ -114,7 +114,7 @@
 
     <header>
         <h1>🗼 Paris Weekly Events</h1>
-        <p class="date-range">May 20–26, 2026</p>
+        <p class="date-range">May 25–31, 2026</p>
         <p class="tagline">Curated every Monday from live sources — click any card for tickets &amp; info</p>
     </header>
 
@@ -123,9 +123,7 @@
         <button class="filter-btn" style="background:#FF6B6B" data-cat="popup">🎪 Pop-ups</button>
         <button class="filter-btn" style="background:#4ECDC4" data-cat="sports">⚽ Sports</button>
         <button class="filter-btn" style="background:#c8b800;color:#fff" data-cat="music">🎵 Live Music</button>
-        <button class="filter-btn" style="background:#d97fd9" data-cat="food">🍽️ Food/Dining</button>
         <button class="filter-btn" style="background:#54A0FF" data-cat="cinema">🎬 Cinema</button>
-        <button class="filter-btn" style="background:#A29BFE" data-cat="theater">🎭 Theater</button>
         <button class="filter-btn" style="background:#6C5CE7" data-cat="comedy">😂 Comedy</button>
         <button class="filter-btn" style="background:#00B894" data-cat="dance">💃 Dance</button>
         <button class="filter-btn" style="background:#d4a017;color:#fff" data-cat="exhibition">🖼️ Exhibitions</button>
@@ -136,218 +134,226 @@
     <div class="events-grid" id="grid"></div>
 
     <footer>
-        <p>Generated Mon 20 May 2026, 07:00 UTC · 09:00 Paris time ·
+        <p>Generated Mon 25 May 2026, 07:00 UTC · 09:00 Paris time ·
            <a href="https://github.com/Rasalghulsslayer/paris-weekly-planner">source</a> ·
            <a href="https://claude.ai/code/routines">Claude Code routines</a></p>
         <p class="source-domains">
-            Sources: sortiraparis.com · parisjetaime.com · rolandgarros.com · festivaljazzsaintgermainparis.com ·
-            fetedelanature.com · guimet.fr · nuitdesmusees.culture.gouv.fr · livenation.fr ·
-            paris.tastefestivals.com · songkick.com · parisselectbook.com · theatredelaville-paris.com ·
-            foiredutrone.com · cinematheque.fr
+            Sources: rolandgarros.com · olympics.com · stadefrance.com · parisbeerfestival.fr ·
+            ateliers-artistes-belleville.fr · jardinsjardin.com · parisgalleryweekend.com ·
+            sortiraparis.com · songkick.com · grandpalais.fr · musee-orsay.fr · quaibranly.fr ·
+            madparis.fr · musee-orangerie.fr · guimet.fr · atelier-lumieres.com · marmottan.fr ·
+            avoiretadanser.fr · mk2.com
         </p>
     </footer>
 </div>
 
 <script>
 const EVENTS = [
-  {
-    cat:'music', chip:'🎵 Live Music', chipBg:'#c8b800', chipDark:false,
-    name:'Oberkampf Music Festival',
-    date:'Wed 20 – Thu 21 May', time:'From 19:00', venue:'Nouveau Casino & Quartier Général, 11th',
-    desc:'Free two-day festival of international emerging talent — indie pop, soul and R&B. Line-up: Jazz Cuti, Elle Coves, Forest Blakk, Daydreamers and more across two neighbouring venues.',
-    url:'https://www.livenation.fr/event/oberkampf-music-festival-2026-paris-tickets-edp1650556',
-    sort:'2026-05-20'
-  },
-  {
-    cat:'music', chip:'🎵 Live Music', chipBg:'#c8b800', chipDark:false,
-    name:'Jazz à Saint-Germain-des-Prés — 25th Anniversary',
-    date:'Wed 20 – Sun 24 May', time:'Various', venue:'Multiple venues, 6th arr. (Saint-Germain Church, Péniche Le Son de la Terre, Réfectoire des Cordeliers…)',
-    desc:'Silver jubilee edition of the Left Bank\'s beloved jazz festival, mixing legends with new voices. Features saxophonist Émile Parisien, Hugh Coltman and Marion Rampal; some concerts are free.',
-    url:'https://festivaljazzsaintgermainparis.com/programmation/',
-    sort:'2026-05-20'
-  },
-  {
-    cat:'popup', chip:'🎪 Pop-ups', chipBg:'#FF6B6B', chipDark:false,
-    name:'Fête de la Nature — 20th Anniversary',
-    date:'Wed 20 – Mon 25 May', time:'Various', venue:'City-wide (Jardin des Plantes, La Défense, parks)',
-    desc:'Free nationwide nature festival in its 20th year — hundreds of free walks, workshops and biodiversity events across Paris. Nature Village at Jardin des Plantes on 23–24 May.',
-    url:'https://fetedelanature.com/',
-    sort:'2026-05-20'
-  },
-  {
-    cat:'popup', chip:'🎪 Pop-ups', chipBg:'#FF6B6B', chipDark:false,
-    name:'Foire du Trône — Final Weekend',
-    date:'Through Mon 25 May', time:'Mon–Thu & Sun 12:00–23:00 · Fri–Sat until 01:00', venue:'Pelouse de Reuilly, 12th arr.',
-    desc:'Last days of Europe\'s most celebrated funfair before it closes for the year. 220 rides including the most illuminated Ferris wheel in Europe and France\'s largest transportable roller coaster. Free entry.',
-    url:'https://www.foiredutrone.com/',
-    sort:'2026-05-20'
-  },
+  // ── MON 25 MAY ──
   {
     cat:'sports', chip:'⚽ Sports', chipBg:'#4ECDC4', chipDark:false,
-    name:'Roland Garros — French Open 2026',
-    date:'Wed 20 – Sun 24 May (this week)', time:'From 10:00 daily', venue:'Stade Roland Garros, 16th arr.',
-    desc:'Qualifying rounds Mon–Fri lead into the first round of the main singles and doubles draw on Sunday 24 May. Multiple matches run simultaneously; early-round tickets remain the most accessible.',
-    url:'https://www.rolandgarros.com/en-us/article/2026-full-schedule-calendar-qualifying-rounds-main-draw-singles-doubles-wheelchair-tennis',
-    sort:'2026-05-20'
+    name:'Roland Garros 2026 — Main Draw Day 2',
+    date:'Mon 25 May (tournament: 18 May – 7 Jun)', time:'From 10:00', venue:'Stade Roland Garros, 16th arr.',
+    desc:'First-round action continues on Day 2: Iga Swiatek headlines Chatrier vs Emerson Jones; Rybakina and Paolini open on the main courts; an all-French night session pits Humbert vs Mannarino and Monfils vs Gaston. Lenglen sees Shelton and Anisimova.',
+    url:'https://www.rolandgarros.com/en-us/order-of-play',
+    sort:'2026-05-25'
+  },
+  {
+    cat:'popup', chip:'🎪 Pop-ups', chipBg:'#FF6B6B', chipDark:false,
+    name:'Paris Beer Festival 2026 — 13th Edition',
+    date:'Mon 25 – Sun 31 May (Grand Final: Sat–Sun 30–31)', time:'Grand Final: Sat 12:00–23:30 · Sun 12:00–19:30', venue:'Ground Control, 81 rue du Charolais, 12th arr. (Grand Final); partner bars city-wide all week',
+    desc:'Paris\'s premier craft-beer celebration: five days of tasting workshops and brewer meet-ups across specialist bars, then the Grand Final at Ground Control with 60 independent breweries, 200+ beers on tap, food stalls and live music. Entry for Grand Final: €7.',
+    url:'https://parisbeerfestival.fr/en/',
+    sort:'2026-05-25'
+  },
+  {
+    cat:'cinema', chip:'🎬 Cinema', chipBg:'#54A0FF', chipDark:false,
+    name:'Cannes à Paris — Official Selection Screenings (FINAL DAYS)',
+    date:'Through Fri 29 May', time:'Various screenings', venue:'MK2 Bibliothèque, 13th arr.',
+    desc:'Final days of MK2\'s Cannes à Paris programme, showing competition films from the 2026 Cannes Film Festival official selection — your chance to catch jury-prize contenders on the big screen before wide release.',
+    url:'https://www.sortiraparis.com/en/what-to-do-in-paris/cinema-series/guides/115048-cannes-2026-festival-re-screenings-of-the-official-selection-films-at-mk2-bibliotheque',
+    sort:'2026-05-25'
+  },
+  // ── TUE 26 MAY ──
+  {
+    cat:'music', chip:'🎵 Live Music', chipBg:'#c8b800', chipDark:false,
+    name:'Sacré Sound Festival — Opening Week',
+    date:'Tue 26 May – Thu 4 Jun', time:'Various (evenings)', venue:'Multiple venues across Paris',
+    desc:'A 10-day immersive festival blending sacred traditions, contemporary music, jazz and electronic sounds. Concerts take place at churches, concert halls and unusual venues, exploring the dialogue between spiritual and experimental music from around the world.',
+    url:'https://www.sortiraparis.com/en/what-to-see-in-paris/concerts-music-festival/guides/190219-paris-may-2026-concerts-you-won-t-want-to-miss',
+    sort:'2026-05-26'
   },
   {
     cat:'dance', chip:'💃 Dance', chipBg:'#00B894', chipDark:false,
-    name:'Maldonne — Leïla Ka',
-    date:'Wed 20 – Thu 21 May', time:'20:00', venue:'Théâtre de la Ville – Les Abbesses, 18th arr.',
-    desc:'An intense contemporary dance piece by choreographer Leïla Ka interrogating feminine identities and their transformations through visceral, precisely controlled physical performance.',
-    url:'https://www.theatredelaville-paris.com/en/spectacles/saison-25-26/danse',
-    sort:'2026-05-20'
+    name:'June Events Festival — 20th Edition (Opens)',
+    date:'Tue 26 May – Sat 13 Jun', time:'Various', venue:'Cartoucherie de Vincennes &amp; partner venues',
+    desc:'One of France\'s most important contemporary choreography festivals opens its 20th edition. Opening week features Mithkal Alzghair, Emily Gualtieri and David Albert-Toth. Affordable tickets; free outdoor events throughout.',
+    url:'https://avoiretadanser.fr/agenda-danse-mai-2026-spectacles-festivals-paris-et-alentours/',
+    sort:'2026-05-26'
+  },
+  // ── WED 27 MAY ──
+  {
+    cat:'music', chip:'🎵 Live Music', chipBg:'#c8b800', chipDark:false,
+    name:'Gaëtan Roussel en concert',
+    date:'Wed 27 May', time:'20:00', venue:'Zénith Paris La Villette, 19th arr.',
+    desc:'The beloved singer-songwriter and Louise Attaque frontman performs his latest solo material alongside crowd-favourite catalogue classics at the iconic Zénith. A homecoming show long anticipated by Parisian fans.',
+    url:'https://www.sortiraparis.com/en/what-to-see-in-paris/concerts-music-festival/guides/190219-paris-may-2026-concerts-you-won-t-want-to-miss',
+    sort:'2026-05-27'
+  },
+  {
+    cat:'music', chip:'🎵 Live Music', chipBg:'#c8b800', chipDark:false,
+    name:'Zucchero — World Tour',
+    date:'Wed 27 May', time:'20:00', venue:'Adidas Arena, 17th arr.',
+    desc:'Italian rock legend Zucchero brings his signature mix of blues, soul and R&B to the Adidas Arena on his world tour. Known for incendiary live performances and a back catalogue spanning four decades.',
+    url:'https://www.sortiraparis.com/en/what-to-see-in-paris/concerts-music-festival/guides/190219-paris-may-2026-concerts-you-won-t-want-to-miss',
+    sort:'2026-05-27'
+  },
+  // ── THU 28 MAY ──
+  {
+    cat:'music', chip:'🎵 Live Music', chipBg:'#c8b800', chipDark:false,
+    name:'Flea (Red Hot Chili Peppers) — Solo Nights',
+    date:'Thu 28 &amp; Fri 29 May', time:'20:00', venue:'L\'Alhambra, 10th arr.',
+    desc:'The legendary RHCP bassist performs two intimate solo evenings at the historic Alhambra — a rare chance to see Flea outside the stadium context, exploring jazz-inflected improvisation and experimental bass work.',
+    url:'https://www.sortiraparis.com/en/what-to-see-in-paris/concerts-music-festival/guides/190219-paris-may-2026-concerts-you-won-t-want-to-miss',
+    sort:'2026-05-28'
+  },
+  {
+    cat:'music', chip:'🎵 Live Music', chipBg:'#c8b800', chipDark:false,
+    name:'Damso — La Défense Arena (4 nights)',
+    date:'Thu 28 – Sun 31 May', time:'20:00', venue:'Paris La Défense Arena, Nanterre',
+    desc:'Belgium\'s most celebrated rapper delivers four nights of his electrifying live show at the massive La Défense Arena — full catalogue performed with cinematic production values and a devoted Parisian crowd.',
+    url:'https://www.sortiraparis.com/en/what-to-see-in-paris/concerts-music-festival/guides/190219-paris-may-2026-concerts-you-won-t-want-to-miss',
+    sort:'2026-05-28'
+  },
+  {
+    cat:'popup', chip:'🎪 Pop-ups', chipBg:'#FF6B6B', chipDark:false,
+    name:'Jardins, Jardin — 20th Edition',
+    date:'Thu 28 – Sun 31 May', time:'Thu–Fri 10:00–21:00 · Sat 10:00–19:00 · Sun 10:00–18:00', venue:'Villa Windsor Park, Bois de Boulogne, 16th arr.',
+    desc:'The landmark garden-design festival marks its 20th anniversary with a focus on biodiversity and collaborative action. Over 30 innovative landscape installations, expert talks and workshops in the gorgeous Windsor park. €15 adults; under-12s free.',
+    url:'https://www.jardinsjardin.com/',
+    sort:'2026-05-28'
+  },
+  {
+    cat:'gallery', chip:'🎨 Galleries', chipBg:'#E17055', chipDark:false,
+    name:'Ateliers d\'Artistes de Belleville — Open Studios (37th Ed.)',
+    date:'Thu 28 – Sun 31 May', time:'14:00–20:00 daily (free entry)', venue:'103 studios across 10th, 11th, 19th &amp; 20th arr. — HQ: 1 rue Francis-Picabia',
+    desc:'170+ artists fling open 103 studios across Belleville for the 37th Portes Ouvertes. All visual-art mediums represented — painting, sculpture, photography, ceramics, printmaking. Italian guest artists and a Rimbaud-themed show are this year\'s highlights.',
+    url:'https://ateliers-artistes-belleville.fr/en/porte-ouverte/portes-ouvertes-2026/',
+    sort:'2026-05-28'
   },
   {
     cat:'dance', chip:'💃 Dance', chipBg:'#00B894', chipDark:false,
-    name:'La Dame aux camélias — Opéra de Paris (LAST WEEK)',
-    date:'Ongoing – closes Sat 23 May', time:'19:30', venue:'Palais Garnier, 9th arr.',
-    desc:'John Neumeier\'s acclaimed narrative ballet to Chopin\'s music, inspired by Dumas fils\' novel. This week marks the final performances of the run — genuinely last chance.',
-    url:'https://www.operadeparis.fr/en/useful-information/opening-calendar',
-    sort:'2026-05-20'
+    name:'Le Sacre du printemps — Dewey Dell',
+    date:'Thu 28 – Sat 30 May', time:'20:00', venue:'Théâtre Silvia Monfort, 15th arr.',
+    desc:'Italian company Dewey Dell presents their visceral reading of Stravinsky\'s Rite of Spring as part of the Paris-Globe international festival, combining contemporary dance, visual art and animal imagery in a striking multimedia staging.',
+    url:'https://avoiretadanser.fr/agenda-danse-mai-2026-spectacles-festivals-paris-et-alentours/',
+    sort:'2026-05-28'
+  },
+  // ── FRI 29 MAY ──
+  {
+    cat:'music', chip:'🎵 Live Music', chipBg:'#c8b800', chipDark:false,
+    name:'Aya Nakamura — Stade de France (3 sold-out nights)',
+    date:'Fri 29 – Sun 31 May', time:'18:30', venue:'Stade de France, Saint-Denis',
+    desc:'The most-listened-to French female artist in history — 7 billion streams worldwide — performs three nights at the Stade de France on her "Destinée" world tour. Expect colossal production and an electric homecoming atmosphere.',
+    url:'https://www.stadefrance.com/en/ticket/aya-nakamura',
+    sort:'2026-05-29'
   },
   {
-    cat:'exhibition', chip:'🖼️ Exhibitions', chipBg:'#d4a017', chipDark:false,
-    name:'Silla: Gold and the Sacred — OPENS TODAY',
-    date:'Opens Wed 20 May (through 31 Aug)', time:'Museum hours', venue:'Musée Guimet, 16th arr.',
-    desc:'The first exhibition in Europe dedicated exclusively to the ancient Korean Silla kingdom: 148 artefacts including gold crowns, jade ornaments and intricate jewellery. Marks the 140th anniversary of Franco-Korean diplomatic ties.',
-    url:'https://www.guimet.fr/en/exhibitions/silla-gold-and-sacred-royal-treasures-korea-57-bce-935-ad',
-    sort:'2026-05-20'
+    cat:'gallery', chip:'🎨 Galleries', chipBg:'#E17055', chipDark:false,
+    name:'Paris Gallery Weekend 2026',
+    date:'Fri 29 – Sun 31 May', time:'Fri 17:00–21:00 (vernissages) · Sat–Sun 10:00–19:00', venue:'70+ galleries across Matignon, Marais, Saint-Germain &amp; NE Paris',
+    desc:'Seventy-plus galleries open simultaneously for free public access, featuring 150+ artists, vernissages, artist talks, book signings and surprise performances. Thematic walking tours available. Entirely free — one of the art calendar\'s great annual events.',
+    url:'https://parisgalleryweekend.com/en/agenda/',
+    sort:'2026-05-29'
   },
   {
+    cat:'comedy', chip:'😂 Comedy', chipBg:'#6C5CE7', chipDark:false,
+    name:'Alexis Tramoni — Le Meilleur et le Pire',
+    date:'Fri 29 &amp; Sat 30 May', time:'21:30', venue:'Petit Palais des Glaces, 10th arr.',
+    desc:'Quick-fire stand-up from one of the French comedy circuit\'s most consistently sold-out performers. Tramoni dissects everyday absurdities with disarming sharpness — runs every Friday and Saturday through late June.',
+    url:'https://www.sortiraparis.com/en/what-to-see-in-paris/shows/guides/325370-comedy-shows-in-paris-in-may-2026-the-shows-to-see',
+    sort:'2026-05-29'
+  },
+  // ── SUN 31 MAY ──
+  {
+    cat:'comedy', chip:'😂 Comedy', chipBg:'#6C5CE7', chipDark:false,
+    name:'Random Comedy Club',
+    date:'Sun 31 May', time:'Evening (doors ~19:00)', venue:'Chouchou Hotel, Paris',
+    desc:'An intimate Sunday stand-up showcase where established names and rising stars take turns on stage — 100% French humour, beloved by locals. Best suited to intermediate French speakers, but the energy is infectious.',
+    url:'https://www.sortiraparis.com/en/what-to-see-in-paris/shows/guides/244131-comedy-shows-paris',
+    sort:'2026-05-31'
+  },
+  // ── ONGOING EXHIBITIONS ──
+  {
     cat:'exhibition', chip:'🖼️ Exhibitions', chipBg:'#d4a017', chipDark:false,
-    name:'Heritage in Resistance: Timbuktu to Odessa — OPENS TODAY',
-    date:'Opens Wed 20 May (through 3 Jan 2027)', time:'Museum hours', venue:'Cité de l\'architecture et du patrimoine, 16th arr.',
-    desc:'A new exhibition exploring how communities worldwide resist the destruction of their heritage in times of conflict, from Mali to Ukraine, with striking archival photography and artefacts.',
-    url:'https://www.citedelarchitecture.fr',
-    sort:'2026-05-20'
+    name:'Hilma af Klint — Major Retrospective',
+    date:'Ongoing (6 May – 30 Aug)', time:'Museum hours', venue:'Grand Palais, 8th arr.',
+    desc:'Sweden\'s abstract pioneer — whose paintings predate Kandinsky\'s by years — receives her largest French retrospective, with 100+ rarely exhibited canvases across the newly renovated Grand Palais. A once-in-a-generation showing.',
+    url:'https://www.grandpalais.fr',
+    sort:'2026-05-25'
   },
   {
     cat:'exhibition', chip:'🖼️ Exhibitions', chipBg:'#d4a017', chipDark:false,
     name:'Renoir and Love',
     date:'Ongoing (17 Mar – 19 Jul)', time:'Museum hours', venue:'Musée d\'Orsay, 7th arr.',
-    desc:'A major retrospective centred on tenderness, joy and human connection in Renoir\'s masterpieces, drawing on rarely loaned works from international collections.',
+    desc:'A landmark retrospective centred on tenderness, intimacy and human connection in Renoir\'s oeuvre, drawing on rarely loaned international works. One of the season\'s most-visited major exhibitions.',
     url:'https://www.musee-orsay.fr',
-    sort:'2026-05-20'
+    sort:'2026-05-25'
   },
   {
     cat:'exhibition', chip:'🖼️ Exhibitions', chipBg:'#d4a017', chipDark:false,
-    name:'Hilma af Klint Retrospective',
-    date:'Ongoing (6 May – 30 Aug)', time:'Museum hours', venue:'Grand Palais, 8th arr.',
-    desc:'The Swedish abstract pioneer — whose work predates Kandinsky — gets her largest French retrospective, with over 100 rarely seen canvases displayed across the newly renovated Grand Palais.',
-    url:'https://www.grandpalais.fr',
-    sort:'2026-05-20'
-  },
-  {
-    cat:'exhibition', chip:'🖼️ Exhibitions', chipBg:'#d4a017', chipDark:false,
-    name:'Henri Rousseau Retrospective',
-    date:'Ongoing (25 Mar – 20 Jul)', time:'Museum hours', venue:'Musée de l\'Orangerie, 1st arr.',
-    desc:'An exceptional survey of "Le Douanier" Rousseau — the self-taught naïve master whose dreamlike jungle paintings captivated Picasso, the Surrealists and the contemporary art world alike.',
-    url:'https://www.musee-orangerie.fr',
-    sort:'2026-05-20'
-  },
-  {
-    cat:'theater', chip:'🎭 Theater', chipBg:'#A29BFE', chipDark:false,
-    name:'Les Demoiselles de Rochefort — Live Musical',
-    date:'Ongoing (through 14 Jun)', time:'Various', venue:'Théâtre du Lido, Champs-Élysées, 8th arr.',
-    desc:'Jacques Demy and Michel Legrand\'s beloved musical brought to life on stage on the Champs-Élysées — full cast singing, dancing and Technicolor costumes from the cinematic classic.',
-    url:'https://parisjetaime.com/eng/article/calendar-of-shows-in-paris-a671',
-    sort:'2026-05-20'
-  },
-  {
-    cat:'theater', chip:'🎭 Theater', chipBg:'#A29BFE', chipDark:false,
-    name:'Sherlock Holmes: The Musical Adventure (final weeks)',
-    date:'Ongoing (through 31 May)', time:'Various', venue:'La Gaîté Rive Gauche, 13th arr.',
-    desc:'A witty, swashbuckling original musical following the great detective — strong reviews for sets, cast and score. Final two weeks of the run.',
-    url:'https://www.gaite-paris.com',
-    sort:'2026-05-20'
-  },
-  {
-    cat:'cinema', chip:'🎬 Cinema', chipBg:'#54A0FF', chipDark:false,
-    name:'Cinémathèque: Serial Killer Cinema Retrospective',
-    date:'Through Tue 26 May', time:'Various screenings', venue:'Cinémathèque française, 12th arr.',
-    desc:'A specially curated programme of landmark serial-killer films from Fritz Lang\'s M to modern thrillers, with archival prints and post-screening discussions. Final week.',
-    url:'https://www.cinematheque.fr',
-    sort:'2026-05-20'
+    name:'Feathers of Paradise — Birds of New Guinea',
+    date:'Ongoing (12 May – 8 Nov)', time:'Museum hours', venue:'Musée du Quai Branly – Jacques Chirac, 7th arr.',
+    desc:'Nearly 190 objects — ceremonial feather headdresses, natural specimens and artefacts — explore the extraordinary birds-of-paradise of New Guinea and their deep cultural significance across indigenous Melanesian societies.',
+    url:'https://www.quaibranly.fr',
+    sort:'2026-05-25'
   },
   {
     cat:'exhibition', chip:'🖼️ Exhibitions', chipBg:'#d4a017', chipDark:false,
     name:'Fashion in Majesty: Haute Couture at the Thai Court',
     date:'Ongoing (13 May – 1 Nov)', time:'Museum hours', venue:'Musée des Arts Décoratifs, 1st arr.',
-    desc:'A sumptuous dialogue between French haute couture houses and the royal ceremonial traditions of the Thai court — garments, jewellery and textiles from both cultures in conversation.',
+    desc:'A sumptuous dialogue between French haute couture houses and Thai royal ceremonial traditions — over 100 garments, accessories and textiles from both cultures in conversation. A uniquely cross-cultural fashion event.',
     url:'https://www.madparis.fr',
-    sort:'2026-05-20'
-  },
-  {
-    cat:'food', chip:'🍽️ Food/Dining', chipBg:'#d97fd9', chipDark:false,
-    name:'Taste of Paris 2026',
-    date:'Thu 21 – Sun 24 May', time:'Lunch 11:30–16:00 · Dinner 19:00–23:30', venue:'Grand Palais Éphémère, 7th arr.',
-    desc:'Paris\'s flagship culinary festival: 80+ top chefs including Christian Le Squer, Thierry Marx and Nina Metayer serving tasting portions (€6–12 each), live cooking demos and masterclasses across four days.',
-    url:'https://paris.tastefestivals.com/',
-    sort:'2026-05-21'
-  },
-  {
-    cat:'music', chip:'🎵 Live Music', chipBg:'#c8b800', chipDark:false,
-    name:'Vanessa Paradis — Le retour des beaux jours',
-    date:'Thu 21 May', time:'20:00', venue:'Zénith Paris La Villette, 19th arr.',
-    desc:'Vanessa Paradis\'s long-awaited return to the Paris stage, presenting new album material alongside classics like "Marilyn & John" and "Divine Idylle". A second night (22 May) was added due to instant sell-out.',
-    url:'https://parisjetaime.com/eng/event/concert-vanessa-paradis-zenith-la-villette-e1667',
-    sort:'2026-05-21'
-  },
-  {
-    cat:'music', chip:'🎵 Live Music', chipBg:'#c8b800', chipDark:false,
-    name:'Vanessa Paradis — 2nd Night',
-    date:'Fri 22 May', time:'20:00', venue:'Zénith Paris La Villette, 19th arr.',
-    desc:'Additional date added after the first night sold out immediately. Same setlist mixing the new album "Le retour des beaux jours" with catalogue classics.',
-    url:'https://www.songkick.com/concerts/42653732-vanessa-paradis-at-zenith-paris-la-villette',
-    sort:'2026-05-22'
-  },
-  {
-    cat:'comedy', chip:'😂 Comedy', chipBg:'#6C5CE7', chipDark:false,
-    name:'Alexis Tramoni — Le Meilleur et le Pire',
-    date:'Fri 22 & Sat 23 May', time:'21:30', venue:'Petit Palais des Glaces, 10th arr.',
-    desc:'Stand-up show running every Friday and Saturday through late June. Tramoni\'s quick-fire set earns consistent sell-outs for his dissection of everyday absurdities.',
-    url:'https://www.sortiraparis.com/en/what-to-see-in-paris/shows/guides/325370-comedy-shows-in-paris-in-may-2026-the-shows-to-see',
-    sort:'2026-05-22'
-  },
-  {
-    cat:'gallery', chip:'🎨 Galleries', chipBg:'#E17055', chipDark:false,
-    name:'SMITH — "Ici grand ouvert" (Vernissage)',
-    date:'Sat 23 May (through late June)', time:'Evening vernissage', venue:'Paris gallery (see link)',
-    desc:'Opening of a new solo show by Paris-based artist SMITH, whose practice sits at the crossroads of photography, performance and corporeal investigation.',
-    url:'https://www.parisgallerymap.com/openings_and_events',
-    sort:'2026-05-23'
-  },
-  {
-    cat:'gallery', chip:'🎨 Galleries', chipBg:'#E17055', chipDark:false,
-    name:'Szabolcs Bozó — "Antidote" (Vernissage)',
-    date:'Sat 23 May – 20 Jun', time:'Evening vernissage', venue:'Paris gallery (see link)',
-    desc:'Opening night for Hungarian painter Szabolcs Bozó\'s "Antidote" — emotional figurative works drawing wide critical attention this season.',
-    url:'https://www.parisgallerymap.com/openings_and_events',
-    sort:'2026-05-23'
+    sort:'2026-05-25'
   },
   {
     cat:'exhibition', chip:'🖼️ Exhibitions', chipBg:'#d4a017', chipDark:false,
-    name:'Nuit des Musées — 22nd Edition',
-    date:'Sat 23 May', time:'~20:00 until midnight', venue:'80+ museums across Paris (free entry)',
-    desc:'Europe\'s annual Museum Night opens 80+ Paris institutions for free late-night access. Highlights: "Nuit Blanche des Fauves" choreography at MAM, DJ sets at Rodin, rooftop storytelling at Quai Branly. Theme: Focus Corée.',
-    url:'https://nuitdesmusees.culture.gouv.fr/',
-    sort:'2026-05-23'
+    name:'Silla: Gold and the Sacred — Korean Royal Treasures',
+    date:'Ongoing (20 May – 31 Aug)', time:'Museum hours', venue:'Musée Guimet, 16th arr.',
+    desc:'Europe\'s first exhibition dedicated to the ancient Silla kingdom (57 BCE–935 AD): 148 artefacts including breathtaking gold crowns, jade ornaments and intricate jewellery. Marks the 140th anniversary of Franco-Korean diplomatic ties.',
+    url:'https://www.guimet.fr',
+    sort:'2026-05-25'
   },
   {
-    cat:'sports', chip:'⚽ Sports', chipBg:'#4ECDC4', chipDark:false,
-    name:'Roland Garros — Main Draw Day 1',
-    date:'Sun 24 May', time:'From 11:00', venue:'Stade Roland Garros, 16th arr.',
-    desc:'First round of the main singles draw begins — the best day for simultaneous court action and atmosphere. Top seeds in action, atmosphere at its most electric.',
-    url:'https://www.rolandgarros.com/en-us/order-of-play/tentative/',
-    sort:'2026-05-24'
+    cat:'exhibition', chip:'🖼️ Exhibitions', chipBg:'#d4a017', chipDark:false,
+    name:'Renaissance Immersive — Ateliers des Lumières',
+    date:'Ongoing (through 27 Jun)', time:'Various (booking advised)', venue:'Ateliers des Lumières, 11th arr.',
+    desc:'Monumental digital projections bring Leonardo da Vinci, Raphael and Michelangelo\'s masterworks to life across 3,000 m² of former industrial space. One of Paris\'s most-visited immersive experiences.',
+    url:'https://www.atelier-lumieres.com',
+    sort:'2026-05-25'
   },
   {
-    cat:'comedy', chip:'😂 Comedy', chipBg:'#6C5CE7', chipDark:false,
-    name:'Random Comedy Club',
-    date:'Sun 25 May', time:'Evening', venue:'Chouchou Hotel, Paris',
-    desc:'A lively Sunday stand-up showcase where comedians take turns on stage in an intimate hotel setting — 100% French humour, accessible to intermediate French speakers.',
-    url:'https://www.sortiraparis.com/en/what-to-see-in-paris/shows/guides/244131-comedy-shows-paris',
+    cat:'exhibition', chip:'🖼️ Exhibitions', chipBg:'#d4a017', chipDark:false,
+    name:'Henri Rousseau — "Le Douanier" Retrospective',
+    date:'Ongoing (25 Mar – 20 Jul)', time:'Museum hours', venue:'Musée de l\'Orangerie, 1st arr.',
+    desc:'An exceptional survey of the self-taught naïve master whose dreamlike jungles captivated Picasso and the Surrealists alike. Over 50 major works, with international loans including rarely seen canvases from American and Japanese collections.',
+    url:'https://www.musee-orangerie.fr',
+    sort:'2026-05-25'
+  },
+  {
+    cat:'exhibition', chip:'🖼️ Exhibitions', chipBg:'#d4a017', chipDark:false,
+    name:'Jardins des Lumières (1750–1800) — Versailles',
+    date:'Ongoing (5 May – 27 Sep)', time:'Versailles museum hours', venue:'Grand Trianon, Palace of Versailles',
+    desc:'Nearly 160 paintings, drawings, models and period furniture explore the golden age of the landscape garden at Versailles\'s Grand Trianon. A beautiful excuse for a day trip to the palace grounds.',
+    url:'https://www.chateauversailles.fr',
+    sort:'2026-05-25'
+  },
+  {
+    cat:'exhibition', chip:'🖼️ Exhibitions', chipBg:'#d4a017', chipDark:false,
+    name:'Giovanni Segantini — Alpine Symbolism',
+    date:'Ongoing (29 Apr – 16 Aug)', time:'Museum hours', venue:'Musée Marmottan Monet, 16th arr.',
+    desc:'The Italian Symbolist\'s radiant Alpine landscapes — full of Divisionist luminosity and mountain light — receive their long-overdue Parisian spotlight at the Marmottan. A quieter gem beside the season\'s blockbusters.',
+    url:'https://www.marmottan.fr',
     sort:'2026-05-25'
   },
 ];
