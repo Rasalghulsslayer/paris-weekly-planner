@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🗼 Paris Weekly Events — June 8–14, 2026</title>
+    <title>🗼 Paris Weekly Events — June 15–21, 2026</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
@@ -114,7 +114,7 @@
 
     <header>
         <h1>🗼 Paris Weekly Events</h1>
-        <p class="date-range">June 8–14, 2026</p>
+        <p class="date-range">June 15–21, 2026</p>
         <p class="tagline">Curated every Monday from live sources — click any card for tickets &amp; info</p>
     </header>
 
@@ -136,294 +136,274 @@
     <div class="events-grid" id="grid"></div>
 
     <footer>
-        <p>Generated Mon 8 Jun 2026, 07:00 UTC · 09:00 Paris time ·
+        <p>Generated Mon 15 Jun 2026, 07:00 UTC · 09:00 Paris time ·
            <a href="https://github.com/Rasalghulsslayer/paris-weekly-planner">source</a> ·
            <a href="https://claude.ai/code/routines">Claude Code routines</a></p>
         <p class="source-domains">
-            Sources: sortiraparis.com · parisjetaime.com · songkick.com · accorarena.com ·
-            olympiahall.com · stadefrance.com · jeudepaume.org · parisdiscoveryguide.com ·
-            secretsofparis.com · galleriesnow.net · cometoparis.com
+            Sources: sortiraparis.com · parisjetaime.com · parisdiscoveryguide.com ·
+            galleriesnow.net · secretsofparis.com · cometoparis.com · parisinsidersguide.com
         </p>
     </footer>
 </div>
 
 <script>
 const EVENTS = [
-  // ── MON 8 JUN ──
+  // ── MON 15 JUN ──
   {
     cat:'music', chip:'🎵 Live Music', chipBg:'#c8b800', chipDark:false,
-    name:'Ensemble Royal de Paris — Vivaldi, Bach &amp; Mozart',
-    date:'Mon 8, Wed 10, Fri 12, Sat 13 Jun', time:'Evening (check classictic.com)',
-    venue:'Église Saint-Julien-le-Pauvre, 5th arr.',
-    desc:'Intimate candlelit performances of Vivaldi, Bach and Mozart in one of Paris\'s oldest churches, steps from Notre-Dame. Multiple dates this week — book ahead as these regularly sell out.',
-    url:'https://www.sortiraparis.com/en/what-to-see-in-paris/concerts-music-festival/guides/192674-paris-june-2026-concerts-you-won-t-want-to-miss',
-    sort:'2026-06-08'
-  },
-  {
-    cat:'music', chip:'🎵 Live Music', chipBg:'#c8b800', chipDark:false,
-    name:'Die Entführung aus dem Serail — Mozart',
-    date:'Mon 8 Jun', time:'Evening (check theatrechampselysees.fr)',
-    venue:'Théâtre des Champs-Élysées, 8th arr.',
-    desc:'Mozart\'s sparkling comic opera "The Abduction from the Seraglio" at one of Paris\'s grandest opera venues — lavish stagecraft, dazzling vocal fireworks and one of the 18th century\'s most irresistible scores.',
-    url:'https://www.sortiraparis.com/en/news/in-paris/guides/346264-what-to-do-in-paris-on-monday-june-8-2026-today-s-outings-and-events',
-    sort:'2026-06-08'
+    name:'Symphonic &amp; Sacred Concert — Église de la Madeleine',
+    date:'Mon 15 Jun', time:'Evening (check venue)',
+    venue:'Église de la Madeleine, 8th arr.',
+    desc:'An exceptional symphonic and sacred concert inside the grandeur of La Madeleine — one of Paris\'s most acoustically magnificent neoclassical churches, with soaring columns and a spectacular organ.',
+    url:'https://parisjetaime.com/eng/article/calendar-of-concerts-in-paris-a672',
+    sort:'2026-06-15'
   },
   {
     cat:'theater', chip:'🎭 Theater', chipBg:'#A29BFE', chipDark:false,
     name:'Les Demoiselles de Rochefort — FINAL WEEK',
-    date:'Mon 8 – Sun 14 Jun (closing night Sun)', time:'Check Théâtre du Lido',
+    date:'Mon 15 – Sun 21 Jun (closing night)', time:'Check Théâtre du Lido',
     venue:'Théâtre du Lido, Champs-Élysées, 8th arr.',
-    desc:'Last chance — this joyful stage adaptation of Jacques Demy &amp; Michel Legrand\'s beloved film musical closes on Sunday. If you\'ve been meaning to see it, this is it.',
+    desc:'Absolute last chance — this joyful stage adaptation of Jacques Demy &amp; Michel Legrand\'s beloved film musical closes for good on Sunday 21 June. If you\'ve been meaning to see it, now or never.',
     url:'https://www.sortiraparis.com/en/what-to-see-in-paris/theater/guides/192419-theatre-shows-to-see-in-paris-in-june-2026-our-pick-of-the-month',
-    sort:'2026-06-08'
-  },
-  {
-    cat:'popup', chip:'🎪 Pop-ups', chipBg:'#FF6B6B', chipDark:false,
-    name:'JR — La Caverne du Pont Neuf',
-    date:'Mon 8 – Sun 14 Jun (ongoing through 28 Jun)', time:'Outdoor installation (always visible)',
-    venue:'Pont Neuf, 1st arr.',
-    desc:'Street artist JR\'s monumental immersive cave transforms Paris\'s oldest bridge into 120 metres of optical illusions, inflatable structures and plays of light. Step inside — free and open around the clock.',
-    url:'https://secretsofparis.com/paris-events-calendar/whats-on-june-2026/',
-    sort:'2026-06-08'
-  },
-  {
-    cat:'food', chip:'🍽️ Food/Dining', chipBg:'#FF9FF3', chipDark:true,
-    name:'Tous au Restaurant 2026 — Final Week',
-    date:'Mon 8 – Sun 14 Jun (last week)', time:'By reservation',
-    venue:'~1,000 participating restaurants across Paris &amp; Île-de-France',
-    desc:'The final week of France\'s most generous dining event: book at any participating restaurant and receive a complimentary menu alongside yours. Reserve quickly — tables fill fast at the end of the run.',
-    url:'https://www.parisdiscoveryguide.com/paris-events-june.html',
-    sort:'2026-06-08'
+    sort:'2026-06-15'
   },
   {
     cat:'theater', chip:'🎭 Theater', chipBg:'#A29BFE', chipDark:false,
-    name:'Le Duplex — Théâtre de Paris',
-    date:'Ongoing (through Sun 5 Jul)', time:'Check Théâtre de Paris',
-    venue:'Théâtre de Paris, 9th arr.',
-    desc:'Didier Caron\'s hit comedy brings together Anny Duperey, Francis Perrin, Corinne Touzet and Philippe Lelièvre in a farcical tangle of mistaken identities. Warm, clever and reliably entertaining.',
+    name:'Napo — FINAL DAYS',
+    date:'Mon 15 – Wed 17 Jun (closing)', time:'Check Comédie Bastille',
+    venue:'Comédie Bastille, 11th arr.',
+    desc:'Last three performances of this satirical comedy imagining Napoleon transported to 2026 to run for president. Timely political farce at the Comédie Bastille — closes Wednesday.',
+    url:'https://www.sortiraparis.com/en/what-to-see-in-paris/theater/guides/116926-the-comedies-to-see-in-paris-theatres-in-june-2026',
+    sort:'2026-06-15'
+  },
+  {
+    cat:'theater', chip:'🎭 Theater', chipBg:'#A29BFE', chipDark:false,
+    name:'L\'Indiscipline — Parisian Premiere',
+    date:'Mon 15 &amp; Wed 17 Jun', time:'Check Studio Hébertot',
+    venue:'Studio Hébertot, 17th arr.',
+    desc:'Two of the first Parisian performances of this fresh new production at Studio Hébertot. Monday 15 and Wednesday 17 June mark the beginning of its Paris run — catch it early.',
     url:'https://www.sortiraparis.com/en/what-to-see-in-paris/theater/guides/192419-theatre-shows-to-see-in-paris-in-june-2026-our-pick-of-the-month',
-    sort:'2026-06-08'
+    sort:'2026-06-15'
   },
   {
     cat:'theater', chip:'🎭 Theater', chipBg:'#A29BFE', chipDark:false,
     name:'Big Mother — Théâtre des Béliers Parisiens',
-    date:'Ongoing (Tue–Sun, through Mon 30 Jun)', time:'Check Théâtre des Béliers Parisiens',
+    date:'Tue–Sun through Mon 30 Jun', time:'Check Théâtre des Béliers Parisiens',
     venue:'Théâtre des Béliers Parisiens, 15th arr.',
-    desc:'Mélody Mourey\'s politico-journalistic thriller imagines a near-future France ruled by algorithmic surveillance. Gripping, timely and sharply performed — extended by popular demand through the end of June.',
+    desc:'Mélody Mourey\'s gripping politico-journalistic thriller imagines a near-future France ruled by algorithmic surveillance — sharp, timely and powerfully performed. Extended through June by popular demand.',
     url:'https://www.sortiraparis.com/en/what-to-see-in-paris/theater/guides/192419-theatre-shows-to-see-in-paris-in-june-2026-our-pick-of-the-month',
-    sort:'2026-06-08'
+    sort:'2026-06-15'
   },
   {
-    cat:'exhibition', chip:'🖼️ Exhibitions', chipBg:'#d4a017', chipDark:false,
-    name:'Gianni Versace Retrospective',
-    date:'Ongoing (5 Jun – 6 Sep)', time:'Museum hours',
-    venue:'Musée Maillol, 7th arr.',
-    desc:'The first major retrospective devoted to Gianni Versace — iconic gowns, archive photographs and personal objects tracing the Milanese maestro\'s revolution in glamour and provocation. A rare Paris opportunity.',
-    url:'https://www.sortiraparis.com/en/what-to-visit-in-paris/exhibit-museum/guides/53047-june-2026-exhibitions-this-month-s-artistic-outings-in-paris-and-ile-de-france',
-    sort:'2026-06-08'
-  },
-  {
-    cat:'gallery', chip:'🎨 Galleries', chipBg:'#E17055', chipDark:false,
-    name:'JR — Les Esquisses de la Caverne at Perrotin',
-    date:'Ongoing (5 Jun – 25 Jul)', time:'Gallery hours (free, check perrotin.com)',
-    venue:'Galerie Perrotin, 3rd arr.',
-    desc:'A companion to the Pont Neuf installation: JR exhibits the drawings, collages and preparatory studies for La Caverne — a rare glimpse into the artist\'s creative process. Free admission.',
-    url:'https://www.galleriesnow.net/exhibitions/paris/',
-    sort:'2026-06-08'
+    cat:'theater', chip:'🎭 Theater', chipBg:'#A29BFE', chipDark:false,
+    name:'Mission Florimont — Théâtre Rive Gauche',
+    date:'Through Sat 28 Jun', time:'Check Théâtre Rive Gauche',
+    venue:'Théâtre Rive Gauche, 14th arr.',
+    desc:'Fast-paced burlesque adventure comedy with a colorful cast of characters — reliably entertaining light-touch farce running through late June on the Left Bank.',
+    url:'https://www.sortiraparis.com/en/what-to-see-in-paris/shows/guides/324764-new-shows-in-paris-in-june-2026-theatre-comedy-dance-and-magic',
+    sort:'2026-06-15'
   },
   {
     cat:'comedy', chip:'😂 Comedy', chipBg:'#6C5CE7', chipDark:false,
     name:'Y\'a de la joie! — Michaël Hirsch',
-    date:'Ongoing (through Wed 25 Jun)', time:'Check Théâtre de l\'Œuvre',
+    date:'Through Wed 25 Jun', time:'Check Théâtre de l\'Œuvre',
     venue:'Théâtre de l\'Œuvre, 9th arr.',
-    desc:'Michaël Hirsch\'s warmly received one-man show — an effervescent, generous performance directed by Mikaël Chirinian. Extended at the Théâtre de l\'Œuvre through late June by popular demand.',
-    url:'https://www.sortiraparis.com/en/what-to-see-in-paris/shows/guides/325360-the-comedy-shows-to-catch-in-paris-in-june-2026',
-    sort:'2026-06-08'
-  },
-  // ── TUE 9 JUN ──
-  {
-    cat:'music', chip:'🎵 Live Music', chipBg:'#c8b800', chipDark:false,
-    name:'Doja Cat — Tour Ma Vie World Tour',
-    date:'Tue 9 Jun', time:'19:00 (doors); check accorarena.com',
-    venue:'Accor Arena (Bercy), 12th arr.',
-    desc:'Pop\'s most theatrically inventive performer brings her "Tour Ma Vie" world tour to Bercy — elaborate staging, rapid-fire costume changes and the full spectrum from Planet Her to her latest album Vie.',
-    url:'https://www.accorarena.com/en/events-and-tickets/doja-cat--84a09',
-    sort:'2026-06-09'
-  },
-  {
-    cat:'music', chip:'🎵 Live Music', chipBg:'#c8b800', chipDark:false,
-    name:'Ercole amante — Opéra Bastille',
-    date:'Tue 9, Fri 12, Sun 14 Jun', time:'Evening (check operaparis.fr)',
-    venue:'Opéra Bastille, 12th arr.',
-    desc:'A rare revival of this 17th-century Baroque opera at the Bastille — grand theatrical spectacle with lavish period staging and the Paris Opera\'s world-class cast. Three performances this week.',
-    url:'https://www.sortiraparis.com/en/what-to-see-in-paris/concerts-music-festival/guides/192674-paris-june-2026-concerts-you-won-t-want-to-miss',
-    sort:'2026-06-09'
-  },
-  {
-    cat:'exhibition', chip:'🖼️ Exhibitions', chipBg:'#d4a017', chipDark:false,
-    name:'Sumo, Sacred Forces — Bruno Aveillan (OPENS)',
-    date:'Tue 9 Jun – Sat 26 Sep', time:'Check Maison de la Culture du Japon',
-    venue:'Maison de la Culture du Japon à Paris, 15th arr.',
-    desc:'French photographer Bruno Aveillan\'s monumental photographic installation on sumo wrestling — capturing the sacred rituals, ancient ceremony and immense physicality of Japan\'s oldest sport. Opens this Tuesday.',
-    url:'https://www.sortiraparis.com/en/what-to-visit-in-paris/exhibit-museum/guides/53047-june-2026-exhibitions-this-month-s-artistic-outings-in-paris-and-ile-de-france',
-    sort:'2026-06-09'
-  },
-  // ── WED 10 JUN ──
-  {
-    cat:'dance', chip:'💃 Dance', chipBg:'#00B894', chipDark:false,
-    name:'Chantiers d\'Europe — Italie / France',
-    date:'Wed 10 – Sat 13 Jun', time:'Check Théâtre de la Ville for schedule',
-    venue:'Théâtre de la Ville, 4th arr.',
-    desc:'The Théâtre de la Ville\'s annual pan-European contemporary dance showcase focuses on Italian and French companies this week — a vital platform for bold choreographers working across borders.',
-    url:'https://www.sortiraparis.com/en/what-to-see-in-paris/shows/guides/324764-new-shows-in-paris-in-june-2026-theatre-comedy-dance-and-magic',
-    sort:'2026-06-10'
-  },
-  {
-    cat:'cinema', chip:'🎬 Cinema', chipBg:'#54A0FF', chipDark:false,
-    name:'Festival des Canotiers — Open-Air Cinema &amp; Concerts',
-    date:'Wed 10 – Sat 13 Jun', time:'Evenings',
-    venue:'Place de l\'Église de Ménilmontant, 20th arr.',
-    desc:'Four evenings of free open-air film screenings and live concerts on the charming square in front of the church of Ménilmontant. A beloved neighbourhood festival — bring a blanket.',
-    url:'https://parisjetaime.com/eng/article/what-to-do-in-paris-in-june-a1582',
-    sort:'2026-06-10'
-  },
-  {
-    cat:'gallery', chip:'🎨 Galleries', chipBg:'#E17055', chipDark:false,
-    name:'Camille Vivier Retrospective (OPENS)',
-    date:'Wed 10 Jun – Sat 13 Sep', time:'Gallery hours (check mep-fr.org)',
-    venue:'Maison Européenne de la Photographie, 4th arr.',
-    desc:'A major retrospective devoted to French photographer Camille Vivier — one of the most distinctive voices in contemporary fashion and portrait photography. Opening week at MEP.',
-    url:'https://www.sortiraparis.com/en/what-to-visit-in-paris/exhibit-museum/guides/322799-new-exhibitions-in-june-2026-the-artistic-gatherings-opening-their-doors-in-paris',
-    sort:'2026-06-10'
-  },
-  // ── THU 11 JUN ──
-  {
-    cat:'music', chip:'🎵 Live Music', chipBg:'#c8b800', chipDark:false,
-    name:'David Guetta — The Ultimate Monolith Show',
-    date:'Thu 11, Fri 12, Sat 13 Jun', time:'Evening (check stadefrance.com)',
-    venue:'Stade de France, Saint-Denis',
-    desc:'Three nights of EDM spectacle at Stade de France — the final stadium run of Guetta\'s landmark Monolith Show. Opening acts: Armin van Buuren (Thu), FISHER (Fri), Black Coffee (Sat). 80,000 capacity each night.',
-    url:'https://www.stadefrance.com/en/ticket/david-guetta',
-    sort:'2026-06-11'
-  },
-  {
-    cat:'cinema', chip:'🎬 Cinema', chipBg:'#54A0FF', chipDark:false,
-    name:'Palais Galliera Cinema Courtyard Screenings',
-    date:'Thu 11 – Sat 13 Jun', time:'Evenings (preceded by free exhibition visit)',
-    venue:'Palais Galliera — Musée de la Mode, 16th arr.',
-    desc:'Three evenings of curated films in the museum\'s majestic courtyard, each preceded by a specialist introduction and free access to the current fashion exhibition. An intimate, elegant cinema under the stars.',
-    url:'https://www.sortiraparis.com/en/what-to-do-in-paris/cinema-series/articles/275778-palais-galliera-goes-to-the-cinema-what-films-are-playing-in-june-2026-and-how-to-get-tickets',
-    sort:'2026-06-11'
-  },
-  {
-    cat:'gallery', chip:'🎨 Galleries', chipBg:'#E17055', chipDark:false,
-    name:'"Paris, Open All Night" — Roger-Viollet (OPENS)',
-    date:'Thu 11 Jun – Sat 3 Oct', time:'Gallery hours (free)',
-    venue:'Galerie Roger-Viollet, 6th arr.',
-    desc:'A free photo exhibition drawing on Roger-Viollet\'s legendary archive to trace a century of Parisian nightlife — cabarets, jazz clubs, all-night street parties and late-night wanderers. Opens this Thursday.',
-    url:'https://www.sortiraparis.com/en/what-to-visit-in-paris/exhibit-museum/guides/322799-new-exhibitions-in-june-2026-the-artistic-gatherings-opening-their-doors-in-paris',
-    sort:'2026-06-11'
-  },
-  {
-    cat:'music', chip:'🎵 Live Music', chipBg:'#c8b800', chipDark:false,
-    name:'Piano Stars: Chopin',
-    date:'Thu 11 – Sun 14 Jun', time:'Evening (check classictic.com)',
-    venue:'Église Saint-Julien-le-Pauvre, 5th arr.',
-    desc:'Four consecutive evenings devoted entirely to Chopin at Paris\'s most atmospheric candlelit concert venue. An irresistible one-night experience — or go back every night if you can\'t get enough.',
-    url:'https://www.sortiraparis.com/en/what-to-see-in-paris/concerts-music-festival/guides/192674-paris-june-2026-concerts-you-won-t-want-to-miss',
-    sort:'2026-06-11'
-  },
-  // ── FRI 12 JUN ──
-  {
-    cat:'exhibition', chip:'🖼️ Exhibitions', chipBg:'#d4a017', chipDark:false,
-    name:'Fragile Beauty — Elton John &amp; David Furnish Collection (OPENS)',
-    date:'Fri 12 Jun – Sun 27 Sep', time:'Museum hours (check jeudepaume.org)',
-    venue:'Jeu de Paume, 1st arr.',
-    desc:'Over 300 photographs from Sir Elton John\'s 7,000-piece collection: Mapplethorpe, Nan Goldin, Herb Ritts, Diane Arbus, William Klein, Richard Avedon and 90+ others. One of the year\'s landmark photography exhibitions.',
-    url:'https://jeudepaume.org/en/evenement/fragile-beauty/',
-    sort:'2026-06-12'
+    desc:'Michaël Hirsch\'s warmly received one-man show — effervescent and generous, directed by Mikaël Chirinian. Extended at the Théâtre de l\'Œuvre through late June by popular demand.',
+    url:'https://www.sortiraparis.com/en/what-to-see-in-paris/shows/guides/325360-comedy-shows-paris-june',
+    sort:'2026-06-15'
   },
   {
     cat:'dance', chip:'💃 Dance', chipBg:'#00B894', chipDark:false,
-    name:'Nemo Flouret — Derniers Feux',
-    date:'Fri 12 – Sun 14 Jun', time:'Check Grand Palais d\'été schedule',
+    name:'Grand Mouvement — Grand Palais d\'été',
+    date:'Through Sat 18 Jul (ongoing)', time:'Check Grand Palais d\'été schedule',
     venue:'Grand Palais d\'été, 8th arr.',
-    desc:'French choreographer Nemo Flouret\'s poetic piece exploring movement and light, performed under the Grand Palais d\'été\'s soaring glass roof. Part of the venue\'s acclaimed summer programme.',
+    desc:'A large-scale dance and artistic gathering under the Grand Palais\'s soaring glass nave, celebrating the body in motion with aerial and contemporary circus performances. Running through mid-July.',
     url:'https://parisjetaime.com/eng/event/grand-palais-d-ete-grand-palais-e1370',
-    sort:'2026-06-12'
+    sort:'2026-06-15'
+  },
+  {
+    cat:'dance', chip:'💃 Dance', chipBg:'#00B894', chipDark:false,
+    name:'MégaWATT Festival — Free Circus, Dance &amp; Theatre',
+    date:'Through Sat 27 Jun', time:'Various (free outdoor performances)',
+    venue:'Public spaces, 13th arrondissement',
+    desc:'Paris\'s 13th takes over its own public squares and plazas for this free festival of circus, dance and theatre — no tickets, no barriers, just performances around every corner.',
+    url:'https://www.sortiraparis.com/en/what-to-see-in-paris/shows/guides/205778-shows-festivals-dance-paris',
+    sort:'2026-06-15'
+  },
+  {
+    cat:'exhibition', chip:'🖼️ Exhibitions', chipBg:'#d4a017', chipDark:false,
+    name:'Renoir and Love — Musée d\'Orsay',
+    date:'Through Sun 19 Jul', time:'Museum hours',
+    venue:'Musée d\'Orsay, 7th arr.',
+    desc:'Major retrospective exploring Renoir\'s deeply personal engagement with love, tenderness and human relationships — masterpieces tracing joy and intimacy across his long career. Running through mid-July.',
+    url:'https://www.sortiraparis.com/en/what-to-visit-in-paris/exhibit-museum/guides/53047-june-2026-exhibitions-this-month-s-artistic-outings-in-paris-and-ile-de-france',
+    sort:'2026-06-15'
+  },
+  {
+    cat:'exhibition', chip:'🖼️ Exhibitions', chipBg:'#d4a017', chipDark:false,
+    name:'Henri Rousseau Retrospective — Musée de l\'Orangerie',
+    date:'Through Mon 20 Jul', time:'Museum hours',
+    venue:'Musée de l\'Orangerie, 1st arr.',
+    desc:'Landmark retrospective of Henri Rousseau, the self-taught master of naive art — jungles, dreamlike portraits and landscapes, with works on international loan. Closes in July, don\'t wait.',
+    url:'https://www.sortiraparis.com/en/what-to-visit-in-paris/exhibit-museum/guides/53047-june-2026-exhibitions-this-month-s-artistic-outings-in-paris-and-ile-de-france',
+    sort:'2026-06-15'
+  },
+  {
+    cat:'exhibition', chip:'🖼️ Exhibitions', chipBg:'#d4a017', chipDark:false,
+    name:'Fragile Beauties — Elton John &amp; David Furnish Collection',
+    date:'Through Sun 27 Sep (ongoing)', time:'Museum hours (check jeudepaume.org)',
+    venue:'Jeu de Paume, 1st arr.',
+    desc:'Over 300 photographs from Sir Elton John\'s 7,000-piece collection: Mapplethorpe, Nan Goldin, Herb Ritts, Diane Arbus, William Klein, Richard Avedon and 90+ others. One of the year\'s landmark photography shows.',
+    url:'https://www.sortiraparis.com/en/what-to-visit-in-paris/exhibit-museum/guides/53047-june-2026-exhibitions-this-month-s-artistic-outings-in-paris-and-ile-de-france',
+    sort:'2026-06-15'
+  },
+  {
+    cat:'exhibition', chip:'🖼️ Exhibitions', chipBg:'#d4a017', chipDark:false,
+    name:'Gianni Versace Retrospective — Musée Maillol',
+    date:'Through Sun 6 Sep', time:'Museum hours',
+    venue:'Musée Maillol, 7th arr.',
+    desc:'The first major retrospective devoted to Gianni Versace — iconic gowns, archive photographs and personal objects tracing the Milanese maestro\'s revolution in glamour and provocation. A rare Paris opportunity.',
+    url:'https://www.sortiraparis.com/en/what-to-visit-in-paris/exhibit-museum/guides/53047-june-2026-exhibitions-this-month-s-artistic-outings-in-paris-and-ile-de-france',
+    sort:'2026-06-15'
+  },
+  {
+    cat:'exhibition', chip:'🖼️ Exhibitions', chipBg:'#d4a017', chipDark:false,
+    name:'Hugo and Architecture — Maison Victor Hugo',
+    date:'Thu 11 Jun – Sun 22 Nov', time:'Museum hours',
+    venue:'Maison Victor Hugo, Place des Vosges, 4th arr.',
+    desc:'A fresh perspective on Hugo\'s lifelong passion for architecture — from his Notre-Dame writings to his personal drawings of châteaux and manor houses. On the poet\'s own Place des Vosges doorstep.',
+    url:'https://www.sortiraparis.com/en/what-to-visit-in-paris/exhibit-museum/guides/322799-new-exhibitions-in-june-2026-the-artistic-gatherings-opening-their-doors-in-paris',
+    sort:'2026-06-15'
+  },
+  {
+    cat:'gallery', chip:'🎨 Galleries', chipBg:'#E17055', chipDark:false,
+    name:'Fujiko Nakaya — Fog Sculpture at Bourse de Commerce',
+    date:'Through Sat 20 Sep', time:'Check pinaultcollection.com for hours',
+    venue:'Bourse de Commerce — Pinault Collection, 1st arr.',
+    desc:'The legendary Japanese environmental artist envelops the Bourse\'s neoclassical rotunda in her signature living fog sculpture — ephemeral, hypnotic, constantly shifting. A rare encounter with a pioneer of environmental art.',
+    url:'https://www.sortiraparis.com/en/what-to-visit-in-paris/exhibit-museum/guides/322799-new-exhibitions-in-june-2026-the-artistic-gatherings-opening-their-doors-in-paris',
+    sort:'2026-06-15'
+  },
+  {
+    cat:'gallery', chip:'🎨 Galleries', chipBg:'#E17055', chipDark:false,
+    name:'LV DREAM — Louis Vuitton Art Deco Exhibition',
+    date:'Through Sun 28 Jun (final two weeks)', time:'Check LV DREAM',
+    venue:'LV DREAM, 8th arr.',
+    desc:'Over 300 archival pieces tracing Louis Vuitton\'s century-long dialogue with the Art Deco movement — trunks, accessories, runway pieces and rare archival documents. Closing at the end of June.',
+    url:'https://www.galleriesnow.net/exhibitions/paris/',
+    sort:'2026-06-15'
+  },
+  {
+    cat:'gallery', chip:'🎨 Galleries', chipBg:'#E17055', chipDark:false,
+    name:'Writers of Legends — COPE2, PRO176, Ito Chieko',
+    date:'Through Sat 4 Jul', time:'Gallery hours',
+    venue:'Goldshteyn-Saatort Gallery, Paris',
+    desc:'Graffiti-focused exhibition with legendary New York writers COPE2 and PRO176 alongside Japanese artist Ito Chieko — a fascinating trans-continental dialogue between street art traditions.',
+    url:'https://www.galleriesnow.net/exhibitions/paris/',
+    sort:'2026-06-15'
   },
   {
     cat:'popup', chip:'🎪 Pop-ups', chipBg:'#FF6B6B', chipDark:false,
-    name:'Club Coca-Cola — Quai de la Photo (OPENS)',
-    date:'Fri 12 Jun – Sun 19 Jul', time:'Check quaidelaphoto.com',
-    venue:'Quai de la Photo, along the Seine',
-    desc:'Coca-Cola\'s summer pop-up along the Seine combines sport, music and entertainment in an immersive outdoor setting. Opening this Friday as part of the lively summer programming at Quai de la Photo.',
-    url:'https://www.sortiraparis.com/en/news/in-paris/guides/121534-this-week-s-best-deals-from-june-8-14-2026-in-paris-and-ile-de-france',
-    sort:'2026-06-12'
+    name:'FIFA World Cup 2026 Fan Zone — Les Halles',
+    date:'Throughout June 2026', time:'Check FIFA schedule',
+    venue:'Les Halles, 1st arr.',
+    desc:'Free FIFA World Cup pop-up at Les Halles with a football pitch, physical and virtual competitions, and a football museum. Essential stop for football fans during France\'s World Cup campaign — especially Tue 16 Jun (France vs Senegal, 21:00).',
+    url:'https://parisjetaime.com/eng/article/what-to-do-in-paris-in-june-a1582',
+    sort:'2026-06-15'
   },
   {
-    cat:'theater', chip:'🎭 Theater', chipBg:'#A29BFE', chipDark:false,
-    name:'Napo — Comédie Bastille',
-    date:'Ongoing (through Wed 17 Jun)', time:'Check Comédie Bastille',
-    venue:'Comédie Bastille, 11th arr.',
-    desc:'Satirical comedy imagining Napoleon transported to 2026 to run for president. Timely political farce delivered with a light touch — in its very last days at the Comédie Bastille.',
-    url:'https://www.sortiraparis.com/en/what-to-see-in-paris/theater/guides/116926-the-comedies-to-see-in-paris-theatres-in-june-2026',
-    sort:'2026-06-08'
+    cat:'popup', chip:'🎪 Pop-ups', chipBg:'#FF6B6B', chipDark:false,
+    name:'Club Coca-Cola — Quai de la Photo',
+    date:'Through Sun 19 Jul (ongoing)', time:'Check quaidelaphoto.com',
+    venue:'Quai de la Photo, along the Seine',
+    desc:'Coca-Cola\'s summer pop-up along the Seine combines sport, music and outdoor entertainment — a lively riverside hangout with views of the water. Running through mid-July.',
+    url:'https://parisjetaime.com/eng/article/what-to-do-in-paris-in-june-a1582',
+    sort:'2026-06-15'
   },
-  // ── SAT 13 JUN ──
+  // ── TUE 16 JUN ──
+  {
+    cat:'sports', chip:'⚽ Sports', chipBg:'#4ECDC4', chipDark:false,
+    name:'France vs Senegal — FIFA World Cup 2026 Group Stage',
+    date:'Tue 16 Jun', time:'21:00 (kick-off)',
+    venue:'Fan zones &amp; bars across Paris',
+    desc:'France\'s opening group stage match of the 2026 FIFA World Cup against Senegal. Fan zones will be electric across the city — the Les Halles FIFA zone and countless bars are showing the game without reservation.',
+    url:'https://www.sortiraparis.com/en/what-to-do-in-paris/sport-wellness/guides/281108-sports-activities-and-events-in-june-2026-across-paris-and-ile-de-france',
+    sort:'2026-06-16'
+  },
+  // ── THU 18 JUN ──
   {
     cat:'music', chip:'🎵 Live Music', chipBg:'#c8b800', chipDark:false,
-    name:'Jack White — Phone-Free Shows',
-    date:'Sat 13 &amp; Sun 14 Jun', time:'20:00 (check olympiahall.com)',
-    venue:'L\'Olympia, 9th arr.',
-    desc:'The White Stripes legend brings his electric solo show to the Olympia for two phone-free nights — blistering blues, garage-rock mayhem and some of rock\'s most inventive guitar work. Student tickets (€20) at box office from 16:30.',
-    url:'https://www.olympiahall.com/en/upcoming-events/jack-white/',
-    sort:'2026-06-13'
+    name:'Renault Live Stage — Champs-Élysées Concerts',
+    date:'Thu 18 – Sun 21 Jun', time:'From 18:00',
+    venue:'Champs-Élysées, 8th arr.',
+    desc:'Four evenings of free open-stage concerts on the Champs-Élysées: MC Solaar, Disiz, Miki, Kungs, The Avenger, Superbus and more. Part of Renault\'s Twingo Live Show activation — reservation recommended for the main stage.',
+    url:'https://www.sortiraparis.com/en/news/in-paris/guides/53380-what-to-do-in-paris-this-week-june-15-21-2026-the-must-see-events',
+    sort:'2026-06-18'
   },
   {
     cat:'sports', chip:'⚽ Sports', chipBg:'#4ECDC4', chipDark:false,
-    name:'Paris Sumo Tournament',
-    date:'Sat 13 &amp; Sun 14 Jun', time:'Check accorarena.com',
-    venue:'Accor Arena (Bercy), 12th arr.',
-    desc:'Sumo returns to France for the first time in over 30 years, marking the centenary of the Japan Sumo Association. 62 rikishi including HOSHORYU and ONOSATO compete on the Parisian dohyo — a once-in-a-generation occasion.',
-    url:'https://www.accorarena.com/en/events-and-tickets/tournoi-de-paris-de-sumo--06ca4',
-    sort:'2026-06-13'
+    name:'Rendez-vous Roller — Roller Culture Festival',
+    date:'Thu 18 – Sun 21 Jun', time:'Various; night skating from 21:00',
+    venue:'Le Centquatre, 19th arr.',
+    desc:'Four days of roller skating culture — dancing, competitions, workshops and late-night skate sessions at the Centquatre arts centre. A joyful, welcoming subculture celebration open to all levels.',
+    url:'https://www.sortiraparis.com/en/what-to-do-in-paris/sport-wellness/guides/281108-sports-activities-and-events-in-june-2026-across-paris-and-ile-de-france',
+    sort:'2026-06-18'
   },
-  {
-    cat:'food', chip:'🍽️ Food/Dining', chipBg:'#FF9FF3', chipDark:true,
-    name:'Paris Tea Festival',
-    date:'Sat 13 &amp; Sun 14 Jun', time:'All day (check parisdiscoveryguide.com)',
-    venue:'Paris (check for venue)',
-    desc:'Two days with over 60 exhibitors and 40 tea-themed activities — tastings, expert workshops, talks and meet-the-maker sessions celebrating tea culture from around the world. The year\'s most complete tea event in France.',
-    url:'https://www.parisdiscoveryguide.com/paris-events-june.html',
-    sort:'2026-06-13'
-  },
-  {
-    cat:'music', chip:'🎵 Live Music', chipBg:'#c8b800', chipDark:false,
-    name:'Seine de Fête — Summer Classical Festival',
-    date:'Sat 13 &amp; Sun 14 Jun', time:'Afternoons and evenings (check laseinemusicale.com)',
-    venue:'La Seine Musicale, Île Seguin, Boulogne-Billancourt',
-    desc:'La Seine Musicale launches its summer season with a grand two-day festival of classical music, immersive experiences and artist encounters — a perfect celebration of summer on this stunning Seine island venue.',
-    url:'https://www.sortiraparis.com/en/what-to-see-in-paris/concerts-music-festival/guides/192674-paris-june-2026-concerts-you-won-t-want-to-miss',
-    sort:'2026-06-13'
-  },
-  {
-    cat:'popup', chip:'🎪 Pop-ups', chipBg:'#FF6B6B', chipDark:false,
-    name:'Musée de Cluny — Unicorn Ball',
-    date:'Sat 13 Jun (one night only)', time:'After-hours (evening event)',
-    venue:'Musée de Cluny — Musée National du Moyen Âge, 5th arr.',
-    desc:'The Musée de Cluny hosts its inaugural Unicorn Ball — a festive after-hours party in the medieval galleries with drag performances, dancing and the legendary Lady and the Unicorn tapestries as your backdrop. Enchanting.',
-    url:'https://www.sortiraparis.com/en/news/in-paris/guides/53380-what-to-do-this-week-in-paris-from-june-8-to-14-2026-the-must-see-outings',
-    sort:'2026-06-13'
-  },
+  // ── FRI 19 JUN ──
   {
     cat:'comedy', chip:'😂 Comedy', chipBg:'#6C5CE7', chipDark:false,
     name:'Alexis Tramoni — Le Meilleur et le Pire',
-    date:'Fri 13 &amp; Sat 14 Jun (every Fri &amp; Sat through 27 Jun)', time:'21:30',
+    date:'Fri 19 &amp; Sat 20 Jun (every Fri &amp; Sat through 27 Jun)', time:'21:30',
     venue:'Petit Palais des Glaces, 10th arr.',
-    desc:'One of the French comedy circuit\'s most reliably sold-out acts. Tramoni dissects modern life with quick-fire wit and disarming sharpness — running every Friday and Saturday at 9:30 PM through late June.',
-    url:'https://www.sortiraparis.com/en/what-to-see-in-paris/shows/guides/325360-the-comedy-shows-to-catch-in-paris-in-june-2026',
-    sort:'2026-06-13'
+    desc:'One of the French comedy circuit\'s most reliably sold-out acts. Tramoni dissects modern life with quick-fire wit and disarming sharpness — 9:30 PM every Friday and Saturday through late June.',
+    url:'https://www.sortiraparis.com/en/what-to-see-in-paris/shows/guides/325360-comedy-shows-paris-june',
+    sort:'2026-06-19'
+  },
+  {
+    cat:'sports', chip:'⚽ Sports', chipBg:'#4ECDC4', chipDark:false,
+    name:'Paris Eiffel Jumping 2026',
+    date:'Fri 19 – Sun 21 Jun', time:'All-day competition (check programme)',
+    venue:'Champ-de-Mars, 7th arr.',
+    desc:'The world\'s best riders and horses compete in prestigious international show jumping with the Eiffel Tower as an extraordinary backdrop. One of Paris\'s most photogenic sporting events of the year.',
+    url:'https://parisjetaime.com/eng/article/calendar-of-sporting-events-a106',
+    sort:'2026-06-19'
+  },
+  {
+    cat:'food', chip:'🍽️ Food/Dining', chipBg:'#FF9FF3', chipDark:true,
+    name:'La Moisson des Brasseurs — Brewers\' Harvest',
+    date:'Fri 19 – Sun 21 Jun', time:'All day (check participating breweries)',
+    venue:'Paris &amp; Île-de-France craft breweries',
+    desc:'The Brewers\' Harvest opens the doors of Paris and greater Île-de-France craft breweries for tastings, behind-the-scenes tours and workshops. A three-day celebration of local beer culture.',
+    url:'https://www.sortiraparis.com/en/where-to-eat-in-paris/food-events',
+    sort:'2026-06-19'
+  },
+  // ── SUN 21 JUN — FÊTE DE LA MUSIQUE ──
+  {
+    cat:'music', chip:'🎵 Live Music', chipBg:'#c8b800', chipDark:false,
+    name:'Fête de la Musique 2026 — Paris-Wide Free Concerts',
+    date:'Sun 21 Jun', time:'08:00 – 01:00 (next day), all free',
+    venue:'All 20 arrondissements, Paris-wide',
+    desc:'The summer solstice transforms all of Paris into one vast open-air concert hall — hundreds of free performances spanning jazz, classical, rap, electro, world music and everything in between. Highlights: Orchestre de Paris under the Louvre Pyramid (reservation), Palais-Royal Gardens jazz stage, open stage at Palais de l\'Élysée.',
+    url:'https://parisjetaime.com/eng/article/fete-de-la-musique-a989',
+    sort:'2026-06-21'
+  },
+  {
+    cat:'music', chip:'🎵 Live Music', chipBg:'#c8b800', chipDark:false,
+    name:'Fête de la Musique: EF Festival',
+    date:'Sun 21 Jun', time:'18:00 – 02:00',
+    venue:'15th arrondissement',
+    desc:'One of the capital\'s biggest Fête de la Musique club events, with Carla Schmitt, Jodie, KLYMVX, Space 92, Tony Romera, Two Dots and more across multiple stages. Six hours of non-stop music until 2 AM.',
+    url:'https://www.sortiraparis.com/en/news/music-festival/guides/53382-fete-de-la-musique-2026-in-paris-and-ile-de-france-the-concert-lineup',
+    sort:'2026-06-21'
+  },
+  {
+    cat:'music', chip:'🎵 Live Music', chipBg:'#c8b800', chipDark:false,
+    name:'Fête de la Musique: France Inter at L\'Olympia',
+    date:'Sun 21 Jun', time:'Evening (free, check france.tv)',
+    venue:'L\'Olympia, 9th arr.',
+    desc:'France Inter transforms the iconic Olympia into a free Fête de la Musique stage — headlined by Chilly Gonzales, Makala, and Ino Casablanca. Free access, but space is limited: arrive early or check for reservations.',
+    url:'https://www.sortiraparis.com/en/news/music-festival/guides/53382-fete-de-la-musique-2026-in-paris-and-ile-de-france-the-concert-lineup',
+    sort:'2026-06-21'
   },
 ];
 
