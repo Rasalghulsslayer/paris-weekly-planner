@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🗼 Paris Weekly Events — July 20 – 26, 2026</title>
+    <title>🗼 Paris Weekly Events — July 27 – August 2, 2026</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
@@ -114,7 +114,7 @@
 
     <header>
         <h1>🗼 Paris Weekly Events</h1>
-        <p class="date-range">July 20 – 26, 2026</p>
+        <p class="date-range">July 27 – August 2, 2026</p>
         <p class="tagline">Curated every Monday from live sources — click any card for tickets &amp; info</p>
     </header>
 
@@ -136,220 +136,255 @@
     <div class="events-grid" id="grid"></div>
 
     <footer>
-        <p>Generated Mon 20 Jul 2026, 08:00 UTC · 10:00 Paris time ·
+        <p>Generated Mon 27 Jul 2026, 08:00 UTC · 10:00 Paris time ·
            <a href="https://github.com/Rasalghulsslayer/paris-weekly-planner">source</a> ·
            <a href="https://claude.ai/code/routines">Claude Code routines</a></p>
         <p class="source-domains">
-            Sources: parisjetaime.com · areneslyriques.com · davidzwirner.com · ocula.com ·
-            galleriesnow.net · lavillette.com · sortiraparis.com · timeout.com ·
-            parisdiscoveryguide.com · paris.fr · museos.com · classictic.com
+            Sources: sortiraparis.com · parisjetaime.com · theatreinparis.com · areneslyriques.com ·
+            timeout.com · parisdiscoveryguide.com · paris.fr · parisselectbook.com ·
+            rottentomatoes.com · allevents.in · bonjourparis.com
         </p>
     </footer>
 </div>
 
 <script>
 const EVENTS = [
-  // ── MON 20 JUL — ongoing events opening the week ──
+
+  // ── MON 27 JUL ──
+  {
+    cat:'music', chip:'🎵 Live Music', chipBg:'#c8b800', chipDark:false,
+    name:'Sainte-Chapelle: "Adagio!" — The Most Beautiful String Quartet Works',
+    date:'Mon 27 Jul', time:'20:00',
+    venue:'Sainte-Chapelle, 4th arr.',
+    desc:'An intimate evening of the greatest string quartet works performed inside the breathtaking Gothic stained-glass masterpiece of Sainte-Chapelle. One of Paris\'s most magical classical concert settings, nightly this week with distinct programmes each evening.',
+    url:'https://www.theatreinparis.com/en/show/sainte-chapelle-concert-series',
+    sort:'2026-07-27'
+  },
   {
     cat:'music', chip:'🎵 Live Music', chipBg:'#c8b800', chipDark:false,
     name:'Ensemble Royal de Paris — Vivaldi, Bach &amp; Mozart',
-    date:'Mon 20 Jul (also Wed 22, Sat 25)', time:'20:30',
+    date:'Mon 27 Jul · Wed 29 Jul', time:'20:30',
     venue:'Église Saint-Julien-le-Pauvre, 5th arr.',
-    desc:'One of Paris\'s finest chamber ensembles performs Vivaldi, Bach and Mozart in the intimate medieval church of Saint-Julien-le-Pauvre — one of the oldest in Paris. Three performances this week: Monday, Wednesday and Saturday.',
-    url:'https://www.classictic.com/en/sitesearch/month/?search=paris&date_from=2026-07-01&date_until=2026-07-31',
-    sort:'2026-07-20'
-  },
-  {
-    cat:'music', chip:'🎵 Live Music', chipBg:'#c8b800', chipDark:false,
-    name:'Paris String Orchestra — Vivaldi\'s Four Seasons &amp; Mozart',
-    date:'Mon 20 Jul', time:'20:30',
-    venue:'La Madeleine, 8th arr.',
-    desc:'The Paris String Orchestra performs Vivaldi\'s beloved Four Seasons alongside Mozart in the magnificent neoclassical La Madeleine church — a perennial summer highlight in one of Paris\'s most spectacular concert settings.',
-    url:'https://www.classictic.com/en/sitesearch/month/?search=paris&date_from=2026-07-01&date_until=2026-07-31',
-    sort:'2026-07-20'
-  },
-  {
-    cat:'music', chip:'🎵 Live Music', chipBg:'#c8b800', chipDark:false,
-    name:'Rhizomes Festival — Final Week (25th Anniversary, FREE)',
-    date:'Mon 20 → Sun 26 Jul (FREE)', time:'Evenings',
-    venue:'18th arr. venues · Parc Floral · Petite Ceinture · Port de Pantin',
-    desc:'The Rhizomes Festival closes its 25th anniversary edition this week — around 100 artists from 20 countries performing world music, contemporary creations and hybrid forms across 12 venues. Free outdoor concerts and musical strolls all week; the closing balade takes place at Domaine de Villarceaux on July 26.',
-    url:'https://www.paris.fr/evenements/festival-rhizomes-2026-112380',
-    sort:'2026-07-20'
-  },
-  {
-    cat:'popup', chip:'🎪 Pop-ups', chipBg:'#FF6B6B', chipDark:false,
-    name:'Paris Plages — Urban Beach Season',
-    date:'4 Jul → 30 Aug (daily, free)', time:'All day',
-    venue:'Berges de la Seine &amp; Bassin de la Villette',
-    desc:'The beloved urban beach continues all summer — free swimming, outdoor dancing, kayaking, volleyball, and deckchair lounging along the Seine and the Bassin de la Villette. A quintessential Paris summer ritual right in the city centre.',
-    url:'https://parisjetaime.com/eng/article/what-to-do-in-paris-in-july-and-august-a1035',
-    sort:'2026-07-20'
-  },
-  {
-    cat:'popup', chip:'🎪 Pop-ups', chipBg:'#FF6B6B', chipDark:false,
-    name:'Festival Paris l\'été — Summer Arts Festival',
-    date:'11 Jul → 4 Aug (free &amp; ticketed)', time:'Varies by event',
-    venue:'Unexpected venues across Paris',
-    desc:'Paris\'s beloved summer festival transforms rooftops, chapels, school courtyards and gardens into stages for 30+ events spanning contemporary theatre, dance, circus and cabaret. Check the programme online for this week\'s surprise locations.',
-    url:'https://parisjetaime.com/eng/article/what-to-do-in-paris-in-july-and-august-a1035',
-    sort:'2026-07-20'
-  },
-  {
-    cat:'popup', chip:'🎪 Pop-ups', chipBg:'#FF6B6B', chipDark:false,
-    name:'BTS ARIRANG Pop-up Store',
-    date:'~3 weeks after Jul 17–18 Stade de France shows', time:'See store for hours',
-    venue:'Near Stade de France, Saint-Denis',
-    desc:'Following BTS\'s two sold-out Stade de France nights (July 17–18), the ARIRANG pop-up store continues offering exclusive collector\'s merchandise: limited-edition vinyls, T-shirts, hoodies, and Light Sticks. Still running this week.',
-    url:'https://secretsofparis.com/paris-events-calendar/july-2026/',
-    sort:'2026-07-20'
+    desc:'One of Paris\'s most beloved chamber ensembles performs Vivaldi, Bach and Mozart in the intimate medieval church of Saint-Julien-le-Pauvre — one of the oldest in Paris. Two performances this week: Monday and Wednesday evenings.',
+    url:'https://www.classictic.com/en/city/paris-t7/paris-events-ec1/',
+    sort:'2026-07-27'
   },
   {
     cat:'exhibition', chip:'🖼️ Exhibitions', chipBg:'#d4a017', chipDark:false,
     name:'Lee Miller Retrospective — FINAL WEEK · Musée d\'Art Moderne',
-    date:'Until Sun 26 Jul (FINAL WEEK)', time:'Tue–Sun 10:00–18:00',
+    date:'Until Sun 2 Aug (FINAL WEEK)', time:'Tue–Sun 10:00–18:00',
     venue:'Musée d\'Art Moderne de Paris, 16th arr.',
-    desc:'A major retrospective of photographer and Surrealist artist Lee Miller, co-organised with Tate Britain — tracing her extraordinary life from Vogue model to war photographer to avant-garde collaborator with Man Ray and Surrealist masters. Last chance this week.',
-    url:'https://www.timeout.com/news/12-brilliant-exhibitions-worth-travelling-to-paris-for-in-2026-011426',
-    sort:'2026-07-20'
+    desc:'The landmark retrospective of photographer and Surrealist artist Lee Miller — 250 vintage and modern prints spanning her career from Vogue model to war correspondent to avant-garde collaborator with Man Ray — has been extended to August 2. Absolute last chance this week.',
+    url:'https://www.sortiraparis.com/en/what-to-visit-in-paris/exhibit-museum/guides/74586-what-to-do-in-august-2026-the-summer-exhibitions-in-paris-you-shouldn-t-miss',
+    sort:'2026-07-27'
+  },
+  {
+    cat:'exhibition', chip:'🖼️ Exhibitions', chipBg:'#d4a017', chipDark:false,
+    name:'Jardin d\'été — Musée du Quai Branly · FINAL DAYS',
+    date:'Until Sun 2 Aug (FINAL DAYS)', time:'Daily (check website)',
+    venue:'Musée du Quai Branly–Jacques Chirac, 7th arr.',
+    desc:'The Quai Branly\'s beloved summer garden programme — free activities, workshops, storytelling, quizzes and outdoor cinema on the museum\'s lush grounds — wraps up its 2026 season this Sunday. A perfect last free outing of the summer.',
+    url:'https://www.sortiraparis.com/en/what-to-visit-in-paris/exhibit-museum/guides/74586-what-to-do-in-august-2026-the-summer-exhibitions-in-paris-you-shouldn-t-miss',
+    sort:'2026-07-27'
   },
   {
     cat:'exhibition', chip:'🖼️ Exhibitions', chipBg:'#d4a017', chipDark:false,
     name:'Calder: Dreaming in Balance — Fondation Louis Vuitton',
     date:'Until Sun 16 Aug', time:'Mon, Wed–Sun 11:00–20:00',
     venue:'Fondation Louis Vuitton, 16th arr.',
-    desc:'Alexander Calder\'s mobiles, stabiles and wire sculptures fill the Frank Gehry–designed Fondation Louis Vuitton — a joyful retrospective of one of the 20th century\'s most inventive artists, in a perfect architectural setting for a Paris summer afternoon.',
+    desc:'Alexander Calder\'s mobiles, stabiles and wire sculptures fill the Frank Gehry–designed Fondation Louis Vuitton — a joyful retrospective of one of the 20th century\'s most inventive sculptors, in a perfect architectural setting for a Paris summer afternoon.',
     url:'https://www.timeout.com/news/12-brilliant-exhibitions-worth-travelling-to-paris-for-in-2026-011426',
-    sort:'2026-07-20'
+    sort:'2026-07-27'
+  },
+  {
+    cat:'exhibition', chip:'🖼️ Exhibitions', chipBg:'#d4a017', chipDark:false,
+    name:'Elton John &amp; David Furnish: Photo Collection — Jeu de Paume',
+    date:'Until Sun 27 Sep', time:'Tue 11:00–21:00 · Wed–Sun 11:00–19:00',
+    venue:'Jeu de Paume, 1st arr.',
+    desc:'A curated selection of photographs from Elton John and David Furnish\'s celebrated collection, exhibited at the Jeu de Paume — one of Paris\'s finest photography institutions. Spanning major 20th-century names and emerging talents.',
+    url:'https://www.sortiraparis.com/en/what-to-visit-in-paris/exhibit-museum/guides/73859-the-july-2026-exhibitions-your-summer-cultural-outings-in-paris-and-ile-de-france',
+    sort:'2026-07-27'
   },
   {
     cat:'exhibition', chip:'🖼️ Exhibitions', chipBg:'#d4a017', chipDark:false,
     name:'Animalia: Bestiary of the Al Thani Collection — Hôtel de la Marine',
     date:'1 Jul 2026 → 10 Jan 2027', time:'Daily 10:30–19:00',
     venue:'Hôtel de la Marine, 8th arr.',
-    desc:'Medieval animal books and extraordinary animal figurines from the Al Thani Collection fill the sumptuous rooms of the Hôtel de la Marine — a fascinating journey through centuries of human fascination with the animal kingdom.',
+    desc:'Medieval animal books and extraordinary animal figurines from the Al Thani Collection fill the sumptuous rooms of the Hôtel de la Marine — a fascinating journey through centuries of human fascination with the animal kingdom, in one of Paris\'s grandest recently restored interiors.',
     url:'https://parisjetaime.com/eng/article/paris-exhibitions-calendar-a1055',
-    sort:'2026-07-20'
+    sort:'2026-07-27'
   },
   {
     cat:'exhibition', chip:'🖼️ Exhibitions', chipBg:'#d4a017', chipDark:false,
     name:'On the Trail of the Dinosaurs — Grande Galerie de l\'Évolution',
-    date:'From Thu 16 Jul (until Jan 2028)', time:'Daily 10:00–18:00',
+    date:'From 16 Jul (until Jan 2028)', time:'Daily 10:00–18:00',
     venue:'Grande Galerie de l\'Évolution (MNHN), 5th arr.',
-    desc:'A spectacular immersive exhibition featuring life-size dinosaur reconstructions, fossil specimens, and state-of-the-art digital experiences — just opened last week at the Natural History Museum. A perfect summer outing for families and dino enthusiasts of all ages.',
-    url:'https://www.museos.com/en/paris/paris-exhibitions/',
-    sort:'2026-07-20'
+    desc:'A spectacular immersive exhibition featuring life-size dinosaur reconstructions, fossil specimens and state-of-the-art digital experiences — just opened at the National History Museum this summer. Perfect for families and dino enthusiasts of all ages.',
+    url:'https://www.sortiraparis.com/en/what-to-visit-in-paris/exhibit-museum/guides/73859-the-july-2026-exhibitions-your-summer-cultural-outings-in-paris-and-ile-de-france',
+    sort:'2026-07-27'
   },
   {
-    cat:'exhibition', chip:'🖼️ Exhibitions', chipBg:'#d4a017', chipDark:false,
-    name:'Tutankhamun: His Tomb and His Treasures',
-    date:'3 Jul → 6 Sep 2026', time:'Daily (check website)',
-    venue:'Paris Expo Porte de Versailles, 15th arr.',
-    desc:'A spectacular reconstructed tour of Tutankhamun\'s tomb featuring funerary treasures, immersive rooms, VR experiences and an audio guide — the blockbuster family exhibition of the summer, based on the landmark travelling show from Egypt.',
-    url:'https://www.parisdiscoveryguide.com/paris-events-july.html',
-    sort:'2026-07-20'
+    cat:'cinema', chip:'🎬 Cinema', chipBg:'#54A0FF', chipDark:false,
+    name:'Cinéma en Plein Air de la Villette — 35th Edition (FREE)',
+    date:'22 Jul → 16 Aug · FREE', time:'18:00 children\'s film · 21:00 feature',
+    venue:'Parc de la Villette, Prairie du Triangle, 19th arr.',
+    desc:'The 35th edition of Paris\'s iconic free open-air cinema festival — themed "The Call of the Wild / The Forest" — runs nightly with a double bill: a children\'s film at 6pm followed by a feature at 9pm. No booking required; bring a blanket and arrive early for a good spot on the lawn.',
+    url:'https://parisjetaime.com/eng/event/open-air-cinema-e017',
+    sort:'2026-07-27'
+  },
+  {
+    cat:'music', chip:'🎵 Live Music', chipBg:'#c8b800', chipDark:false,
+    name:'Les Arènes Lyriques — "E Fra le nubi d\'oro" (Among the Golden Clouds)',
+    date:'22 Jul → 15 Aug (nightly)', time:'21:00 (gates 20:00)',
+    venue:'Arènes de Montmartre, 25 rue Chappe, 18th arr.',
+    desc:'The 6th edition of the open-air lyric concert season on Montmartre Hill: grand opera, soul and jazz performed under the Paris sky by soprano Clara Orif, soul voice Louise Bianco, tenor Jean-François Marras and pianist Kim Bernard. Inspired by the aria from Catalani\'s La Wally. Tickets €34–45.',
+    url:'https://areneslyriques.com/en/concerts-2026/',
+    sort:'2026-07-27'
+  },
+  {
+    cat:'music', chip:'🎵 Live Music', chipBg:'#c8b800', chipDark:false,
+    name:'Children\'s Lyric Arenas — Free Classical Music for Kids',
+    date:'23 Jul → 7 Aug · FREE', time:'Daytime (see website)',
+    venue:'Arènes de Montmartre, 18th arr.',
+    desc:'As part of Les Arènes Lyriques, Montmartre\'s open-air amphitheatre opens its doors each day to the youngest audiences for free classical music performances — a beautiful and accessible introduction to opera and orchestral music for families.',
+    url:'https://www.sortiraparis.com/en/child-and-family/articles/347871-the-children-s-lyrical-arenas-free-classical-music-performances-for-the-little-ones',
+    sort:'2026-07-27'
+  },
+  {
+    cat:'theater', chip:'🎭 Theater', chipBg:'#A29BFE', chipDark:false,
+    name:'Festival Paris l\'été — FINAL WEEK (36th Edition)',
+    date:'Until Tue 4 Aug (FINAL WEEK)', time:'Varies by event',
+    venue:'Unexpected venues across Paris (rooftops, chapels, gardens, schools)',
+    desc:'The 36th edition of the beloved Paris summer festival — 30+ events spanning contemporary dance, theatre, circus, cabaret and installation art in surprise venues across the city — enters its final week. Both free and ticketed shows; check the full programme online.',
+    url:'https://parisjetaime.com/eng/event/festival-paris-lete-e005',
+    sort:'2026-07-27'
   },
   {
     cat:'theater', chip:'🎭 Theater', chipBg:'#A29BFE', chipDark:false,
     name:'The Lion King — Mogador Theatre',
-    date:'Until Mon 10 Aug', time:'Various',
+    date:'Until Sun 9 Aug', time:'Various',
     venue:'Mogador Theatre, 9th arr.',
-    desc:'Disney\'s theatrical spectacular continues its triumphant Paris summer run — the full production with stunning African-inspired puppetry, vibrant costumes and Elton John\'s beloved score. The perfect family outing this summer.',
+    desc:'Disney\'s theatrical spectacular continues its triumphant Paris summer run — the full production with stunning African-inspired puppetry, vibrant costumes and Elton John\'s beloved score. The perfect family theatrical outing this summer.',
     url:'https://www.sortiraparis.com/en/what-to-see-in-paris/shows/guides/168882-shows-to-see-in-paris-in-july-2026-the-month-s-lineup',
-    sort:'2026-07-20'
+    sort:'2026-07-27'
   },
   {
     cat:'theater', chip:'🎭 Theater', chipBg:'#A29BFE', chipDark:false,
-    name:'And Meanwhile, Simone Keeps Watch! — FINAL WEEK',
-    date:'Until Sun 26 Jul (FINAL WEEK)', time:'21:00',
-    venue:'Comédie Bastille, 12th arr.',
-    desc:'A stirring theatrical journey tracing the fight for women\'s rights across the past century, told with passion, wit and emotional depth. One of this summer\'s most talked-about productions — this is the final week to catch it at the Comédie Bastille.',
-    url:'https://www.sortiraparis.com/en/what-to-see-in-paris/theater/guides/145953-theatre-plays-to-see-in-paris-in-july-2026-our-selection',
-    sort:'2026-07-20'
-  },
-  {
-    cat:'theater', chip:'🎭 Theater', chipBg:'#A29BFE', chipDark:false,
-    name:'The Inseparable Complex — Apollo Théâtre',
-    date:'Until Mon 22 Sep', time:'Various',
-    venue:'Apollo Théâtre, 9th arr.',
-    desc:'Alexandra Vandernoot and Paul Belmondo star in this crowd-pleasing comedy about an inseparable duo whose relationship is tested to its limits — one of the summer season\'s most popular and best-reviewed productions.',
-    url:'https://www.sortiraparis.com/en/what-to-see-in-paris/theater/guides/145953-theatre-plays-to-see-in-paris-in-july-2026-our-selection',
-    sort:'2026-07-20'
+    name:'Île-de-France en Scène — Free Outdoor Theater Festival',
+    date:'Until Tue 5 Aug · FREE', time:'Evenings (see programme)',
+    venue:'Créteil, Port aux Cerises &amp; Cergy-Pontoise leisure islands',
+    desc:'The 10th edition of this free outdoor performing arts festival on the leisure islands of Île-de-France — circus, dance, theatre and puppetry performances on lakeside stages, open to all. Running through August 5.',
+    url:'https://parisjetaime.com/eng/article/what-to-do-in-paris-in-july-and-august-a1035',
+    sort:'2026-07-27'
   },
   {
     cat:'comedy', chip:'😂 Comedy', chipBg:'#6C5CE7', chipDark:false,
-    name:'How to Become a Parisian in One Hour? (English)',
-    date:'Until Sat 25 Jul', time:'Various',
-    venue:'Théâtre des Nouveautés, 9th arr.',
-    desc:'Olivier Giraud\'s enduringly popular English-language comedy decodes Parisian attitudes with sharp, self-deprecating humour — ideal for visitors and expats who want to understand French culture with a laugh. Running entirely in English.',
+    name:'La Boucle (The Loop) — Molière 2025 Best Comedy',
+    date:'Until Sat 29 Aug', time:'Various',
+    venue:'Théâtre Saint-Georges, 9th arr.',
+    desc:'Robin Goupil\'s comedy — winner of the 2025 Molière Award for Best Comedy — continues its extended Paris run at the Théâtre Saint-Georges. Catch one of the most talked-about productions of the season before it closes.',
     url:'https://www.sortiraparis.com/en/what-to-see-in-paris/shows/guides/325438-comedy-shows-in-paris-in-july-2026-stand-up-and-other-comedic-performances',
-    sort:'2026-07-20'
+    sort:'2026-07-27'
   },
   {
-    cat:'gallery', chip:'🎨 Galleries', chipBg:'#E17055', chipDark:false,
-    name:'Michaël Borremans: "French Painting" — David Zwirner · FINAL DAYS',
-    date:'Until Tue 22 Jul (CLOSING)', time:'Tue–Sat 10:00–18:00',
-    venue:'David Zwirner, 108 rue Vieille du Temple, 3rd arr.',
-    desc:'The Belgian artist\'s first solo show in France in twenty years: new paintings offering an ironic homage to the French pictorial tradition, where beauty is simultaneously seductive and disturbing. Only 3 days left — do not miss this.',
-    url:'https://www.davidzwirner.com/exhibitions/2026/michael-borremans-french-painting',
-    sort:'2026-07-20'
+    cat:'comedy', chip:'😂 Comedy', chipBg:'#6C5CE7', chipDark:false,
+    name:'Ménopause — Musical Comedy',
+    date:'Until 31 Dec 2026', time:'Various',
+    venue:'Apollo Théâtre, 9th arr.',
+    desc:'A musical comedy about menopause that has been packing out the Apollo Théâtre all season — bold, funny and unexpectedly moving. One of the year\'s surprise theatrical hits; a great option for a summer evening.',
+    url:'https://www.sortiraparis.com/en/what-to-see-in-paris/shows/guides/182298-anticipated-comedy-shows-paris',
+    sort:'2026-07-27'
   },
   {
-    cat:'gallery', chip:'🎨 Galleries', chipBg:'#E17055', chipDark:false,
-    name:'Nicolas Ceccaldi: "Unplugged" — Galerie Édouard Montassut',
-    date:'Until Sat 25 Jul', time:'Tue–Sat 14:00–19:00',
-    venue:'Galerie Édouard Montassut, 3rd arr.',
-    desc:'New works by Nicolas Ceccaldi featuring his signature hand-drawn charcoal eyes peering out from inside computer screens — a quietly uncanny body of work from one of contemporary art\'s most idiosyncratic voices.',
-    url:'https://ocula.com/cities/france/paris-art-galleries/exhibitions/',
-    sort:'2026-07-20'
+    cat:'popup', chip:'🎪 Pop-ups', chipBg:'#FF6B6B', chipDark:false,
+    name:'Paris Plages — Summer Urban Beach',
+    date:'4 Jul → 30 Aug · FREE', time:'All day',
+    venue:'Berges de la Seine &amp; Bassin de la Villette',
+    desc:'The beloved Paris urban beach continues all summer — free swimming, outdoor dancing, kayaking, volleyball and deckchair lounging along the Seine and the Bassin de la Villette. A quintessential Paris summer ritual right in the city centre.',
+    url:'https://parisjetaime.com/eng/article/what-to-do-in-paris-in-july-and-august-a1035',
+    sort:'2026-07-27'
   },
-  {
-    cat:'gallery', chip:'🎨 Galleries', chipBg:'#E17055', chipDark:false,
-    name:'Jacqeline de Jong Retrospective — Galerie Allen',
-    date:'Until Sat 25 Jul', time:'Tue–Sat 11:00–19:00',
-    venue:'Galerie Allen, 11th arr.',
-    desc:'A posthumous retrospective of Jacqeline de Jong — the Dutch-born artist who collaborated with the Situationist International before forging her own path through provocative figuration, comics art and printmaking. A fitting summer tribute to a radical figure.',
-    url:'https://ocula.com/cities/france/paris-art-galleries/exhibitions/',
-    sort:'2026-07-20'
-  },
-  {
-    cat:'gallery', chip:'🎨 Galleries', chipBg:'#E17055', chipDark:false,
-    name:'Piene, Mack, Uecker: Light, Space &amp; Time — Almine Rech',
-    date:'Until Sat 25 Jul', time:'Tue–Sat 10:00–18:00',
-    venue:'Almine Rech Matignon, 8th arr.',
-    desc:'Three founding members of the ZERO movement — Otto Piene, Heinz Mack, and Günther Uecker — brought together in a landmark group show exploring their shared obsessions with light, vibration, and kinetic energy. Closing this week.',
-    url:'https://www.galleriesnow.net/exhibitions/paris/',
-    sort:'2026-07-20'
-  },
-  // ── WED 22 JUL ──
-  {
-    cat:'cinema', chip:'🎬 Cinema', chipBg:'#54A0FF', chipDark:false,
-    name:'Cinéma en Plein Air de la Villette — OPENS (35th Edition, FREE)',
-    date:'Opens Wed 22 Jul → 16 Aug (FREE)', time:'18:00 (children\'s film) · 21:00 (feature)',
-    venue:'Parc de la Villette, Prairie du Triangle, 19th arr.',
-    desc:'The 35th edition of Paris\'s beloved free open-air cinema opens this week, themed "The Call of the Wild." Double bills nightly: My Neighbor Totoro opens on July 22; The Blair Witch Project plays July 24; Into the Wild + Flow on July 25; Arrietty on July 26. No booking — bring a blanket.',
-    url:'https://parisjetaime.com/eng/event/open-air-cinema-e017',
-    sort:'2026-07-22'
-  },
-  {
-    cat:'music', chip:'🎵 Live Music', chipBg:'#c8b800', chipDark:false,
-    name:'Les Arènes Lyriques — "E Fra le nubi d\'oro" · OPENS',
-    date:'Opens Wed 22 Jul → 15 Aug', time:'21:00 (gates open 20:00)',
-    venue:'Arènes de Montmartre, 25 rue Chappe, 18th arr.',
-    desc:'A brand-new open-air lyric concert season opens on Montmartre Hill — "Among the Golden Clouds" weaves grand romantic opera with Latin American music, jazz and soul under the Paris sky. Soprano Clara Orif and tenor Jean-François Marras lead the first cast (Jul 22–Aug 1). Tickets €34–45.',
-    url:'https://areneslyriques.com/en/',
-    sort:'2026-07-22'
-  },
-  // ── SUN 26 JUL ──
   {
     cat:'sports', chip:'⚽ Sports', chipBg:'#4ECDC4', chipDark:false,
-    name:'Tour de France 2026 — Final Stage: Thoiry → Champs-Élysées',
-    date:'Sun 26 Jul', time:'Start 16:30 CEST · Champs-Élysées finish ~19:30',
-    venue:'Route: Montmartre (Rue Lepic ×3) → Champs-Élysées · free to watch',
-    desc:'Stage 21 of the 2026 Tour de France: 133km from Thoiry, climbing Montmartre\'s cobbled Rue Lepic three times before the traditional sprint finish on the Champs-Élysées around 7:30pm. Line the pavement anywhere along the route — completely free.',
-    url:'https://parisjetaime.com/eng/event/tour-de-france-e026',
-    sort:'2026-07-26'
+    name:'Esports World Cup — Paris Edition',
+    date:'6 Jul → 23 Aug', time:'Daily (check schedule)',
+    venue:'Paris Expo Porte de Versailles, 15th arr.',
+    desc:'Paris is hosting the Esports World Cup this summer — 2,000+ elite players from 100 countries competing across 25 major game tournaments. Drop in on the action at Porte de Versailles for a spectacular weekend of competitive gaming at the highest level.',
+    url:'https://www.paris.fr/en/pages/the-2026-calendar-of-sporting-events-in-paris-34040',
+    sort:'2026-07-27'
   },
+  {
+    cat:'dance', chip:'💃 Dance', chipBg:'#00B894', chipDark:false,
+    name:'La Clairière — Open-Air Nights in Bois de Boulogne',
+    date:'Summer season (ongoing)', time:'Evenings',
+    venue:'Bois de Boulogne, 16th arr.',
+    desc:'La Clairière returns to the Bois de Boulogne for its summer season — open-air DJ sets under the trees, a chill-out zone, food trucks and collective energy in a magical forest clearing. One of Paris\'s great summer evening escapes.',
+    url:'https://www.sortiraparis.com/en/what-to-see-in-paris/shows/guides/168882-shows-to-see-in-paris-in-july-2026-the-month-s-lineup',
+    sort:'2026-07-27'
+  },
+
+  // ── TUE 28 JUL ──
+  {
+    cat:'music', chip:'🎵 Live Music', chipBg:'#c8b800', chipDark:false,
+    name:'Sainte-Chapelle: "The Four Seasons" — Vivaldi &amp; Baroque Masterpieces',
+    date:'Tue 28 Jul · Thu 30 Jul', time:'20:00',
+    venue:'Sainte-Chapelle, 4th arr.',
+    desc:'Two performances this week of Vivaldi\'s Four Seasons alongside baroque masterpieces inside the glorious stained-glass vaults of Sainte-Chapelle. Tuesday features the Orchestre Classik Ensemble with violinist David Braccini; Thursday the Les Solistes Français with Paul Rouger on violin.',
+    url:'https://www.theatreinparis.com/en/show/sainte-chapelle-concert-series',
+    sort:'2026-07-28'
+  },
+
+  // ── WED 29 JUL ──
+  {
+    cat:'music', chip:'🎵 Live Music', chipBg:'#c8b800', chipDark:false,
+    name:'Sainte-Chapelle: "Baroque Treasures" — Violin &amp; Cello Masterpieces',
+    date:'Wed 29 Jul', time:'20:00',
+    venue:'Sainte-Chapelle, 4th arr.',
+    desc:'An evening of violin and cello masterworks by Marais, Couperin, Tartini, Bach, Telemann and Vivaldi — performed by the Barok Ensemble with David Braccini (violin) and Cyrille Lacrouts (cello) in the stunning Gothic setting of the Sainte-Chapelle.',
+    url:'https://www.theatreinparis.com/en/show/sainte-chapelle-concert-series',
+    sort:'2026-07-29'
+  },
+  {
+    cat:'cinema', chip:'🎬 Cinema', chipBg:'#54A0FF', chipDark:false,
+    name:'Spider-Man: Brand New Day — Wide Release',
+    date:'From Wed 29 Jul', time:'Multiple screenings daily',
+    venue:'Cinemas citywide',
+    desc:'Tom Holland returns as Spider-Man in Marvel\'s eagerly awaited Brand New Day — the UK and international release lands on July 29 (US wide release July 31). Check your local cinema for early screenings across Paris from Wednesday.',
+    url:'https://editorial.rottentomatoes.com/article/everything-we-know-about-spider-man-brand-new-day/',
+    sort:'2026-07-29'
+  },
+
+  // ── THU 30 JUL ──
+  {
+    cat:'popup', chip:'🎪 Pop-ups', chipBg:'#FF6B6B', chipDark:false,
+    name:'McKay Pop-Up',
+    date:'Thu 30 Jul', time:'See event page',
+    venue:'14 rue Abel, 75012 Paris',
+    desc:'A pop-up event at 14 rue Abel in the 12th arrondissement — check the AllEvents page for full details, dress code and programme as the event approaches.',
+    url:'https://allevents.in/paris/pop-ups',
+    sort:'2026-07-30'
+  },
+  {
+    cat:'food', chip:'🍽️ Food/Dining', chipBg:'#FF9FF3', chipDark:true,
+    name:'Le Comptoir du Jeudi — €1 Oysters at Janette Bistrot',
+    date:'Every Thursday · incl. Thu 30 Jul', time:'19:00–20:00',
+    venue:'Janette Bistrot Parisien (check website for address)',
+    desc:'Janette Bistrot\'s weekly "Thursday Counter" event: €1 oysters, chilled white wine, and affordable cocktails for one hour every Thursday evening. A brilliant value Paris ritual — arrive early as it fills quickly.',
+    url:'https://www.sortiraparis.com/en/where-to-eat-in-paris/restaurant/guides/315008-4-new-must-try-restaurants-to-check-out-in-paris-this-july-2026',
+    sort:'2026-07-30'
+  },
+
+  // ── FRI 31 JUL ──
+  {
+    cat:'sports', chip:'⚽ Sports', chipBg:'#4ECDC4', chipDark:false,
+    name:'European Swimming Championships — OPENS TODAY',
+    date:'31 Jul → 16 Aug · OPENS THIS WEEK', time:'Various heats &amp; finals',
+    venue:'Centre Aquatique Olympique, Saint-Denis &amp; River Seine',
+    desc:'The European Swimming Championships open on Friday July 31 at the Olympic Aquatic Centre in Saint-Denis and in the River Seine — a major continental event using the Paris 2024 Olympic venues. Pool, open-water and artistic swimming across two weeks.',
+    url:'https://www.parisselectbook.com/en/2026/07/14/marathon-roland-garros-accor-arena-the-calendar-of-sporting-events-in-paris-that-will-get-2026-pumped-up/',
+    sort:'2026-07-31'
+  },
+
 ];
 
 // ── Render ──
