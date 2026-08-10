@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🗼 Paris Weekly Events — August 3–9, 2026</title>
+    <title>🗼 Paris Weekly Events — August 10–16, 2026</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
@@ -114,7 +114,7 @@
 
     <header>
         <h1>🗼 Paris Weekly Events</h1>
-        <p class="date-range">August 3–9, 2026</p>
+        <p class="date-range">August 10–16, 2026</p>
         <p class="tagline">Curated every Monday from live sources — click any card for tickets &amp; info</p>
     </header>
 
@@ -136,13 +136,13 @@
     <div class="events-grid" id="grid"></div>
 
     <footer>
-        <p>Generated Mon 3 Aug 2026, 08:00 UTC · 10:00 Paris time ·
+        <p>Generated Mon 10 Aug 2026, 08:00 UTC · 10:00 Paris time ·
            <a href="https://github.com/Rasalghulsslayer/paris-weekly-planner">source</a> ·
            <a href="https://claude.ai/code/routines">Claude Code routines</a></p>
         <p class="source-domains">
-            Sources: sortiraparis.com · parisjetaime.com · parisdiscoveryguide.com · classictic.com ·
-            beyondthestreets.com · lavillette.com · hakyarts.com · allevents.in ·
-            europeanaquatics.org · obeygiant.com
+            Sources: classictic.com · parisdiscoveryguide.com · parisjetaime.com ·
+            observatoiredeparis.psl.eu · visitparisregion.com · sortiraparis.com ·
+            theatreinparis.com · paris.beyondthestreets.com · hakyarts.com · bonjourparis.com
         </p>
     </footer>
 </div>
@@ -150,107 +150,245 @@
 <script>
 const EVENTS = [
 
-  // ── MON 3 AUG (specific) ──
+  // ── MON 10 AUG — specific concerts ──
   {
     cat:'music', chip:'🎵 Live Music', chipBg:'#c8b800', chipDark:false,
-    name:'Arch Enemy — La Maroquinerie',
-    date:'Mon 3 Aug', time:'Check venue for set time',
-    venue:'La Maroquinerie, 20th arr.',
-    desc:'Swedish melodic death metal legends Arch Enemy headline an intimate Paris club show at La Maroquinerie. A rare, high-energy Monday night booking — a genuine treat for metal fans in the city this week.',
+    name:'Ensemble Royal de Paris — Vivaldi, Bach, Mozart',
+    date:'Mon 10 · Wed 12 · Sat 15 Aug', time:'Check venue for time',
+    venue:'Église Saint-Julien-le-Pauvre, 5th arr.',
+    desc:'One of Paris\'s finest chamber ensembles performs Vivaldi, Bach and Mozart in this exquisite 13th-century Latin Quarter church — one of the oldest in the city. Three performances this week: Monday, Wednesday and Saturday evenings.',
     url:'https://www.classictic.com/en/city/paris-t7/concerts-in-paris-in-august/',
-    sort:'2026-08-03-a'
+    sort:'2026-08-10-a'
   },
   {
-    cat:'popup', chip:'🎪 Pop-ups', chipBg:'#FF6B6B', chipDark:false,
-    name:'Pop Up Beauté &amp; Bien-être',
-    date:'Mon 3 Aug', time:'11:00',
-    venue:'6 Rue Charles-François Dupuis, 3rd arr.',
-    desc:'A beauty and wellness pop-up in the Marais neighbourhood — expect curated products, brand showcases and wellness experiences from independent beauty labels. A low-key Monday outing in one of Paris\'s most vibrant districts.',
-    url:'https://allevents.in/paris/pop-ups',
-    sort:'2026-08-03-b'
+    cat:'music', chip:'🎵 Live Music', chipBg:'#c8b800', chipDark:false,
+    name:'Paris String Orchestra — Bach, Pachelbel, Albinoni',
+    date:'Mon 10 · Wed 12 Aug', time:'Check venue for time',
+    venue:'La Madeleine Church, 8th arr.',
+    desc:'The Paris String Orchestra performs Bach, Pachelbel\'s Canon and Albinoni\'s Adagio in the grand neoclassical setting of La Madeleine — two evenings of sublime chamber music in one of the city\'s most majestic concert halls this week.',
+    url:'https://www.parisdiscoveryguide.com/paris-events-august.html',
+    sort:'2026-08-10-b'
   },
-
-  // ── WEEK-LONG (AUG 3–9, ongoing) ──
   {
-    cat:'theater', chip:'🎭 Theater', chipBg:'#A29BFE', chipDark:false,
-    name:'The Lion King (Le Roi Lion) — FINAL WEEK',
-    date:'Until Sun 9 Aug ⚠️ LAST WEEK', time:'Various (check Mogador)',
-    venue:'Mogador Theatre, 9th arr.',
-    desc:'The fifth and final Paris season of Disney\'s spectacular musical closes this Sunday — your very last chance to see this production. Stunning African-inspired puppetry, vibrant costumes and Elton John\'s beloved score. Book fast; seats are going.',
-    url:'https://www.sortiraparis.com/en/what-to-see-in-paris/shows/guides/171393-shows-to-see-in-paris-in-august-2026-our-pick-of-the-hottest-shows-right-now',
-    sort:'2026-08-03-c'
+    cat:'music', chip:'🎵 Live Music', chipBg:'#c8b800', chipDark:false,
+    name:'Bach by Candlelight: Suites for Solo Cello',
+    date:'Mon 10 Aug', time:'Check venue for time',
+    venue:'Église Saint-Éphrem, 5th arr.',
+    desc:'An intimate candlelit evening devoted entirely to Bach\'s unaccompanied cello suites — performed in the hushed stone interior of Saint-Éphrem church in the Latin Quarter. A rare and deeply moving concert experience.',
+    url:'https://www.classictic.com/en/city/paris-t7/concerts-in-paris-in-august/',
+    sort:'2026-08-10-c'
   },
   {
     cat:'cinema', chip:'🎬 Cinema', chipBg:'#54A0FF', chipDark:false,
-    name:'Cinéma en Plein Air de la Villette — 35th Edition (FREE)',
-    date:'22 Jul → 16 Aug · FREE', time:'18:00 children\'s film · 21:00 feature',
+    name:'Cinéma en Plein Air de la Villette — FINAL WEEK (FREE)',
+    date:'Until Sun 16 Aug · FREE', time:'18:00 children\'s film · 21:00 feature',
     venue:'Parc de la Villette, Prairie du Triangle, 19th arr.',
-    desc:'The 35th edition of Paris\'s beloved free open-air cinema festival — themed "The Call of the Wild" — runs nightly this week with two screenings: a children\'s programme at 6pm and a feature under the stars at 9pm. All films in original language (VOST). No booking needed; bring a blanket.',
+    desc:'The 35th edition of Paris\'s beloved free open-air cinema festival — themed "The Call of the Wild" — enters its very last week. Free nightly screenings under the stars: children\'s programme at 6pm, feature at 9pm, VOST. No booking required; bring a blanket.',
     url:'https://parisjetaime.com/eng/event/open-air-cinema-e017',
-    sort:'2026-08-03-d'
+    sort:'2026-08-10-d'
+  },
+
+  // ── WED 12 AUG — solar eclipse ──
+  {
+    cat:'popup', chip:'🎪 Pop-ups', chipBg:'#FF6B6B', chipDark:false,
+    name:'Solar Eclipse 92% — Free Viewing at Philharmonie Belvédère',
+    date:'Wed 12 Aug · FREE', time:'19:00 → sunset (peak 20:23)',
+    venue:'Belvédère de la Philharmonie de Paris, 19th arr.',
+    desc:'A near-total solar eclipse (92.2% coverage) peaks over Paris at 20:23. The Philharmonie\'s rooftop Belvédère opens from 7pm with the French Astronomy Association (AFA) — free admission, certified eclipse glasses distributed on site. The Cité des Sciences also hosts observation workshops.',
+    url:'https://observatoiredeparis.psl.eu/solar-eclipse-on-12-august.html',
+    sort:'2026-08-12-a'
+  },
+
+  // ── FRI 14 AUG — outdoor cinema ──
+  {
+    cat:'cinema', chip:'🎬 Cinema', chipBg:'#54A0FF', chipDark:false,
+    name:'Stand by Me — Free Open-Air Screening',
+    date:'Fri 14 Aug · FREE', time:'21:00',
+    venue:'Vincennes Estival Club, Vincennes (RER A)',
+    desc:'Rob Reiner\'s timeless coming-of-age classic screens under the stars at the Vincennes Estival Club — a free open-air summer cinema just a short RER ride from central Paris. Bring a picnic blanket and enjoy this beloved film in a beautiful outdoor setting.',
+    url:'https://parisjetaime.com/eng/article/movies-outdoors-a010',
+    sort:'2026-08-14-a'
+  },
+
+  // ── SAT 15 AUG — Assumption Day ──
+  {
+    cat:'popup', chip:'🎪 Pop-ups', chipBg:'#FF6B6B', chipDark:false,
+    name:'Assumption Day Brocantes &amp; Vide-Greniers',
+    date:'Sat 15 Aug · FREE', time:'07:00–19:00',
+    venue:'Hôtel de Ville · Place Saint-Michel · multiple locations',
+    desc:'France\'s August public holiday transforms Paris streets into open-air treasure hunts. Flea markets and brocantes pop up across the city — hunt for vintage vinyl, Art Deco mirrors, retro clothing and curiosities in a quieter-than-usual, festive Paris.',
+    url:'https://www.sortiraparis.com/en/what-to-do-in-paris/shopping-fashion/articles/330956-flea-markets-in-paris-and-the-ile-de-france-region-where-you-can-hunt-for-bargains-saturday-15-august-2026-assumption-day',
+    sort:'2026-08-15-a'
   },
   {
-    cat:'music', chip:'🎵 Live Music', chipBg:'#c8b800', chipDark:false,
-    name:'Sainte-Chapelle Classical Concert Series',
-    date:'Throughout August · nightly', time:'20:00',
-    venue:'Sainte-Chapelle, 4th arr.',
-    desc:'Classical music by candlelight inside Paris\'s breathtaking Gothic stained-glass chapel — one of the city\'s most magical concert settings. Programmes vary nightly with Vivaldi, Bach, Mozart and French baroque composers performed by rotating ensembles.',
-    url:'https://www.parisdiscoveryguide.com/paris-events-august.html',
-    sort:'2026-08-03-e'
+    cat:'dance', chip:'💃 Dance', chipBg:'#00B894', chipDark:false,
+    name:'Festival des Places — Free Dance &amp; Concerts',
+    date:'Sat 15 · Sun 16 Aug · FREE', time:'See programme online',
+    venue:'Place du Châtelet &amp; Paris squares',
+    desc:'Every weekend April–October, the Festival des Places transforms Place du Châtelet and other Paris squares into free open-air stages for dance performances and concerts by the Théâtre de la Ville. Assumption weekend brings an extra festive atmosphere.',
+    url:'https://www.sortiraparis.com/en/what-to-see-in-paris/shows/articles/327956-festival-des-places-2026-free-dance-performances-and-concerts-at-place-du-chatelet-and-various-venues-across-paris',
+    sort:'2026-08-15-b'
+  },
+
+  // ── ONGOING EXHIBITIONS ──
+  {
+    cat:'exhibition', chip:'🖼️ Exhibitions', chipBg:'#d4a017', chipDark:false,
+    name:'Hilma af Klint — Grand Palais (FIRST TIME IN FRANCE)',
+    date:'Until Sun 30 Aug', time:'Daily (check hours)',
+    venue:'Grand Palais, 8th arr.',
+    desc:'The pioneering Swedish abstract artist\'s work is shown in France for the very first time — a landmark cultural moment. Af Klint\'s visionary paintings, created before Kandinsky\'s abstract work, are among the 20th century\'s most extraordinary hidden histories. Only three weeks left.',
+    url:'https://www.visitparisregion.com/en/inspiration/top-experiences/upcoming-major-exhibitions-in-paris-region',
+    sort:'2026-08-16-a'
   },
   {
-    cat:'music', chip:'🎵 Live Music', chipBg:'#c8b800', chipDark:false,
-    name:'Les Violons de France — Vivaldi\'s Four Seasons',
-    date:'Throughout August · nightly', time:'20:30',
-    venue:'La Madeleine Church, 8th arr.',
-    desc:'One of Paris\'s celebrated chamber ensembles performs Vivaldi\'s beloved Four Seasons in the grand neoclassical setting of La Madeleine. A staple of the city\'s summer classical music programme and a gorgeous evening out.',
-    url:'https://www.parisdiscoveryguide.com/paris-events-august.html',
-    sort:'2026-08-03-f'
+    cat:'exhibition', chip:'🖼️ Exhibitions', chipBg:'#d4a017', chipDark:false,
+    name:'Leandro Erlich — Grand Palais (LARGEST IN EUROPE)',
+    date:'Until Sat 6 Sep', time:'Daily (check hours)',
+    venue:'Grand Palais, 8th arr.',
+    desc:'The largest exhibition ever dedicated to Argentine conceptual artist Leandro Erlich in Europe — his mind-bending optical illusions, architectural paradoxes and participatory installations fill the grand spaces of the newly restored Grand Palais. A genuinely astonishing experience.',
+    url:'https://www.visitparisregion.com/en/inspiration/top-experiences/upcoming-major-exhibitions-in-paris-region',
+    sort:'2026-08-16-b'
   },
   {
-    cat:'music', chip:'🎵 Live Music', chipBg:'#c8b800', chipDark:false,
-    name:'Gospel Dream — American Cathedral',
-    date:'Throughout August', time:'Check cathedral website',
-    venue:'American Cathedral, 8th arr.',
-    desc:'Joyful gospel music concerts at the American Cathedral in Paris — a summer series bringing the warmth and energy of gospel to one of the city\'s most welcoming international houses of worship. Free or low cost entry.',
-    url:'https://www.parisdiscoveryguide.com/paris-events-august.html',
-    sort:'2026-08-03-g'
+    cat:'exhibition', chip:'🖼️ Exhibitions', chipBg:'#d4a017', chipDark:false,
+    name:'Silla: Gold and the Sacred — Musée Guimet',
+    date:'Until Sun 31 Aug', time:'Wed–Mon 10:00–18:00',
+    venue:'Musée Guimet (National Museum of Asian Arts), 16th arr.',
+    desc:'Ancient treasures of Korea\'s Silla kingdom — dazzling gold crowns, jewellery and sacred objects — are unveiled at the Musée Guimet. A rare chance to encounter one of East Asia\'s most magnificent ancient cultures in one of Paris\'s finest museums.',
+    url:'https://www.sortiraparis.com/en/what-to-visit-in-paris/exhibit-museum/guides/74586-what-to-do-in-august-2026-the-standout-summer-exhibitions-not-to-miss-in-paris',
+    sort:'2026-08-16-c'
   },
+  {
+    cat:'exhibition', chip:'🖼️ Exhibitions', chipBg:'#d4a017', chipDark:false,
+    name:'The Little Prince: An Immersive Odyssey — Atelier des Lumières',
+    date:'3 Jul → 13 Sep', time:'Daily (check hours)',
+    venue:'Atelier des Lumières, 11th arr.',
+    desc:'Saint-Exupéry\'s beloved novella becomes an immersive digital odyssey projected across 3,300m² of floor, walls and ceiling alongside Van Gogh\'s Starry Night and Dreaming of Japan. Breathtaking for all ages at one of Paris\'s most spectacular immersive venues.',
+    url:'https://www.sortiraparis.com/en/what-to-visit-in-paris/exhibit-museum/guides/74586-what-to-do-in-august-2026-the-standout-summer-exhibitions-not-to-miss-in-paris',
+    sort:'2026-08-16-d'
+  },
+  {
+    cat:'exhibition', chip:'🖼️ Exhibitions', chipBg:'#d4a017', chipDark:false,
+    name:'Roma, City of Light — Free Open-Air Photo Exhibition',
+    date:'Until Sun 30 Aug · FREE', time:'All day',
+    venue:'Banks of the Seine, central Paris',
+    desc:'A free open-air photography exhibition along the Seine exploring Rome through the lens of cinema — a luminous portrait of the Italian capital across decades of film history. One of summer\'s most accessible cultural treats, free to all along the river.',
+    url:'https://www.sortiraparis.com/en/what-to-visit-in-paris/exhibit-museum/guides/74586-what-to-do-in-august-2026-the-standout-summer-exhibitions-not-to-miss-in-paris',
+    sort:'2026-08-16-e'
+  },
+  {
+    cat:'exhibition', chip:'🖼️ Exhibitions', chipBg:'#d4a017', chipDark:false,
+    name:'Elton John &amp; David Furnish: Photography Collection',
+    date:'12 Jun → 27 Sep', time:'Tue 11:00–21:00 · Wed–Sun 11:00–19:00',
+    venue:'Jeu de Paume, 1st arr.',
+    desc:'A curated selection of photographs from Elton John and David Furnish\'s celebrated personal collection — spanning major 20th-century names and emerging talents — at one of Paris\'s finest photography institutions. An intimate and surprising show.',
+    url:'https://www.sortiraparis.com/en/what-to-visit-in-paris/exhibit-museum/guides/74586-what-to-do-in-august-2026-the-standout-summer-exhibitions-not-to-miss-in-paris',
+    sort:'2026-08-16-f'
+  },
+  {
+    cat:'exhibition', chip:'🖼️ Exhibitions', chipBg:'#d4a017', chipDark:false,
+    name:'Gianni Versace Retrospective — Musée Maillol',
+    date:'Until 31 Oct', time:'Daily (check hours)',
+    venue:'Musée Maillol, 7th arr.',
+    desc:'A sweeping retrospective of the legendary Italian fashion designer — his bold aesthetic, cultural impact and the archive pieces that defined an era. One of Paris\'s most anticipated fashion exhibitions of 2026, with substantial time still on the clock.',
+    url:'https://www.visitparisregion.com/en/inspiration/top-experiences/upcoming-major-exhibitions-in-paris-region',
+    sort:'2026-08-16-g'
+  },
+  {
+    cat:'exhibition', chip:'🖼️ Exhibitions', chipBg:'#d4a017', chipDark:false,
+    name:'AURA INVALIDES — Orchestral Light Mapping',
+    date:'Ongoing · evenings', time:'Check website for showtimes',
+    venue:'Les Invalides, 7th arr.',
+    desc:'A spectacular immersive experience combining orchestral music, video mapping and light projections that animate the golden dome of Les Invalides. One of Paris\'s most talked-about summer spectacles — especially magical after dark and beneath a nearly eclipsed sky this week.',
+    url:'https://www.sortiraparis.com/en/what-to-visit-in-paris/exhibit-museum/guides/74586-what-to-do-in-august-2026-the-standout-summer-exhibitions-not-to-miss-in-paris',
+    sort:'2026-08-16-h'
+  },
+  {
+    cat:'exhibition', chip:'🖼️ Exhibitions', chipBg:'#d4a017', chipDark:false,
+    name:'Zeus: The Olympic Horse — Musée des Arts et Métiers (FREE)',
+    date:'Until Jan 2027 · FREE', time:'Tue–Sun 10:00–18:00',
+    venue:'Musée des Arts et Métiers, 3rd arr.',
+    desc:'Zeus, the iconic mechanical horse from the Paris 2024 Olympics\' Opening Ceremony, is on permanent free display at the Musée des Arts et Métiers — a remarkable technical marvel and a piece of living Olympic history, accessible to all.',
+    url:'https://www.sortiraparis.com/en/what-to-visit-in-paris/exhibit-museum/guides/322692-exhibitions-opening-their-doors-in-august-2026-in-paris-this-month-s-new-openings',
+    sort:'2026-08-16-i'
+  },
+
+  // ── ONGOING GALLERIES ──
+  {
+    cat:'gallery', chip:'🎨 Galleries', chipBg:'#E17055', chipDark:false,
+    name:'Beyond the Streets — Legends of Graffiti &amp; Street Art',
+    date:'27 May → 30 Aug', time:'Daily (check website)',
+    venue:'Grande Halle de la Villette, 19th arr.',
+    desc:'The world\'s most influential graffiti and street art exhibition — 3,600m² with 100+ artists including FUTURA 2000, Shepard Fairey, Lady Pink, Invader and JR. Under three weeks left. Don\'t miss it.',
+    url:'https://paris.beyondthestreets.com/',
+    sort:'2026-08-16-j'
+  },
+  {
+    cat:'gallery', chip:'🎨 Galleries', chipBg:'#E17055', chipDark:false,
+    name:'Sterling Ruby: TILL DEATH DO US PART — Gagosian',
+    date:'12 Jun → 3 Oct', time:'Mon–Sat 10:00–19:00',
+    venue:'Gagosian Gallery, 8th arr.',
+    desc:'Gagosian Paris presents a major show by American artist Sterling Ruby — large-scale textile, ceramic and mixed-media works exploring endurance, destruction and ritual. One of Paris\'s most compelling gallery exhibitions of the summer.',
+    url:'https://www.hakyarts.com/blogs/art-exhibitions/top-contemporary-art-exhibitions-to-see-in-paris-august-2026',
+    sort:'2026-08-16-k'
+  },
+  {
+    cat:'gallery', chip:'🎨 Galleries', chipBg:'#E17055', chipDark:false,
+    name:'Annette Messager — Galerie Marian Goodman',
+    date:'3 Jul → 26 Sep', time:'Tue–Sat (check hours)',
+    venue:'Galerie Marian Goodman, 3rd arr.',
+    desc:'One of France\'s most celebrated contemporary artists shows new work at Galerie Marian Goodman — her characteristically subversive, poetic and politically charged installations running through late September in the Marais.',
+    url:'https://www.hakyarts.com/blogs/art-exhibitions/top-contemporary-art-exhibitions-to-see-in-paris-august-2026',
+    sort:'2026-08-16-l'
+  },
+
+  // ── ONGOING THEATER ──
   {
     cat:'theater', chip:'🎭 Theater', chipBg:'#A29BFE', chipDark:false,
     name:'Big Mother — Théâtre des Béliers Parisiens',
     date:'Until Sat 23 Aug · Tue–Sun', time:'Various',
     venue:'Théâtre des Béliers Parisiens, 11th arr.',
-    desc:'Mélody Mourey\'s political-journalistic thriller, extended through August 23 by popular demand. A sharp, topical production blending investigative journalism and theatrical drama — one of Paris\'s most talked-about summer shows.',
+    desc:'Mélody Mourey\'s political-journalistic thriller, extended through August 23 by popular demand. A sharp, topical production blending investigative journalism and theatrical drama — one of Paris\'s most talked-about summer shows. Under two weeks left.',
     url:'https://www.sortiraparis.com/en/what-to-see-in-paris/theater/guides/172727-theatre-shows-to-see-in-paris-in-august-2026-our-pick-of-the-moment',
-    sort:'2026-08-03-h'
+    sort:'2026-08-16-m'
   },
   {
     cat:'theater', chip:'🎭 Theater', chipBg:'#A29BFE', chipDark:false,
-    name:'Mystery at Silent Pool: Agatha Christie is Missing',
-    date:'10 Jun → 23 Aug', time:'Various',
-    venue:'Le Lucernaire, 6th arr.',
-    desc:'An Agatha Christie-inspired detective play by Carla Girod, Drys Penthier and Axel Stein-Kurdzielewicz, staged by Compagnie des Ballons Rouges. A fun, clever whodunit in the intimate Lucernaire — a great evening for mystery lovers.',
+    name:'Le Porteur d\'Histoire — Alexis Michalik',
+    date:'Until Mon 31 Aug', time:'Various',
+    venue:'Théâtre du Petit Montparnasse, 14th arr.',
+    desc:'Alexis Michalik\'s celebrated mystery-historical thriller blends multiple time periods and stories into one breathless evening — a literary treasure hunt. A Paris audience favourite with a loyal cult following; this is the last summer chance.',
     url:'https://www.sortiraparis.com/en/what-to-see-in-paris/theater/guides/172727-theatre-shows-to-see-in-paris-in-august-2026-our-pick-of-the-moment',
-    sort:'2026-08-03-i'
+    sort:'2026-08-16-n'
   },
   {
+    cat:'theater', chip:'🎭 Theater', chipBg:'#A29BFE', chipDark:false,
+    name:'La Leçon (The Lesson) — Ionesco · World Record',
+    date:'Ongoing · Tue–Sun', time:'Various',
+    venue:'Théâtre de la Huchette, 5th arr.',
+    desc:'Ionesco\'s absurdist masterpiece — a tyrannical professor, a captive pupil, mounting terror — has run at the Théâtre de la Huchette continuously since 1957, holding the Guinness World Record for the longest-running play. A Paris theatre pilgrimage.',
+    url:'https://www.theatreinparis.com/blog/what-s-on-in-paris-live-events-in-august',
+    sort:'2026-08-16-o'
+  },
+  {
+    cat:'theater', chip:'🎭 Theater', chipBg:'#A29BFE', chipDark:false,
+    name:'La Cantatrice Chauve (The Bald Soprano) — Ionesco · World Record',
+    date:'Ongoing · Tue–Sun', time:'Various',
+    venue:'Théâtre de la Huchette, 5th arr.',
+    desc:'Ionesco\'s avant-garde comedy — funny, absurd and surreal — shares the bill with The Lesson at the Huchette in an uninterrupted run since 1952, holding the Guinness World Record for the longest-running theatrical show. A mandatory Paris experience.',
+    url:'https://www.theatreinparis.com/blog/what-s-on-in-paris-live-events-in-august',
+    sort:'2026-08-16-p'
+  },
+
+  // ── ONGOING COMEDY ──
+  {
     cat:'comedy', chip:'😂 Comedy', chipBg:'#6C5CE7', chipDark:false,
-    name:'La Boucle (The Loop) — Molière 2025 Best Comedy',
-    date:'Until Sat 29 Aug', time:'Various',
+    name:'La Boucle — Molière Best Comedy 2025',
+    date:'Until Fri 29 Aug', time:'Various',
     venue:'Théâtre Saint-Georges, 9th arr.',
-    desc:'Robin Goupil\'s comedy — winner of the 2025 Molière Award for Best Comedy — continues its extended summer run at the Théâtre Saint-Georges. The most acclaimed comedy of the Paris season; still time to catch it.',
+    desc:'Robin Goupil\'s comedy — winner of the 2025 Molière Award for Best Comedy — continues its extended summer run at the Théâtre Saint-Georges. The most acclaimed comedy of the Paris season; still time to catch it before the end of August.',
     url:'https://www.sortiraparis.com/en/what-to-see-in-paris/shows/guides/325504-the-comedy-shows-to-catch-in-paris-in-august-2026',
-    sort:'2026-08-03-j'
-  },
-  {
-    cat:'comedy', chip:'😂 Comedy', chipBg:'#6C5CE7', chipDark:false,
-    name:'Paris Is Magic — Musical Comedy',
-    date:'From 23 Jun (ongoing)', time:'Various',
-    venue:'La Gaîté Rive Gauche, 13th arr.',
-    desc:'A whimsical musical comedy written and directed by Sacha Judaszko and Nicolas Nebot, celebrating Paris\'s legendary magic and joie de vivre. Light, warm and charming — a lovely Left Bank summer evening.',
-    url:'https://www.sortiraparis.com/en/what-to-see-in-paris/shows/guides/325504-the-comedy-shows-to-catch-in-paris-in-august-2026',
-    sort:'2026-08-03-k'
+    sort:'2026-08-16-q'
   },
   {
     cat:'comedy', chip:'😂 Comedy', chipBg:'#6C5CE7', chipDark:false,
@@ -259,175 +397,67 @@ const EVENTS = [
     venue:'Apollo Théâtre, 9th arr.',
     desc:'Bold, funny and unexpectedly moving — this musical comedy about menopause has been one of the year\'s surprise Paris theatrical hits, packing out the Apollo all summer. Refreshingly candid and brilliantly performed.',
     url:'https://www.sortiraparis.com/en/what-to-see-in-paris/shows/guides/325504-the-comedy-shows-to-catch-in-paris-in-august-2026',
-    sort:'2026-08-03-l'
+    sort:'2026-08-16-r'
   },
   {
-    cat:'exhibition', chip:'🖼️ Exhibitions', chipBg:'#d4a017', chipDark:false,
-    name:'Roma, City of Light — Free Open-Air Photo Exhibition',
-    date:'Until Sun 30 Aug · FREE', time:'All day',
-    venue:'Banks of the Seine, central Paris',
-    desc:'A free open-air photography exhibition along the Seine exploring Rome through the lens of cinema — a luminous portrait of the Italian capital across decades of film history. One of summer\'s great free cultural offerings, right in the city centre.',
-    url:'https://www.sortiraparis.com/en/what-to-visit-in-paris/exhibit-museum/guides/74586-what-to-do-in-august-2026-the-summer-exhibitions-in-paris-you-shouldn-t-miss',
-    sort:'2026-08-03-m'
+    cat:'comedy', chip:'😂 Comedy', chipBg:'#6C5CE7', chipDark:false,
+    name:'Paris Is Magic — Musical Comedy',
+    date:'From 23 Jun (ongoing)', time:'Various',
+    venue:'La Gaîté Rive Gauche, 13th arr.',
+    desc:'A whimsical musical comedy celebrating Paris\'s legendary magic and joie de vivre, written and directed by Sacha Judaszko and Nicolas Nebot. Light, warm and charming — a lovely Left Bank summer evening.',
+    url:'https://www.sortiraparis.com/en/what-to-see-in-paris/shows/guides/325504-the-comedy-shows-to-catch-in-paris-in-august-2026',
+    sort:'2026-08-16-s'
   },
-  {
-    cat:'exhibition', chip:'🖼️ Exhibitions', chipBg:'#d4a017', chipDark:false,
-    name:'Marilyn: Portrait of a Radiant Child — Sam Shaw',
-    date:'1 Jun → 15 Sep', time:'Tue–Sun (check hours)',
-    venue:'Galerie de l\'Instant, 3rd arr.',
-    desc:'Intimate, luminous photographs of Marilyn Monroe by legendary photographer Sam Shaw — capturing the star between roles, on set, and in private moments. An unmissable show for anyone drawn to Hollywood\'s golden age.',
-    url:'https://www.sortiraparis.com/en/what-to-visit-in-paris/exhibit-museum/guides/74586-what-to-do-in-august-2026-the-summer-exhibitions-in-paris-you-shouldn-t-miss',
-    sort:'2026-08-03-n'
-  },
-  {
-    cat:'exhibition', chip:'🖼️ Exhibitions', chipBg:'#d4a017', chipDark:false,
-    name:'Gianni Versace Retrospective — Musée Maillol',
-    date:'Ongoing (check website)', time:'Daily (check hours)',
-    venue:'Musée Maillol, 7th arr.',
-    desc:'A sweeping retrospective of the legendary Italian fashion designer Gianni Versace — his bold aesthetic, his cultural impact, and the archive pieces that defined an era. One of Paris\'s most anticipated fashion exhibitions of 2026.',
-    url:'https://www.sortiraparis.com/en/what-to-visit-in-paris/exhibit-museum/guides/74586-what-to-do-in-august-2026-the-summer-exhibitions-in-paris-you-shouldn-t-miss',
-    sort:'2026-08-03-o'
-  },
-  {
-    cat:'exhibition', chip:'🖼️ Exhibitions', chipBg:'#d4a017', chipDark:false,
-    name:'Space Mission — Cité des Sciences',
-    date:'Ongoing', time:'Tue–Sun 10:00–18:00',
-    venue:'Cité des Sciences et de l\'Industrie, 19th arr.',
-    desc:'An immersive adventure in space technologies and lunar missions — interactive simulators, exhibits and hands-on science. Worth a visit this week ahead of the solar eclipse visible from Paris on August 12, with special eclipse workshops planned.',
-    url:'https://www.sortiraparis.com/en/what-to-visit-in-paris/exhibit-museum/guides/74586-what-to-do-in-august-2026-the-summer-exhibitions-in-paris-you-shouldn-t-miss',
-    sort:'2026-08-03-p'
-  },
-  {
-    cat:'exhibition', chip:'🖼️ Exhibitions', chipBg:'#d4a017', chipDark:false,
-    name:'AURA INVALIDES — Orchestral Light Mapping',
-    date:'Ongoing · evenings', time:'Check website for showtimes',
-    venue:'Les Invalides, 7th arr.',
-    desc:'A spectacular immersive experience combining orchestral music, video mapping, and light projections that animate the golden dome of Les Invalides. One of Paris\'s most talked-about summer spectacles — especially magical after dark.',
-    url:'https://www.sortiraparis.com/en/what-to-visit-in-paris/exhibit-museum/guides/74586-what-to-do-in-august-2026-the-summer-exhibitions-in-paris-you-shouldn-t-miss',
-    sort:'2026-08-03-q'
-  },
-  {
-    cat:'exhibition', chip:'🖼️ Exhibitions', chipBg:'#d4a017', chipDark:false,
-    name:'Elton John &amp; David Furnish: Photography Collection',
-    date:'12 Jun → 27 Sep', time:'Tue 11:00–21:00 · Wed–Sun 11:00–19:00',
-    venue:'Jeu de Paume, 1st arr.',
-    desc:'A curated selection of photographs from Elton John and David Furnish\'s celebrated personal collection — spanning major 20th-century names and emerging talents, exhibited at one of Paris\'s finest photography institutions.',
-    url:'https://www.sortiraparis.com/en/what-to-visit-in-paris/exhibit-museum/guides/74586-what-to-do-in-august-2026-the-summer-exhibitions-in-paris-you-shouldn-t-miss',
-    sort:'2026-08-03-r'
-  },
-  {
-    cat:'exhibition', chip:'🖼️ Exhibitions', chipBg:'#d4a017', chipDark:false,
-    name:'The Sound of Pixels — Philharmonie des Enfants',
-    date:'Ongoing', time:'Check Philharmonie website',
-    venue:'Philharmonie de Paris, 19th arr.',
-    desc:'An immersive installation at the Philharmonie des enfants tied to the exhibition "Video Games &amp; Music" — a multi-sensory experience exploring the sonic landscapes of gaming culture. Great for families and music/tech enthusiasts.',
-    url:'https://www.sortiraparis.com/en/news/in-paris/guides/53380-what-to-do-in-paris-this-week-august-3-9-2026-the-must-see-outings',
-    sort:'2026-08-03-s'
-  },
-  {
-    cat:'gallery', chip:'🎨 Galleries', chipBg:'#E17055', chipDark:false,
-    name:'Beyond the Streets — Legends of Graffiti &amp; Street Art',
-    date:'27 May → 30 Aug', time:'Daily (check website)',
-    venue:'Grande Halle de La Villette, 19th arr.',
-    desc:'The world\'s most influential graffiti and street art exhibition — spanning 3,600m² with 100+ artists including FUTURA 2000, Shepard Fairey, Lady Pink, Invader and JR. The French scene gets a central spotlight. Under a month left; don\'t miss it.',
-    url:'https://paris.beyondthestreets.com/',
-    sort:'2026-08-03-t'
-  },
-  {
-    cat:'gallery', chip:'🎨 Galleries', chipBg:'#E17055', chipDark:false,
-    name:'Fondation Cartier: 40 Years of Contemporary Art',
-    date:'Until Sun 23 Aug', time:'Tue–Sun 11:00–20:00',
-    venue:'Fondation Cartier, Place du Palais Royal, 1st arr.',
-    desc:'A major retrospective of the Fondation Cartier\'s collection, retracing 40 years of contemporary creation at its stunning new Place du Palais Royal home. A landmark occasion to engage with one of France\'s most important contemporary art bodies.',
-    url:'https://www.sortiraparis.com/en/what-to-visit-in-paris/exhibit-museum/guides/322692-exhibitions-opening-their-doors-in-august-2026-in-paris-this-month-s-new-openings',
-    sort:'2026-08-03-u'
-  },
-  {
-    cat:'gallery', chip:'🎨 Galleries', chipBg:'#E17055', chipDark:false,
-    name:'Shiori Eda — A2Z Art Gallery',
-    date:'18 Jun → 29 Aug', time:'Tue–Sat 11:00–19:00',
-    venue:'A2Z Art Gallery, 8th arr.',
-    desc:'Japanese artist Shiori Eda\'s solo exhibition continues through August — delicate, luminous works exploring memory, nature and material. A quieter but deeply rewarding gallery experience away from the summer crowds.',
-    url:'https://www.hakyarts.com/blogs/art-exhibitions/top-contemporary-art-exhibitions-to-see-in-paris-august-2026',
-    sort:'2026-08-03-v'
-  },
-  {
-    cat:'gallery', chip:'🎨 Galleries', chipBg:'#E17055', chipDark:false,
-    name:'Sterling Ruby: TILL DEATH DO US PART — Gagosian',
-    date:'12 Jun → 3 Oct', time:'Mon–Sat 10:00–19:00',
-    venue:'Gagosian Gallery, 8th arr.',
-    desc:'Gagosian Paris presents a major new show by American artist Sterling Ruby — large-scale textile, ceramic and mixed-media works exploring endurance, destruction and ritual. One of Paris\'s most compelling gallery exhibitions of the summer.',
-    url:'https://www.hakyarts.com/blogs/art-exhibitions/top-contemporary-art-exhibitions-to-see-in-paris-august-2026',
-    sort:'2026-08-03-w'
-  },
+
+  // ── ONGOING POP-UPS ──
   {
     cat:'popup', chip:'🎪 Pop-ups', chipBg:'#FF6B6B', chipDark:false,
-    name:'Paris Plages — Urban Summer Beach (FREE)',
+    name:'Paris Plages 2026 — USA Edition (FREE)',
     date:'4 Jul → 30 Aug · FREE', time:'All day',
     venue:'Berges de la Seine &amp; Bassin de la Villette',
-    desc:'The beloved Paris urban beach continues — free swimming, kayaking, volleyball, pétanque and deckchair lounging along the Seine and the Bassin de la Villette, plus pop-up bars and sports. A quintessential Parisian summer ritual in the heart of the city.',
+    desc:'The beloved Paris urban beach continues — free swimming, kayaking, volleyball, pétanque and deckchair lounging along the Seine and the Villette basin, with a US theme this year. Pop-up bars, sports and live music throughout the week.',
     url:'https://parisjetaime.com/eng/article/what-to-do-in-paris-in-august-a1583',
-    sort:'2026-08-03-x'
-  },
-  {
-    cat:'popup', chip:'🎪 Pop-ups', chipBg:'#FF6B6B', chipDark:false,
-    name:'L\'Été du Canal — Waterway Festival',
-    date:'Summer 2026 (ongoing)', time:'All day &amp; evenings',
-    venue:'Canal Saint-Martin &amp; Paris waterways',
-    desc:'A festival turning Paris\'s waterways into vibrant cultural hubs — floating concerts, lively dance events, street art tours and waterside picnics along the Canal Saint-Martin. A uniquely Parisian way to spend a summer afternoon or evening.',
-    url:'https://parisjetaime.com/eng/article/what-to-do-in-paris-in-august-a1583',
-    sort:'2026-08-03-y'
+    sort:'2026-08-16-t'
   },
   {
     cat:'popup', chip:'🎪 Pop-ups', chipBg:'#FF6B6B', chipDark:false,
     name:'Fête Foraine des Tuileries — Summer Carnival',
     date:'20 Jun → 23 Aug', time:'Daily (see website)',
     venue:'Tuileries Garden, Place de la Concorde, 1st arr.',
-    desc:'The Tuileries Garden\'s beloved summer funfair — carousels, a giant Ferris wheel, rides and carnival food including crepes, waffles and ice cream. A nostalgic, joyful outing for all ages, steps from the Louvre.',
+    desc:'The Tuileries Garden\'s beloved summer funfair — carousels, a giant Ferris wheel, 60 rides and carnival food including crepes, waffles and ice cream. Steps from the Louvre; final two weeks now — a joyful outing for all ages.',
     url:'https://parisjetaime.com/eng/article/what-to-do-in-paris-in-august-a1583',
-    sort:'2026-08-03-z'
-  },
-  {
-    cat:'popup', chip:'🎪 Pop-ups', chipBg:'#FF6B6B', chipDark:false,
-    name:'Silent Zoo Evenings — Parc Zoologique de Paris',
-    date:'This week (ongoing summer)', time:'Until 01:00',
-    venue:'Parc Zoologique de Paris (Zoo de Vincennes), 12th arr.',
-    desc:'One of Paris\'s most unusual summer evenings — dance among the zoo\'s animals until 1am with a silent disco headset. A surreal and genuinely fun night out that combines wildlife, music and the magic of a Paris summer night.',
-    url:'https://www.sortiraparis.com/en/news/in-paris/guides/53380-what-to-do-in-paris-this-week-august-3-9-2026-the-must-see-outings',
-    sort:'2026-08-03-za'
+    sort:'2026-08-16-u'
   },
 
-  // ── TUE 4 – SAT 8 AUG ──
+  // ── ONGOING MUSIC ──
   {
-    cat:'sports', chip:'⚽ Sports', chipBg:'#4ECDC4', chipDark:false,
-    name:'European Aquatics Championships — Open Water on the Seine',
-    date:'Tue 4 → Sat 8 Aug', time:'Various heats &amp; finals',
-    venue:'River Seine, near Pont de Bir-Hakeim, 15th/16th arr.',
-    desc:'Elite open-water swimming from across Europe takes place in the River Seine — using the same course as the Paris 2024 Olympics. Watch from the riverbanks for free as athletes race past some of the city\'s most iconic bridges.',
-    url:'https://parisjetaime.com/eng/event/2026-european-swimming-championships-e1485',
-    sort:'2026-08-04'
+    cat:'music', chip:'🎵 Live Music', chipBg:'#c8b800', chipDark:false,
+    name:'Sainte-Chapelle Classical Concert Series',
+    date:'Throughout August · nightly', time:'20:00',
+    venue:'Sainte-Chapelle, 4th arr.',
+    desc:'Classical music by candlelight inside Paris\'s breathtaking Gothic stained-glass chapel — one of the city\'s most magical concert settings. Programmes vary nightly with Vivaldi, Bach, Mozart and French baroque composers performed by rotating ensembles.',
+    url:'https://www.classictic.com/en/city/paris-t7/concerts-in-paris-in-august/',
+    sort:'2026-08-16-v'
   },
 
-  // ── FRI 7 – SAT 8 AUG ──
+  // ── ONGOING FOOD/DINING ──
   {
-    cat:'sports', chip:'⚽ Sports', chipBg:'#4ECDC4', chipDark:false,
-    name:'European Aquatics Championships — High Diving on the Seine',
-    date:'Fri 7 · Sat 8 Aug', time:'Various sessions',
-    venue:'River Seine, near Pont de Bir-Hakeim, 15th/16th arr.',
-    desc:'Breathtaking high-diving competitions on the River Seine as part of the European Aquatics Championships — elite divers launching from platforms into the Seine against a backdrop of Pont de Bir-Hakeim. One of the most dramatic sporting spectacles of the week.',
-    url:'https://www.sortiraparis.com/en/what-to-do-in-paris/sport-wellness/articles/349424-european-swimming-championships-schedule-and-timetable-for-diving-and-high-diving-events',
-    sort:'2026-08-07'
+    cat:'food', chip:'🍽️ Food/Dining', chipBg:'#FF9FF3', chipDark:true,
+    name:'Le Jardin Tropézien — Château Minuty Pop-Up',
+    date:'All summer · open daily', time:'12:00–21:00',
+    venue:'8th arrondissement',
+    desc:'Saint-Tropez comes to Paris: Château Minuty\'s chic pop-up terrace brings Provençal bites, celebrated Minuty rosés and full Mediterranean décor to the 8th. Open every day from noon — ideal for a lazy summer lunch or early evening apéritif.',
+    url:'https://bonjourparis.com/food-restaurant-news/august-2026-restaurant-buzz-where-to-eat-in-paris/',
+    sort:'2026-08-16-w'
   },
-
-  // ── SAT 8 – SUN 9 AUG ──
   {
-    cat:'dance', chip:'💃 Dance', chipBg:'#00B894', chipDark:false,
-    name:'Festival des Places — Free Dance &amp; Concerts at Place du Châtelet',
-    date:'Sat 8 · Sun 9 Aug · FREE', time:'See programme online',
-    venue:'Place du Châtelet &amp; various Paris squares',
-    desc:'Every weekend April–October, the Festival des Places transforms Place du Châtelet and other Paris squares into free open-air stages for dance performances and concerts, presented by the Théâtre de la Ville. A beloved democratic cultural event for all Parisians.',
-    url:'https://www.sortiraparis.com/en/what-to-see-in-paris/shows/articles/327956-festival-des-places-2026-free-dance-performances-and-concerts-at-place-du-chatelet-and-various-venues-across-paris',
-    sort:'2026-08-08'
+    cat:'food', chip:'🍽️ Food/Dining', chipBg:'#FF9FF3', chipDark:true,
+    name:'Balcon Paris — Rooftop Bistro by Julien Sebbag',
+    date:'Ongoing', time:'Check restaurant website',
+    venue:'Galeries Lafayette Rooftop, 9th arr.',
+    desc:'Chef Julien Sebbag\'s rooftop bistro reimagines French classics with panoramic views of the Eiffel Tower, Palais Garnier and Sacré-Cœur. One of Paris\'s most coveted summer dining destinations, perched high above the city.',
+    url:'https://bonjourparis.com/food-restaurant-news/august-2026-restaurant-buzz-where-to-eat-in-paris/',
+    sort:'2026-08-16-x'
   },
 
 ];
