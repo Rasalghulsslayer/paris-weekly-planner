@@ -280,9 +280,9 @@
 <body>
 
 <div class="masthead">
-  <span class="masthead-eyebrow">Automne · 21–27 Sep 2026</span>
+  <span class="masthead-eyebrow">Automne · 28 Sep – 4 Oct 2026</span>
   <h1><span class="tower">🗼</span> Paris Weekly Events</h1>
-  <p class="date-range">Monday 21 September – Sunday 27 September 2026</p>
+  <p class="date-range">Monday 28 September – Sunday 4 October 2026</p>
   <p class="tagline">Curated every Monday from live sources — click any card for tickets &amp; info</p>
 </div>
 
@@ -310,259 +310,199 @@
 
 <footer>
   <p>
-    Generated Mon 21 Sep 2026 · UTC 05:15 · Paris 07:15 ·
+    Generated Mon 28 Sep 2026 · UTC 05:15 · Paris 07:15 ·
     <a href="https://github.com/Rasalghulsslayer/paris-weekly-planner">source</a> ·
     <a href="https://claude.ai/code/routines">Claude Code routines</a>
   </p>
   <p class="source-domains">
-    Sources: sortiraparis.com · theatreinparis.com · parisjetaime.com · grandpalais.fr · mam.paris.fr ·
-    bachtrack.com · theatredelaville-paris.com · festival-automne.com · musee-jacquemart-andre.com ·
-    theatredulido.com · ticketnews.com · parisbymouth.substack.com · visitparisregion.com
+    Sources: parisjetaime.com · songkick.com · accorarena.com · grandpalais.fr ·
+    wikipedia.org · fetedelascience.fr · sortiraparis.com (via search) ·
+    bandsintown.com · fnacspectacles.com · concertaparis.fr
   </p>
 </footer>
 
 <script>
 const EVENTS = [
 
+  // ── Mon 28 Sep — Paris Fashion Week opens ──
+  {
+    cat:'popup', chip:'🎪 Pop-ups', chipBg:'#FF6B6B', dark:false,
+    name:'Paris Fashion Week SS27 — Women\'s Ready-to-Wear',
+    date:'Mon 28 Sep – Tue 6 Oct 2026 · All week', time:'Shows throughout the day · Various venues',
+    venue:'Multiple venues across Paris',
+    desc:'The busiest women\'s edition of Paris Fashion Week on record: 101 fashion houses on the official FHCM calendar, 68 runway shows and 33 presentations. Week opens Monday with Julie Kegels, Maxhosa Africa and Fidan Novruzova, among newcomers making their Paris debut. Industry press and accredited guests only for runway shows; public events and pop-up activations throughout the city.',
+    url:'https://parisjetaime.com/eng/event/paris-fashion-week-e091',
+    sort:'2026-09-28-a'
+  },
+  {
+    cat:'popup', chip:'🎪 Pop-ups', chipBg:'#FF6B6B', dark:false,
+    name:'L\'Oréal Paris Runway Show — Place Joffre · Free (registration required)',
+    date:'Mon 28 Sep 2026', time:'21:00 · Free with advance registration',
+    venue:'Place Joffre, foot of the Eiffel Tower, 7th arr.',
+    desc:'L\'Oréal Paris transforms the iconic Place Joffre, at the foot of the Eiffel Tower, into an open-air runway for its annual public fashion show. Kendall Jenner, Eva Longoria, Jane Fonda, Cara Delevingne and Viola Davis are among the brand ambassadors expected on the catwalk. Free to attend but advance registration on the L\'Oréal Paris website is required.',
+    url:'https://parisjetaime.com/eng/event/paris-fashion-week-e091',
+    sort:'2026-09-28-b'
+  },
+
   // ── Ongoing through the week ──
   {
-    cat:'exhibition', chip:'🖼️ Exhibitions', chipBg:'#c4960a', dark:false,
-    name:'Kerry James Marshall: The Histories — Musée d\'Art Moderne',
-    date:'18 Sep – 24 Jan 2027 · Ongoing this week', time:'Check mam.paris.fr for hours',
-    venue:'Musée d\'Art Moderne de Paris, 16th arr.',
-    desc:'The first major exhibition in France devoted to Kerry James Marshall — one of the most influential contemporary painters alive. Seventy works spanning four decades, including eight new paintings made for the show, centering Black life and experience with epic scale and tenderness. An unmissable autumn opening.',
-    url:'https://www.mam.paris.fr/en/expositions/exhibitions-kerry-james-marshall',
-    sort:'2026-09-18-a'
-  },
-  {
-    cat:'theater', chip:'🎭 Theater', chipBg:'#A29BFE', dark:false,
-    name:'Singin\' in the Rain — Théâtre du Lido',
-    date:'From 17 Sep · New season', time:'Evening performances',
-    venue:'Théâtre du Lido, 8th arr. (Champs-Élysées)',
-    desc:'The most iconic musical film of all time comes to life on stage at the revamped Théâtre du Lido on the Champs-Élysées, directed by Robert Carsen with a full live orchestra, virtuoso tap-dance numbers and 240 sparkling costumes. Performed exclusively in English — one of the season\'s most eagerly anticipated theatrical arrivals.',
-    url:'https://theatredulido.com/en/blog/top-broadway-shows-paris/',
-    sort:'2026-09-17-a'
-  },
-  {
-    cat:'theater', chip:'🎭 Theater', chipBg:'#A29BFE', dark:false,
-    name:'Lapland — Théâtre de la Renaissance',
-    date:'18 Sep 2026 – 10 Jan 2027 · Ongoing', time:'Evening performances',
-    venue:'Théâtre de la Renaissance, 10th arr.',
-    desc:'A new comedy by Matthieu Delaporte and Alexandre de La Patellière ("Le Prénom") opens the season at the Théâtre de la Renaissance, running through January. Two established playwrights at the top of their game deliver sharp, character-driven comedy for the autumn rentrée.',
-    url:'https://www.sortiraparis.com/en/what-to-see-in-paris/shows/guides/326349-the-shows-and-theatre-productions-kicking-off-in-september-2026-in-paris-and-ile-de-france',
-    sort:'2026-09-18-b'
-  },
-  {
-    cat:'comedy', chip:'😂 Comedy', chipBg:'#6C5CE7', dark:false,
-    name:'Alexis Tramoni: The Best and the Worst — La Piccola Scala',
-    date:'From 18 Sep · Through 26 Dec 2026', time:'21:15',
-    venue:'La Piccola Scala, Paris',
-    desc:'Rising French comedian Alexis Tramoni opens his new solo show — a sharp and warmly absurdist exploration of life\'s extremes. One of the most anticipated comedy debuts of the autumn season at the intimate La Piccola Scala, running through Christmas.',
-    url:'https://www.sortiraparis.com/en/what-to-see-in-paris/shows/guides/325672-comedy-shows-in-paris-in-september-2026-the-comedians-to-watch',
-    sort:'2026-09-18-c'
-  },
-  {
-    cat:'exhibition', chip:'🖼️ Exhibitions', chipBg:'#c4960a', dark:false,
-    name:'Éternel Tintoret — Musée Jacquemart-André',
-    date:'11 Sep – 24 Jan 2027 · Ongoing', time:'Check musee-jacquemart-andre.com for hours',
-    venue:'Musée Jacquemart-André, 8th arr.',
-    desc:'The first major retrospective of Tintoretto ever mounted in France — roughly 40 paintings tracing the Italian Mannerist\'s career from Venice to his lasting influence on 19th-century French painting. A landmark autumn exhibition in one of the most beautiful private museums in Paris.',
-    url:'https://www.musee-jacquemart-andre.com/en/timeless-tintoretto',
-    sort:'2026-09-11-a'
-  },
-  {
-    cat:'exhibition', chip:'🖼️ Exhibitions', chipBg:'#c4960a', dark:false,
-    name:'Bartholdi & the Statue of Liberty — Musée d\'Orsay',
-    date:'15 Sep – 31 Jan 2027 · Ongoing', time:'Check musee-orsay.fr for hours',
-    venue:'Musée d\'Orsay, 7th arr.',
-    desc:'A landmark retrospective dedicated to Auguste Bartholdi — sculptor, traveller, diplomat and creator of the Statue of Liberty — tracing his monumental public sculpture in the context of 19th-century French art and transatlantic exchange. A major opening at one of Paris\'s crown-jewel museums.',
-    url:'https://parisjetaime.com/eng/article/paris-exhibitions-calendar-a1055',
-    sort:'2026-09-15-a'
-  },
-  {
-    cat:'dance', chip:'💃 Dance', chipBg:'#00B894', dark:false,
-    name:'Festival d\'Automne 2026 — Ongoing',
-    date:'11 Sep – 19 Dec · Ongoing this week', time:'Check festival-automne.com for schedule',
-    venue:'58 venues across Paris and Île-de-France',
-    desc:'Paris\'s most ambitious autumn arts festival is in full swing — 75 projects, 40 countries, 450 performances spanning contemporary dance, theatre, music and visual art. This week sees a packed programme across the city including contemporary dance works at multiple venues. Free and ticketed events throughout.',
-    url:'https://www.festival-automne.com/en',
-    sort:'2026-09-11-b'
-  },
-  {
     cat:'popup', chip:'🎪 Pop-ups', chipBg:'#FF6B6B', dark:false,
-    name:'JW Anderson Pop-up — Last Days · Rue du Louvre',
-    date:'9 Jul – 24 Sep · FINAL DAYS', time:'Check venue for hours',
-    venue:'15 Rue du Louvre, 1st arr.',
-    desc:'The JW Anderson pop-up store in the heart of Paris enters its final days this week, closing on Wednesday 24 September. A rare chance to explore the British designer\'s irreverent, sculptural vision in an intimate Left Bank setting before the doors close until 2027.',
-    url:'https://www.sortiraparis.com/en/what-to-do-in-paris/shopping-fashion/guides/351347-paris-fashion-season-kicks-off-with-new-pop-up-exhibitions-and-events-not-to-miss-in-september-2026',
-    sort:'2026-09-09-a'
+    name:'Chatou Fair — 111th Edition · Last Days',
+    date:'25 Sep – Sun 4 Oct 2026 (FINAL DAY this Sunday)', time:'Check venue for daily opening hours',
+    venue:'Île des Impressionnistes, Chatou (RER A: Chatou-Croissy)',
+    desc:'The 111th edition of the legendary Chatou Fair — one of the world\'s oldest and largest antiques markets — runs through this Sunday. Over 300 exhibitors spread across the Île des Impressionnistes, offering antique furniture, vintage jewellery, retro fashion, collectibles and curiosities. A perfect autumn Sunday outing 20 minutes from central Paris.',
+    url:'https://parisjetaime.com/eng/article/what-to-do-in-paris-in-september-a1038',
+    sort:'2026-09-25-a'
   },
-
-  // ── Monday 21 Sep ──
-  {
-    cat:'popup', chip:'🎪 Pop-ups', chipBg:'#FF6B6B', dark:false,
-    name:'Giant Puppet Exhibition — Espace Bièvre',
-    date:'Mon 21 – Fri 25 Sep · Free', time:'Check venue for opening hours',
-    venue:'Espace Bièvre, 13th arr.',
-    desc:'A free display of giant puppets — between 2 and 4 metres tall — from the Courant d\'Art Frais collective, crafted by residents of the Kellermann neighbourhood and tenants of APF France Handicap. Each puppet represents a different culture or animal; the puppeteers hidden inside move heads and limbs using internal rods. Prelude to Saturday\'s grand parade.',
-    url:'https://www.sortiraparis.com/en/what-to-visit-in-paris/exhibit-museum/articles/351479-giant-puppet-parade-and-free-exhibition-in-paris-s-13th-arrondissement',
-    sort:'2026-09-21-a'
-  },
-  {
-    cat:'music', chip:'🎵 Live Music', chipBg:'#b8a000', dark:false,
-    name:'Baroque Masterpieces at Sainte-Chapelle',
-    date:'Mon 21 Sep', time:'20:00',
-    venue:'Sainte-Chapelle, Île de la Cité, 1st arr.',
-    desc:'Orchestre Paris Classik performs a programme of Baroque masterpieces — Vivaldi\'s Four Seasons, Handel\'s Sarabande and Pachelbel\'s Canon — inside the breathtaking Gothic splendour of Sainte-Chapelle\'s upper chapel, with 15 metres of medieval stained glass glowing against the September evening.',
-    url:'https://www.theatreinparis.com/en/show/sainte-chapelle-concert-series',
-    sort:'2026-09-21-b'
-  },
-  {
-    cat:'music', chip:'🎵 Live Music', chipBg:'#b8a000', dark:false,
-    name:'Hamlet — Opéra Bastille',
-    date:'Mon 21, Thu 24 & Sun 27 Sep', time:'Evening — check opera.paris for curtain time',
-    venue:'Opéra Bastille, 12th arr.',
-    desc:'Ambroise Thomas\'s rarely staged 19th-century opera receives three performances this week at the Opéra Bastille. A sweeping adaptation of Shakespeare\'s tragedy set to lush, Romantic-era orchestration, directed in a production that has won critical acclaim across European houses.',
-    url:'https://parisjetaime.com/eng/article/calendar-of-concerts-in-paris-a672',
-    sort:'2026-09-21-c'
-  },
-
-  // ── Tuesday 22 Sep ──
-  {
-    cat:'dance', chip:'💃 Dance', chipBg:'#00B894', dark:false,
-    name:'Malandain Ballet Biarritz — Théâtre des Champs-Élysées',
-    date:'Tue 22 – Sat 26 Sep (mat.)', time:'19:30 (Sat: matinée)',
-    venue:'Théâtre des Champs-Élysées, 8th arr.',
-    desc:'One of France\'s great regional companies brings three works to the Champs-Élysées stage: choreographies set to Saint-Saëns, Ravel\'s Boléro and Stravinsky\'s Firebird. This is a valedictory Paris engagement for director Thierry Malandain, who steps down at the end of 2026 after nearly three decades. A landmark five-night run — don\'t miss it.',
-    url:'https://bachtrack.com/dance-event/malandain-ballet-biarritz-theatre-des-champs-elysees-22-september-2026/440264',
-    sort:'2026-09-22-a'
-  },
-  {
-    cat:'dance', chip:'💃 Dance', chipBg:'#00B894', dark:false,
-    name:'Ballet National de Marseille — Théâtre de la Ville',
-    date:'Tue 22 – Wed 30 Sep', time:'Check theatredelaville-paris.com for schedule',
-    venue:'Théâtre de la Ville, 4th arr.',
-    desc:'The Ballet National de Marseille brings a new contemporary dance programme to the Théâtre de la Ville for a nine-day residency. Part of the prestigious autumn season, the company presents works that blend rigorous technique with visceral physical storytelling — tickets in high demand.',
-    url:'https://www.theatredelaville-paris.com/en/spectacles/saison/danse',
-    sort:'2026-09-22-b'
-  },
-
-  // ── Wednesday 23 Sep ──
   {
     cat:'exhibition', chip:'🖼️ Exhibitions', chipBg:'#c4960a', dark:false,
-    name:'Cézanne and Us — Grand Palais · OPENS',
-    date:'OPENS Wed 23 Sep · Through 17 Jan 2027', time:'Check grandpalais.fr for hours',
+    name:'Cézanne and Us — Grand Palais',
+    date:'23 Sep 2026 – 17 Jan 2027 · Ongoing this week', time:'Check grandpalais.fr for hours',
     venue:'Grand Palais, 8th arr.',
-    desc:'The season\'s most anticipated exhibition: nearly 180 artworks tracing how Cézanne\'s revolutionary vision was discovered, interpreted and transformed from the late 19th century to today — from Gauguin and Matisse to Picasso, Joan Mitchell, Bridget Riley and Peter Doig. Co-produced with the Centre Pompidou and Musée d\'Orsay. Book ahead.',
+    desc:'Nearly 180 artworks trace how Cézanne\'s revolutionary vision was discovered and transformed — from Gauguin and Matisse to Picasso, Joan Mitchell, Bridget Riley and Peter Doig. Co-produced with the Centre Pompidou and Musée d\'Orsay, this is the season\'s most anticipated exhibition. Book tickets in advance — queues are forming.',
     url:'https://www.grandpalais.fr/en/program/cezanne-and-us',
     sort:'2026-09-23-a'
   },
   {
-    cat:'music', chip:'🎵 Live Music', chipBg:'#b8a000', dark:false,
-    name:'The Barber of Seville — Opéra Bastille',
-    date:'Wed 23 & Sat 26 Sep', time:'Evening — check opera.paris for curtain time',
-    venue:'Opéra Bastille, 12th arr.',
-    desc:'Rossini\'s sparkling comic masterpiece returns to the Opéra Bastille for two performances this week. One of the most beloved works in the repertoire — all mistaken identities, scheming barbers and gorgeous bel canto — performed with a full orchestra at one of the world\'s great opera houses.',
-    url:'https://parisjetaime.com/eng/article/calendar-of-concerts-in-paris-a672',
-    sort:'2026-09-23-b'
-  },
-  {
-    cat:'music', chip:'🎵 Live Music', chipBg:'#b8a000', dark:false,
-    name:'Céline Dion Residency — Paris La Défense Arena',
-    date:'Wed 23, Fri 25 & Sat 26 Sep (this week)', time:'Check ladefensearena.com for curtain time',
-    venue:'Paris La Défense Arena, Nanterre',
-    desc:'Céline Dion\'s historic comeback residency — 26 sold-out shows across autumn 2026 and spring 2027 at the Plenitude Arena — continues this week with three performances. Widely reviewed as one of the most emotionally resonant concert experiences in Paris this decade. Tickets sold out; check resale platforms.',
-    url:'https://en.wikipedia.org/wiki/Celine_Dion_Paris_2026%E2%80%932027',
-    sort:'2026-09-23-c'
-  },
-
-  // ── Thursday 24 Sep ──
-  {
     cat:'exhibition', chip:'🖼️ Exhibitions', chipBg:'#c4960a', dark:false,
-    name:'Histoires de Paysages — Marmottan Monet · OPENS',
-    date:'OPENS Thu 24 Sep · Through 31 Jan 2027', time:'Check marmottan.fr for hours',
-    venue:'Musée Marmottan Monet, 16th arr.',
-    desc:'A major new exhibition at the Marmottan Monet exploring the art of the landscape across five centuries of European painting. Situated in one of Paris\'s most intimate and beautiful museum settings, within the Bois de Boulogne. A companion piece to the Orangerie\'s autumn Monet programme.',
-    url:'https://parisjetaime.com/eng/article/paris-exhibitions-calendar-a1055',
-    sort:'2026-09-24-a'
-  },
-  {
-    cat:'cinema', chip:'🎬 Cinema', chipBg:'#54A0FF', dark:false,
-    name:'Cinema Under the Eiffel Tower — Gustave Eiffel Hall',
-    date:'Thu 24 – Sun 27 Sep', time:'Sessions from evening — lottery required',
-    venue:'Gustave Eiffel Hall, Tour Eiffel, 7th arr.',
-    desc:'A rare pop-up cinema experience inside the Eiffel Tower: selected participants (chosen by a lottery announced on September 18) can catch films in the intimate Gustave Eiffel Hall with the iron lady as their backdrop. Check the Eiffel Tower official site for session details and any remaining tickets.',
+    name:'La Tempête (Jérémy Pradier-Jeauneau) — Arc de Triomphe · FINAL DAYS',
+    date:'9 Sep – Sun 4 Oct 2026 · CLOSING THIS SUNDAY', time:'Arc de Triomphe opening hours',
+    venue:'Arc de Triomphe, 8th arr.',
+    desc:'Artist Jérémy Pradier-Jeauneau\'s site-specific installation "La Tempête" drapes the Arc de Triomphe in a monumental contemporary art work, continuing the tradition launched by Christo\'s wrapping of the monument in 2021. This Sunday is the absolute last chance to see it — head up for the view and the work together.',
     url:'https://parisjetaime.com/eng/article/what-to-do-in-paris-in-september-a1038',
-    sort:'2026-09-24-b'
+    sort:'2026-09-09-a'
   },
   {
-    cat:'food', chip:'🍽️ Food', chipBg:'#FF9FF3', dark:true,
-    name:'Paris September Restaurant Openings — New Tables This Week',
-    date:'Open now · September 2026', time:'Check individual venues for hours',
-    venue:'Multiple arrondissements',
-    desc:'Paris\'s autumn food season is in bloom. Notable new tables open this month: The Indian Arms (2nd, British-Indian gastropub by Manoj Sharma); Fougue (7th, new brasserie at Beaupassage led by chef Fanny Herpin); Nonno San (6th, Italian-Japanese pasta and crudo on rue Dauphine); and Kintsugi Beer (10th, house-brewed beers and all-gyoza menu on quai de Valmy).',
-    url:'https://parisbymouth.substack.com/p/word-of-mouth-september-2026',
-    sort:'2026-09-21-d'
+    cat:'theater', chip:'🎭 Theater', chipBg:'#A29BFE', dark:false,
+    name:'Singin\' in the Rain — Théâtre du Lido',
+    date:'From 17 Sep · Ongoing this week', time:'Evening performances',
+    venue:'Théâtre du Lido, 8th arr. (Champs-Élysées)',
+    desc:'The most iconic musical film of all time live on stage at the revamped Théâtre du Lido on the Champs-Élysées, directed by Robert Carsen with a full live orchestra, virtuoso tap-dance numbers and 240 sparkling costumes. Performed exclusively in English — one of the season\'s most eagerly anticipated theatrical arrivals.',
+    url:'https://parisjetaime.com/eng/article/calendar-of-shows-in-paris-a671',
+    sort:'2026-09-17-a'
   },
-
-  // ── Friday 25 Sep ──
+  {
+    cat:'theater', chip:'🎭 Theater', chipBg:'#A29BFE', dark:false,
+    name:'Dead Poets Society — Théâtre Libre',
+    date:'11 Sep 2026 – 10 Jan 2027 · Ongoing', time:'Evening performances',
+    venue:'Théâtre Libre, Paris',
+    desc:'The beloved 1989 film adapted for the stage — the story of Professor Keating and his students at Welton Academy, in a production that has already won significant critical praise in its Paris run. "O Captain! My Captain!" performed live at the intimate Théâtre Libre. Running through January 2027.',
+    url:'https://parisjetaime.com/eng/article/calendar-of-shows-in-paris-a671',
+    sort:'2026-09-11-a'
+  },
+  {
+    cat:'theater', chip:'🎭 Theater', chipBg:'#A29BFE', dark:false,
+    name:'Le Roi Soleil: 20th Anniversary Return — Dôme de Paris',
+    date:'12 Sep – 18 Oct 2026 · Ongoing this week', time:'Evening performances · ~2h30 with interval',
+    venue:'Dôme de Paris – Palais des Sports, 15th arr.',
+    desc:'The cult French musical "Le Roi Soleil" returns to the Dôme de Paris to celebrate its 20th anniversary, produced by Dove Attia and directed by Kamel Ouali. The life of Louis XIV unfolds through catchy pop-rock songs, flamboyant stained-glass-style sets and energetic choreography. Tickets from €25.',
+    url:'https://agenda.parisjetaime.com/en/sun-king-dome-paris-2026/',
+    sort:'2026-09-12-a'
+  },
   {
     cat:'comedy', chip:'😂 Comedy', chipBg:'#6C5CE7', dark:false,
-    name:'Blandine Lehout: Your Mother\'s Life — Théâtre des Mathurins',
-    date:'From Fri 25 Sep · Thu–Sat at 19:00', time:'19:00',
-    venue:'Théâtre des Mathurins, 8th arr.',
-    desc:'Stand-up comedian Blandine Lehout opens her new solo show with sharp, warm humour aimed squarely at family dynamics and the comedy of everyday life. Thursday to Saturday evenings at 19:00 at the Théâtre des Mathurins — one of the most appealing new comedy openings of the autumn season.',
-    url:'https://www.sortiraparis.com/en/what-to-see-in-paris/shows/guides/325672-comedy-shows-in-paris-in-september-2026-the-comedians-to-watch',
-    sort:'2026-09-25-a'
+    name:'Panayotis Pascot: Entre les Deux — Théâtre Fontaine',
+    date:'September & October 2026 · Ongoing', time:'Evening performances',
+    venue:'Théâtre Fontaine, 9th arr.',
+    desc:'Panayotis Pascot — writer on "Quotidien" and author of the bestselling memoir "Almost" — returns to the stage with his solo stand-up show "Entre les deux" at the Théâtre Fontaine, before moving to the Théâtre du Rond-Point from October 6. Witty, personal and deeply human comedy from one of France\'s most distinctive young voices.',
+    url:'https://parisjetaime.com/eng/article/humour-comedy-and-theatre-in-paris-a297',
+    sort:'2026-09-01-a'
   },
   {
     cat:'comedy', chip:'😂 Comedy', chipBg:'#6C5CE7', dark:false,
-    name:'Jean-Benoît Diallo: Libre Arbitre — Théâtre Le République',
-    date:'From Fri 25 Sep · Through 18 Dec 2026', time:'Evening performances',
-    venue:'Théâtre Le République, Paris',
-    desc:'Comedian and philosopher Jean-Benoît Diallo opens his solo show blending sharp humour with genuine philosophical reflection on free will, responsibility and the human condition. A distinctive and thought-provoking comedy voice making his long-run Paris debut.',
-    url:'https://www.sortiraparis.com/en/what-to-see-in-paris/shows/guides/325672-comedy-shows-in-paris-in-september-2026-the-comedians-to-watch',
-    sort:'2026-09-25-b'
-  },
-
-  // ── Saturday 26 Sep ──
-  {
-    cat:'popup', chip:'🎪 Pop-ups', chipBg:'#FF6B6B', dark:false,
-    name:'Grand Puppet Parade — Espace Bièvre · Free',
-    date:'Sat 26 Sep', time:'From 15:00 · Free, no ticket needed',
-    venue:'Espace Bièvre, 13th arr.',
-    desc:'After five days of free exhibition, the giant puppets of Courant d\'Art Frais take to the streets in a festive parade starting at 15:00 from Espace Bièvre. Puppets up to four metres tall — each representing a different culture or creature — fill the streets of the 13th arrondissement with colour, music and community spirit. Perfect for all ages.',
-    url:'https://www.sortiraparis.com/en/what-to-visit-in-paris/exhibit-museum/articles/351479-giant-puppet-parade-and-free-exhibition-in-paris-s-13th-arrondissement',
-    sort:'2026-09-26-a'
+    name:'David Castello-Lopes: Délicieux — Théâtre Libre',
+    date:'14 Sep 2026 – 9 Mar 2027 · Ongoing', time:'Evening performances',
+    venue:'Théâtre Libre, Paris',
+    desc:'Journalist and broadcaster David Castello-Lopes brings his solo show "Délicieux" to the Théâtre Libre — a show entirely devoted to pleasure, curiosity and the joy of discovering what we love. Sharp, personal and unexpectedly moving comedy for a long run through to March 2027.',
+    url:'https://parisjetaime.com/eng/article/humour-comedy-and-theatre-in-paris-a297',
+    sort:'2026-09-14-a'
   },
   {
     cat:'gallery', chip:'🎨 Galleries', chipBg:'#E17055', dark:false,
-    name:'Ateliers Ouverts de Pré Saint-Gervais — 15th Edition',
-    date:'Sat 26 – Sun 27 Sep', time:'Check programme for individual studio hours',
-    venue:'Pré Saint-Gervais, Seine-Saint-Denis (adjacent to 19th arr.)',
-    desc:'The 15th edition of the artists\' open studios in Pré Saint-Gervais — themed "Daybreak" — invites the public inside roughly a hundred artists\' workspaces over two days. Paintings, sculpture, ceramics, photography and more across a neighbourhood with a rich creative tradition. Free and open to all.',
-    url:'https://www.sortiraparis.com/en/news/in-paris/guides/53380-what-to-do-this-week-september-21-27-2026-your-picks-for-a-memorable-week-in-paris',
-    sort:'2026-09-26-b'
+    name:'Leonora Carrington — First Paris Solo Exhibition',
+    date:'8 Sep – 10 Oct 2026 · Ongoing this week', time:'Check venue for gallery hours',
+    venue:'64 rue de Turenne, 3rd arr. (Marais)',
+    desc:'The first ever solo exhibition in Paris dedicated to Leonora Carrington — the British-Mexican surrealist painter, sculptor and writer — brings together drawings, paintings, sculpture, tapestry and writing. A rare and long-overdue retrospective of one of Surrealism\'s most inventive and singular figures. Free to visit; check gallery hours.',
+    url:'https://ocula.com/cities/france/paris-art-galleries/exhibitions/',
+    sort:'2026-09-08-a'
   },
   {
-    cat:'music', chip:'🎵 Live Music', chipBg:'#b8a000', dark:false,
-    name:'Mozart the Enchanter — Sainte-Chapelle',
-    date:'Sat 26 Sep', time:'20:00',
-    venue:'Sainte-Chapelle, Île de la Cité, 1st arr.',
-    desc:'"Mozart the Enchanter: Operatic Fantasies and Variations for Flute Quartet" — an intimate programme of Mozart\'s most beloved flute quartet arrangements and operatic fantasies performed inside the jewel of Gothic Paris. Fifteen metres of medieval stained glass glow against the September night sky.',
-    url:'https://www.theatreinparis.com/en/show/sainte-chapelle-concert-series',
-    sort:'2026-09-26-c'
+    cat:'gallery', chip:'🎨 Galleries', chipBg:'#E17055', dark:false,
+    name:'Johan Creten: Les Chiens de Pavlov — Perrotin Marais',
+    date:'5 Sep – 10 Oct 2026 · Ongoing this week', time:'Tue–Sat 11:00–19:00',
+    venue:'Perrotin Marais, rue de Turenne, 3rd arr.',
+    desc:'Celebrated sculptor Johan Creten exhibits his new series "Les Chiens de Pavlov" at Galerie Perrotin\'s Marais space — monumental ceramic and bronze works exploring conditioning, desire and animality. The Belgian-born artist at his most provocative and poetic, in one of Paris\'s premier contemporary galleries.',
+    url:'https://ocula.com/cities/france/paris-art-galleries/exhibitions/',
+    sort:'2026-09-05-a'
+  },
+  {
+    cat:'gallery', chip:'🎨 Galleries', chipBg:'#E17055', dark:false,
+    name:'Jennifer Guidi: Waterfall — Gagosian Paris',
+    date:'3 Sep – 10 Oct 2026 · Ongoing this week', time:'Tue–Sat 11:00–19:00',
+    venue:'Gagosian, rue de Castiglione, 1st arr.',
+    desc:'Los Angeles painter Jennifer Guidi presents "Waterfall" at Gagosian\'s Paris gallery — large-scale works on sand-textured grounds in her characteristic mandala-like compositions, exploring stillness, transcendence and the meditative power of repetition. One of the most quietly beautiful gallery shows of the autumn season.',
+    url:'https://ocula.com/cities/france/paris-art-galleries/exhibitions/',
+    sort:'2026-09-03-a'
+  },
+  {
+    cat:'dance', chip:'💃 Dance', chipBg:'#00B894', dark:false,
+    name:'Babel — Le Bon Marché Rive Gauche · Free',
+    date:'Every Thu, Fri & Sat through Dec 2026 · This week: Thu 1, Fri 2, Sat 3 Oct', time:'At store closing time (approx. 21:00)',
+    venue:'Le Bon Marché Rive Gauche, 7th arr.',
+    desc:'Ten circus artists and dancers fill the closing hours of Paris\'s most beautiful department store with "Babel" — a mesmerising contemporary circus and dance performance created to unfold in the extraordinary architecture of Le Bon Marché. Free, no ticket needed; simply be in the store at closing time on Thursday, Friday or Saturday evenings.',
+    url:'https://parisjetaime.com/eng/article/what-to-do-in-paris-in-october-a1039',
+    sort:'2026-09-03-b'
   },
 
-  // ── Sunday 27 Sep ──
+  // ── Wed 30 Sep ──
   {
     cat:'music', chip:'🎵 Live Music', chipBg:'#b8a000', dark:false,
-    name:'Sacred Masterpieces at Sainte-Chapelle — Mozart, Vivaldi & Pergolesi',
-    date:'Sun 27 Sep', time:'20:00',
-    venue:'Sainte-Chapelle, Île de la Cité, 1st arr.',
-    desc:'The week closes with a programme of sacred masterpieces inside Sainte-Chapelle — works by Mozart, Vivaldi and Pergolesi performed beneath the most spectacular Gothic windows in Paris. A transcendent Sunday evening in one of the most beautiful concert settings in the world.',
-    url:'https://www.theatreinparis.com/en/show/sainte-chapelle-concert-series',
-    sort:'2026-09-27-a'
+    name:'A$AP Rocky: Don\'t Be Dumb World Tour — Accor Arena',
+    date:'Wed 30 Sep 2026', time:'20:00 · Doors earlier',
+    venue:'Accor Arena, 8 Boulevard de Bercy, 12th arr.',
+    desc:'A$AP Rocky brings his headline "Don\'t Be Dumb World Tour" to Paris\'s Accor Arena — his only French date on the tour. Tickets remain available from €49.90 (floor through premium seating at €109.30). One of the biggest hip-hop concerts in Paris this autumn; expect a high-energy production at the 20,000-capacity arena on the banks of the Seine.',
+    url:'https://www.accorarena.com/en/events-and-tickets/aap-rocky-dont-be-dumb-world-tour--03f96',
+    sort:'2026-09-30-a'
+  },
+  {
+    cat:'cinema', chip:'🎬 Cinema', chipBg:'#54A0FF', dark:false,
+    name:'New Releases: Verity · Our Salvation · Digger',
+    date:'Wed 30 Sep 2026 · In cinemas from this date', time:'Multiple screenings daily',
+    venue:'Cinemas across Paris',
+    desc:'Three major films hit French cinemas on September 30: "Verity" starring Anne Hathaway and Dakota Johnson in a twisty psychological thriller; "Our Salvation" (Notre Salut) with Swann Arlaud — a highly anticipated French drama; and "Digger" starring Tom Cruise. Check MK2, UGC or Pathé websites for showtimes at your nearest cinema.',
+    url:'https://parisjetaime.com/eng/article/what-to-do-in-paris-in-september-a1038',
+    sort:'2026-09-30-b'
+  },
+
+  // ── Thu 1 Oct ──
+  {
+    cat:'food', chip:'🍽️ Food', chipBg:'#FF9FF3', dark:true,
+    name:'Bouillon sur Seine — Grand Opening',
+    date:'Thu 1 Oct 2026 · OPENS TODAY', time:'Lunch and dinner service — check for hours',
+    venue:'Île Seguin, Boulogne-Billancourt (accessible from 15th arr.)',
+    desc:'The autumn\'s most anticipated restaurant opening: Bouillon sur Seine launches on the Île Seguin in Boulogne-Billancourt, with a dining room spanning 1,100 m² and a sweeping terrace overlooking the Seine with a total capacity of 570 covers. Classic bouillon cuisine at accessible prices, in a spectacular waterfront setting. Walk-ins welcome; bookings advised for busy services.',
+    url:'https://parisjetaime.com/eng/article/what-to-do-in-paris-in-october-a1039',
+    sort:'2026-10-01-a'
+  },
+
+  // ── Fri–Sun 2–4 Oct ──
+  {
+    cat:'food', chip:'🍽️ Food', chipBg:'#FF9FF3', dark:true,
+    name:'Fête de la Science 2026 — Free Events · "Learned Flavors" Theme',
+    date:'Fri 2 Oct – Mon 12 Oct 2026 (starts this weekend)', time:'Various times · All events FREE',
+    venue:'80+ venues across Paris and Île-de-France',
+    desc:'The 35th edition of France\'s Fête de la Science launches this weekend with the theme "Saveurs savantes" (Learned Flavors) — exploring the science of food, taste, nutrition and culinary chemistry. Over 80 free events in Paris alone: lab visits, taste workshops, science cafés, guided tours and live performances. Science Village on the Grands Moulins campus October 1–3.',
+    url:'https://www.fetedelascience.fr/',
+    sort:'2026-10-02-a'
+  },
+  {
+    cat:'cinema', chip:'🎬 Cinema', chipBg:'#54A0FF', dark:false,
+    name:'Steven Spielberg 80th Birthday Tribute — Le Grand Rex',
+    date:'Sat 3 Oct 2026', time:'Evening — check grandrexy.fr for exact time',
+    venue:'Le Grand Rex, 2nd arr.',
+    desc:'Le Grand Rex pays tribute to Steven Spielberg on his 80th birthday with an immersive symphonic concert: a live orchestra performs the greatest scores of his career — John Williams\'s iconic themes from Jaws, Schindler\'s List, E.T., Jurassic Park and Indiana Jones — synchronized with scenes from the films on the grand screen. A night for film lovers.',
+    url:'https://parisjetaime.com/eng/article/what-to-do-in-paris-in-october-a1039',
+    sort:'2026-10-03-a'
   },
 
 ];
